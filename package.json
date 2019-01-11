@@ -1,0 +1,17 @@
+{
+  "name": "webecuestre",
+  "version": "1.0.0",
+  "description": "Web para la FDNE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jrojas96",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "cookieconsent": "^3.1.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.5"
+  }
+}

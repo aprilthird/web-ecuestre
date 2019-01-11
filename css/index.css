@@ -1,0 +1,31 @@
+/* main section */
+#main-carousel .carousel-item::after {
+    content:'\A';
+    position:absolute;
+    width:100%; height:100%;
+    top:0; left:0;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 1;
+}
+
+.main-title {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    max-width: 30%;
+    z-index: 10;
+    font-size: 2em;
+    color:white;
+    margin-left: 5%;
+}
+
+/* disciplines section */
+#disciplines-section {
+    height: 100vh;
+    background-image: linear-gradient(90deg, black 45%, RGB(225, 49, 29) 40%);
+}
+
+#disciplines-carousel {
+      width: 50%;
+}
+
