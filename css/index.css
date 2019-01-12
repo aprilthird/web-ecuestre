@@ -60,6 +60,7 @@ background-color: white;
 #disciplines-section {
     height: 100vh;
     background-image: linear-gradient(90deg, black 45%, RGB(225, 49, 29) 40%);
+	
 }
 
 #disciplines-carousel {
