@@ -2,6 +2,88 @@ body {
     font-family: Quicksand;
 }
 
+.cc-btn {
+    border: 2px solid white !important;
+    border-radius: 15px;
+}
+
+.cc-allow {
+    background-color: white !important;
+    color: black !important;
+}
+
+.cc-allow:hover {
+    background-color: RGB(225, 49, 29) !important;
+    border-color: RGB(225, 49, 29) !important;
+    color: white !important;
+}
+
+.cc-dismiss {
+    background-color: transparent !important;
+    color: white !important;
+}
+
+.cc-dismiss:hover {
+    background-color: white !important;
+    color: black !important;
+}
+
+.cc-btn:hover {
+    text-decoration: none;
+}
+
+.cc-message {
+    line-height: normal !important;
+}
+
+.cc-window {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    padding-top: 2% !important;
+    padding-bottom: 2% !important;
+}
+
+/* main menu */
+#main-menu {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.hamburger {
+    width: 100%;
+    height: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before {
+    background-color: white !important;
+}
+
+#main-menu .table-menu {
+    background-color: black;
+}
+
+#main-menu .table-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+#main-menu .table-menu a.active {
+    color: RGB(225, 49, 29);
+}
+
+#main-menu .table-menu a:hover {
+    color: RGB(225, 49, 29);
+}
+
+.navbar-collapse.show {
+    margin-left: 0%;
+    margin-right: 0%;
+    height: 100%;
+    background-color: black;
+}
+
 /* main section */
 #main-carousel .carousel-item::after {
     content:'\A';
@@ -90,6 +172,7 @@ background-color: white;
 .section-header {
     font-size: 2.5em;
     margin-bottom: 10%;
+    font-weight: bold;
 }
 
 .nav-link {
@@ -198,6 +281,10 @@ color:  RGB(225, 49, 29);
       background-color: RGB(225, 49, 29);
   }
 
+  .event-card:hover {
+      cursor: pointer;;
+  }
+
   .event-card .event-date {
       font-size: 0.65em;
   }
@@ -238,6 +325,15 @@ footer a:hover {
     width: 100%;
 }
 
+.table-menu a:hover {
+    text-decoration: none;
+    color: RGB(225, 49, 29);
+}
+
+.table-menu a.active {
+    color: RGB(225, 49, 29);
+}
+
 .table-menu td, .table-menu th {
     padding-right: 0%;
 }
@@ -251,7 +347,7 @@ footer a:hover {
 }
 
 .table-menu thead tr {
-    border-bottom: 2px solid white;
+    border-bottom: 1px solid white;
 }
 
 .table-menu tbody tr:first-child td {
