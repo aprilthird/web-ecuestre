@@ -1,3 +1,7 @@
+body {
+    font-family: Quicksand;
+}
+
 /* main section */
 #main-carousel .carousel-item::after {
     content:'\A';
@@ -10,13 +14,46 @@
 
 .main-title {
     position: absolute;
-    top:50%;
+    top:60%;
     transform: translateY(-50%);
-    max-width: 30%;
+    max-width: 60%;
     z-index: 10;
-    font-size: 2em;
+    font-size: 3.5em;
     color:white;
-    margin-left: 5%;
+    padding-left: 5%;
+    font-weight: bold;
+}
+
+.main-footer {
+    position: absolute;
+    top:85%;
+    transform: translateY(-50%);
+    color: white;
+    padding-left: 6%;
+    padding-right: 6%;
+    width: 100%;
+}
+
+.btn-outline {
+    background-color: transparent;
+}
+
+.btn-white {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-white:hover {
+color:black;
+background-color: white;
+}
+
+.btn-contact {
+    border-radius: 15px;
+}
+
+.footer-text {
+    margin-left: auto;
 }
 
 /* disciplines section */
@@ -27,5 +64,208 @@
 
 #disciplines-carousel {
       width: 50%;
+      padding-top: 5%;
 }
 
+#disciplines-carousel .carousel-item:hover::after {
+    content:'\A';
+    position:absolute;
+    width:100%; height:100%;
+    top:0; left:0;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 1;
+}
+
+
+/* ranking section */
+#ranking-section {
+    height: 100vh;
+    background-color: black;
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+}
+
+.section-header {
+    font-size: 2.5em;
+    margin-bottom: 10%;
+}
+
+.nav-link {
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 5%;
+}
+
+.nav-link:hover {
+color:  RGB(225, 49, 29);
+}
+
+.nav-pills .nav-link.active {
+    background-color: black;
+    text-decoration: underline;
+    color: RGB(225, 49, 29);
+}
+
+.card {
+    padding-left: 0%;
+    padding-right: 0%;
+    background-color: transparent;
+    margin-right: 2%;
+    height: 100%;
+}
+
+.card:hover .card-content {
+    border: 2px solid RGB(225, 49, 29); 
+}
+
+.card:hover .card-title {
+    color:  RGB(225, 49, 29);
+}
+
+.card-content {
+    position: relative;
+    box-sizing: 100%;
+}
+
+.card-content img {
+    box-sizing: inherit;
+}
+
+.card .container {
+    background-color:rgba(0, 0, 0, 0.3);;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 0.75em;
+}
+
+.container p {
+ margin-bottom: 0;
+}
+
+.card.second {
+    margin-top: 5%;
+}
+
+.card.third {
+    margin-top: 10%;
+}
+
+/* events section */
+#events-section {
+    height: 60vh;
+    background-color: white;
+    color: black;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .event-card {
+      color: white;
+      text-align: left;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 20%;
+      padding-bottom: 5%;
+      width: 100%;
+      background-color: RGB(225, 49, 29);
+  }
+
+  .event-card .event-date {
+      font-size: 0.65em;
+  }
+
+  .event-card .event-name {
+      font-weight: bold;
+      font-size: 1em;
+  }
+
+  .event-card .event-place {
+      font-size: 0.65em;
+  }
+
+  /* footer */
+footer {
+    height: 40vh;
+    background-color: black;
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    font-size: 0.65em;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.outer-links {
+    text-decoration: underline;
+}
+
+.table-menu {
+    width: 100%;
+}
+
+.table-menu td, .table-menu th {
+    padding-right: 0%;
+}
+
+.table-menu td {
+    padding-top: 1%;
+}
+
+.table-menu th {
+    font-weight: normal;
+}
+
+.table-menu thead tr {
+    border-bottom: 2px solid white;
+}
+
+.table-menu tbody tr:first-child td {
+padding-top: 2%;
+}
+
+.social .social-networks {
+    font-size: 2em;
+}
+
+.social-networks a {
+    margin-right: 5%;
+}
+
+.social-networks a {
+    text-decoration: none;
+}

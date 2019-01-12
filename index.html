@@ -1,141 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Web Ecuestre</title>
 
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="node_modules/cookieconsent/build/cookieconsent.min.css">
-    <link rel="stylesheet" href="css/index.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Web Ecuestre</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="node_modules/cookieconsent/build/cookieconsent.min.css" />
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/index.css" />
 </head>
+
 <body>
-    <nav class="navbar fixed-top navbar-light">
-        <a class="navbar-brand" href="#">FDNE</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
-      <section id="main-section">
-        <div class="main-title">
-            FEDERACIÓN DEPORTIVA NACIONAL ECUESTRE
-        </div>
-        <div id="main-carousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
+  <nav class="navbar fixed-top navbar-dark">
+    <a class="navbar-brand" href="#">
+      <img src="img/oie_transparent.png" width="50%" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <section id="main-section">
+    <div class="main-title">
+      FEDERACIÓN DEPORTIVA NACIONAL ECUESTRE
+    </div>
+    <div id="main-carousel" class="carousel slide" data-ride="carousel">
+      <!--<ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="img/main.JPG" alt="First slide" width="100%" style="height: 100vh;">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="img/main2.JPG" alt="Second slide" width="100%" style="height: 100vh;">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="img/main3.JPG" alt="Third slide" width="100%" style="height: 100vh;">
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            </ol>-->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="img/main.JPG" alt="First slide" width="100%" style="height: 100vh;">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/main2.JPG" alt="Second slide" width="100%" style="height: 100vh;">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/main3.JPG" alt="Third slide" width="100%" style="height: 100vh;">
+        </div>
+      </div>
+      <!--<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
             <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
+            </a>-->
+    </div>
+    <div class="main-footer row">
+      <button class="btn btn-outline btn-white btn-contact">Cont&aacute;ctanos</button>
+      <div class="footer-text">
+        Federaci&oacute;n Deportiva Nacional Ecuestre
+      </div>
+    </div>
+  </section>
+  <section id="disciplines-section">
+    <div id="disciplines-carousel" class="carousel slide mx-auto" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="img/main.JPG" alt="First slide" style="height: 70vh;">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/main2.JPG" alt="Second slide" style="height: 70vh;">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/main3.JPG" alt="Third slide" style="height: 70vh;">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+  <section id="ranking-section">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="section-header">
+          RANKING
+        </div>
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+            aria-controls="v-pills-home" aria-selected="true">Adiestramiento</a>
+          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+            aria-controls="v-pills-profile" aria-selected="false">Enduro</a>
+          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+            aria-controls="v-pills-messages" aria-selected="false">Salto</a>
+          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+            aria-controls="v-pills-settings" aria-selected="false">Prueba Completa</a>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <div class="row">
+              <div class="card col-md-3 first">
+                <div class="card-title">PRIMER PUESTO</div>
+                <div class="card-content">
+                  <img src="img/placeholder.png" alt="Avatar" style="width:100%">
+                  <div class="container">
+                    <p><strong>SVENJA ECHLER</strong></p>
+                    <p>CABALLO: SAMY</p>
+                    <p>PUNTOS: 92.09</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card col-md-3 second">
+                <div class="card-title">SEGUNDO PUESTO</div>
+                <div class="card-content">
+                  <img class="card-image" src="img/placeholder.png" alt="Avatar" style="width:100%">
+                  <div class="container">
+                    <p><strong>SVENJA ECHLER</strong></p>
+                    <p>CABALLO: PEPE</p>
+                    <p>PUNTOS: 90.10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card col-md-3 third">
+                <div class="card-title">TERCER PUESTO</div>
+                <div class="card-content">
+                  <img src="img/placeholder.png" alt="Avatar" style="width:100%">
+                  <div class="container">
+                    <p><strong>SVENJA ECHLER</strong></p>
+                    <p>CABALLO: SUGAR</p>
+                    <p>PUNTOS: 84.56</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+          <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="events-section">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="section-header">
+          EVENTOS
+        </div>
+      </div>
+      <div class="col-md-8 swiper">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="event-card">
+                <div class="event-date">
+                  08 y 09 Set
+                </div>
+                <div class="event-name">
+                  CICOS 111 / FEI B
+                </div>
+                <div class="event-place">
+                  Club Ecuestre Huachipa
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="event-card">
+                <div class="event-date">
+                  08 y 09 Set
+                </div>
+                <div class="event-name">
+                  CICOS 111 / FEI B
+                </div>
+                <div class="event-place">
+                  Club Ecuestre Huachipa
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="event-card">
+                <div class="event-date">
+                  08 y 09 Set
+                </div>
+                <div class="event-name">
+                  CICOS 111 / FEI B
+                </div>
+                <div class="event-place">
+                  Club Ecuestre Huachipa
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="row">
+      <div class="col-md-2">
+        <img src="img/oie_transparent.png" width="30%" />
+      </div>
+      <div class="col-md-8">
+        <table class="table-menu">
+          <thead>
+            <tr>
+              <th>
+                <a href="#">NOSOTROS</a>
+              </th>
+              <th>
+                <a href="#">DISCIPLINAS</a>
+              </th>
+              <th>
+                <a href="#">HOME</a>
+              </th>
+              <th>
+                <a href="#">CONCURSOS</a>                
+              </th>
+              <th>
+                <a href="#">EVENTOS</a>
+              </th>
+              <th>
+                <a href="#">GALER&Iacute;A</a>
+              </th>
+              <th>
+                <a href="#">AFILIADOS</a>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>
+                <a href="#">VISI&Oacute;N</a>
+              </td>
+              <td>
+                <a href="#">SALTO</a>
+              </td>
+              <td>
+                <a href="#">RESULTADOS</a>
+              </td>
+              <td></td>
+              <td></td>
+              <td>
+                <a href="#">CLUBES</a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <a href="#">MISI&Oacute;N</a>
+              </td>
+              <td>
+                <a href="#">ADIESTRAMIENTO</a>
+              </td>
+              <td>
+                <a href="#">RANKING</a>
+              </td>
+              <td></td>
+              <td></td>
+              <td>
+                <a href="#">JINETES</a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <a href="#">HISTORIA</a>
+              </td>
+              <td>
+                <a href="#">ENDURO</a>
+              </td>
+              <td>
+                <a href="#">FEI</a>
+              </td>
+              <td></td>
+              <td></td>
+              <td>
+                <a href="#">COACHES</a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <a href="#">ORGANIZACI&Oacute;N</a>
+              </td>
+              <td>
+                <a href="#">PRUEBA COMPLETA</a>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-2">
+        <div class="outer-links">
+        <p><a href="#">Cont&aacute;ctanos</a></p>
+        <p><a href="#">T&eacute;rminos y Condiciones</a></p>
+        <p><a href="#">Cookies</a></p>
+      </div>
+        <div class="social">
+          <div class="social-follow">S&iacute;guenos en</div>
+          <div class="social-networks">
+            <a href="#">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fa fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="fa fa-youtube"></i>
             </a>
           </div>
-      </section>
-      <section id="disciplines-section">
-            <div id="disciplines-carousel" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img class="d-block w-100" src="img/main.JPG" alt="First slide" style="height: 70vh;">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="img/main2.JPG" alt="Second slide" style="height: 70vh;">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="img/main3.JPG" alt="Third slide" style="height: 70vh;">
-                      </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </div>
-      </section>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="node_modules/cookieconsent/build/cookieconsent.min.js"></script>
-    <script>
-          window.cookieconsent.initialise({
-            container: document.getElementById("content"),
-            palette:{
-            popup: {background: "#fff"},
-            button: {background: "#aa0000"},
-            },
-            revokable:true,
-            onStatusChange: function(status) {
-            console.log(this.hasConsented() ?
-                'enable cookies' : 'disable cookies');
-            },
-            layouts: {
-                'basic': '{{messagelink}}{{compliance}}&emsp;<button class="btn btn-secondary">Andreita</button>',
-                'basic-close': '{{messagelink}}{{compliance}}{{close}}',
-                'basic-header': '{{header}}{{message}}{{link}}{{compliance}}',
-            },
-            palette: {
-            popup: {background: '#000000', text: '#fff', link: '#fff'},
-            button: {background: 'transparent', border: '#f8e71c', text: '#f8e71c'},
-            highlight: {background: '#f8e71c', border: '#f8e71c', text: '#000000'},
-            },
-            law: {
-                regionalLaw: false,
-            },
-            location: true
-        });
-    </script>
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/cookieconsent/build/cookieconsent.min.js"></script>
+<script src="node_modules/swiper/swiper.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    freeMode: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
+
+  window.cookieconsent.initialise({
+    container: document.getElementById("content"),
+    palette: {
+      popup: { background: "#fff" },
+      button: { background: "#aa0000" },
+    },
+    revokable: true,
+    onStatusChange: function (status) {
+      console.log(this.hasConsented() ?
+        'enable cookies' : 'disable cookies');
+    },
+    layouts: {
+      'basic': '{{messagelink}}{{compliance}}',
+      'basic-close': '{{messagelink}}{{compliance}}{{close}}',
+      'basic-header': '{{header}}{{message}}{{link}}{{compliance}}',
+    },
+    palette: {
+      popup: { background: '#000000', text: '#fff', link: '#fff' },
+      button: { background: 'transparent', border: '#f8e71c', text: '#f8e71c' },
+      highlight: { background: '#f8e71c', border: '#f8e71c', text: '#000000' },
+    },
+    law: {
+      regionalLaw: false,
+    },
+    location: true
+  });
+</script>
+
 </html>
