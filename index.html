@@ -11,49 +11,120 @@
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="node_modules/cookieconsent/build/cookieconsent.min.css" />
+  <link rel="stylesheet" href="node_modules/hamburgers/dist/hamburgers.min.css" />
   <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/index.css" />
   <link rel="stylesheet" href="css/discipline.css" />
 </head>
 
 <body>
-  <nav class="navbar fixed-top navbar-dark">
+  <nav id="main-menu" class="navbar fixed-top navbar-dark">
     <a class="navbar-brand" href="#">
       <img src="img/oie_transparent.png" width="50%" />
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <div class="hamburger hamburger--elastic" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div>
+      </div>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      <table class="table-menu">
+        <thead>
+          <tr>
+            <th>
+              <a class="active" href="#">HOME</a>
+            </th>
+            <th>
+              <a href="#">NOSOTROS</a>
+            </th>
+            <th>
+              <a href="#">DISCIPLINAS</a>
+            </th>
+            <th>
+              <a href="#">CONCURSOS</a>
+            </th>
+            <th>
+              <a href="#">EVENTOS</a>
+            </th>
+            <th>
+              <a href="#">GALER&Iacute;A</a>
+            </th>
+            <th>
+              <a href="#">AFILIADOS</a>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>
+              <a href="#">VISI&Oacute;N</a>
+            </td>
+            <td>
+              <a href="#">SALTO</a>
+            </td>
+            <td>
+              <a href="#">RESULTADOS</a>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+              <a href="#">CLUBES</a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <a href="#">MISI&Oacute;N</a>
+            </td>
+            <td>
+              <a href="#">ADIESTRAMIENTO</a>
+            </td>
+            <td>
+              <a href="#">RANKING</a>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+              <a href="#">JINETES</a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <a href="#">HISTORIA</a>
+            </td>
+            <td>
+              <a href="#">ENDURO</a>
+            </td>
+            <td>
+              <a href="#">FEI</a>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+              <a href="#">COACHES</a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <a href="#">ORGANIZACI&Oacute;N</a>
+            </td>
+            <td>
+              <a href="#">PRUEBA COMPLETA</a>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </nav>
   <section id="main-section">
@@ -89,7 +160,7 @@
     <div class="main-footer row">
       <button class="btn btn-outline btn-white btn-contact">Cont&aacute;ctanos</button>
       <div class="footer-text">
-        Federaci&oacute;n Deportiva Nacional Ecuestre
+        Promoviendo el deporte Ecuestre
       </div>
     </div>
   </section>
@@ -225,12 +296,86 @@
               </div>
             </div>
           </div>
-          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
-          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
-          <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+            <div class="row">
+              <div class="card col-md-3 first">
+                <div class="card-title">PRIMER PUESTO</div>
+                <div class="card-content">
+                  <img src="img/placeholder.png" alt="Avatar" style="width:100%">
+                  <div class="container">
+                    <p><strong>SVENJA ECHLER</strong></p>
+                    <p>CABALLO: SAMY</p>
+                    <p>PUNTOS: 92.09</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card col-md-3 second">
+                <div class="card-title">SEGUNDO PUESTO</div>
+                <div class="card-content">
+                  <img class="card-image" src="img/placeholder.png" alt="Avatar" style="width:100%">
+                  <div class="container">
+                    <p><strong>SVENJA ECHLER</strong></p>
+                    <p>CABALLO: PEPE</p>
+                    <p>PUNTOS: 90.10</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+            <div class="row">
+              <div class="card col-md-3 first">
+                <div class="card-title">PRIMER PUESTO</div>
+                <div class="card-content">
+                  <img src="img/placeholder.png" alt="Avatar" style="width:100%">
+                  <div class="container">
+                    <p><strong>SVENJA ECHLER</strong></p>
+                    <p>CABALLO: SAMY</p>
+                    <p>PUNTOS: 92.09</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card col-md-3 second">
+                <div class="card-title">SEGUNDO PUESTO</div>
+                <div class="card-content">
+                  <img class="card-image" src="img/placeholder.png" alt="Avatar" style="width:100%">
+                  <div class="container">
+                    <p><strong>SVENJA ECHLER</strong></p>
+                    <p>CABALLO: PEPE</p>
+                    <p>PUNTOS: 90.10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card col-md-3 third">
+                <div class="card-title">TERCER PUESTO</div>
+                <div class="card-content">
+                  <img src="img/placeholder.png" alt="Avatar" style="width:100%">
+                  <div class="container">
+                    <p><strong>SVENJA ECHLER</strong></p>
+                    <p>CABALLO: SUGAR</p>
+                    <p>PUNTOS: 84.56</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+            <div class="row">
+              <div class="card col-md-3 first">
+                <div class="card-title">PRIMER PUESTO</div>
+                <div class="card-content">
+                  <img src="img/placeholder.png" alt="Avatar" style="width:100%">
+                  <div class="container">
+                    <p><strong>SVENJA ECHLER</strong></p>
+                    <p>CABALLO: SAMY</p>
+                    <p>PUNTOS: 92.09</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
   </section>
   <section id="events-section">
     <div class="row">
@@ -281,10 +426,36 @@
                 </div>
               </div>
             </div>
+            <div class="swiper-slide">
+              <div class="event-card">
+                <div class="event-date">
+                  08 y 09 Set
+                </div>
+                <div class="event-name">
+                  CICOS 111 / FEI B
+                </div>
+                <div class="event-place">
+                  Club Ecuestre Huachipa
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="event-card">
+                <div class="event-date">
+                  08 y 09 Set
+                </div>
+                <div class="event-name">
+                  CICOS 111 / FEI B
+                </div>
+                <div class="event-place">
+                  Club Ecuestre Huachipa
+                </div>
+              </div>
+            </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   </section>
   <footer>
     <div class="row">
@@ -296,16 +467,16 @@
           <thead>
             <tr>
               <th>
+                <a class="active" href="#">HOME</a>
+              </th>
+              <th>
                 <a href="#">NOSOTROS</a>
               </th>
               <th>
                 <a href="#">DISCIPLINAS</a>
               </th>
               <th>
-                <a href="#">HOME</a>
-              </th>
-              <th>
-                <a href="#">CONCURSOS</a>                
+                <a href="#">CONCURSOS</a>
               </th>
               <th>
                 <a href="#">EVENTOS</a>
@@ -388,10 +559,10 @@
       </div>
       <div class="col-md-2">
         <div class="outer-links">
-        <p><a href="#">Cont&aacute;ctanos</a></p>
-        <p><a href="#">T&eacute;rminos y Condiciones</a></p>
-        <p><a href="#">Cookies</a></p>
-      </div>
+          <p><a href="#">Cont&aacute;ctanos</a></p>
+          <p><a href="#">T&eacute;rminos y Condiciones</a></p>
+          <p><a href="#">Cookies</a></p>
+        </div>
         <div class="social">
           <div class="social-follow">S&iacute;guenos en</div>
           <div class="social-networks">
@@ -465,7 +636,7 @@
         'enable cookies' : 'disable cookies');
     },
     layouts: {
-      'basic': '{{messagelink}}{{compliance}}',
+      'basic': '{{messagelink}}{{allow}}&emsp;{{dismiss}}',
       'basic-close': '{{messagelink}}{{compliance}}{{close}}',
       'basic-header': '{{header}}{{message}}{{link}}{{compliance}}',
     },
@@ -477,8 +648,59 @@
     law: {
       regionalLaw: false,
     },
-    location: true
+    location: true,
+    content: {
+      header: 'Cookies used on the website!',
+      message: '<b>Utilizamos cookies en este sitio para mejorar su experiencia de usuario</b><br/>Para obtener más información sobre nuestro uso de <i>cookies</i>, por favor vea nuestra <i>Política de privacidad</i><br/>Al hacer clic en cualquier enlace de esta página, está dando su consentimiento para que configuremos cookies',
+      dismiss: 'No Acepto',
+      allow: 'Acepto',
+      deny: 'Decline',
+      link: '',
+      href: 'http://cookiesandyou.com',
+      close: 'x',
+      policy: 'Cookie Policy',
+      target: '_blank',
+
+      elements: {
+        header: '<span class="cc-header">{{header}}</span>&nbsp;',
+        message: '<span id="cookieconsent:desc" class="cc-message">{{message}}</span>',
+        messagelink: '<span id="cookieconsent:desc" class="cc-message">{{message}} <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_blank">{{link}}</a></span>',
+        dismiss: '<a aria-label="dismiss cookie message" tabindex="0" class="cc-btn cc-dismiss">{{dismiss}}</a>',
+        allow: '<a aria-label="allow cookies" tabindex="0" class="cc-btn cc-allow">{{allow}}</a>',
+        deny: '<a aria-label="deny cookies" tabindex="0" class="cc-btn cc-deny">{{deny}}</a>',
+        link: '<a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_blank">{{link}}</a>',
+        close: '<span class="btn btn-outline btn-white" aria-label="dismiss cookie message" tabindex="0">{{close}}</span>',
+      }
+
+
+    }
+
+
   });
+
+
+  /**
+   * forEach implementation for Objects/NodeLists/Arrays, automatic type loops and context options
+   *
+   * @private
+   * @author Todd Motto
+   * @link https://github.com/toddmotto/foreach
+   * @param {Array|Object|NodeList} collection - Collection of items to iterate, could be an Array, Object or NodeList
+   * @callback requestCallback      callback   - Callback function for each iteration.
+   * @param {Array|Object|NodeList} scope=null - Object/NodeList/Array that forEach is iterating over, to use as the this value when executing callback.
+   * @returns {}
+   */
+  var forEach = function (t, o, r) { if ("[object Object]" === Object.prototype.toString.call(t)) for (var c in t) Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t); else for (var e = 0, l = t.length; l > e; e++)o.call(r, t[e], e, t) };
+
+  var hamburgers = document.querySelectorAll(".hamburger");
+  if (hamburgers.length > 0) {
+    forEach(hamburgers, function (hamburger) {
+      hamburger.addEventListener("click", function () {
+        this.classList.toggle("is-active");
+      }, false);
+    });
+  }
+
 </script>
 
 </html>
