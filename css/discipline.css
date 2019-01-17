@@ -140,9 +140,9 @@
 
 .left-panel .next a {
     border-style: solid;
-    padding: 0.2em 0.6em 0.4em 0.6em;
+    padding: 0.4em 0.5em 0.2em 0.5em;
     color: #ffffff;
     font-size: 2em;
-    border-radius: 60px;
+    border-radius: 65px;
     text-decoration: none;
 }
