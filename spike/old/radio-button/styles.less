@@ -1,0 +1,19 @@
+.window {
+    width: 200px;
+    height: 200px;
+}
+
+div {
+    .window;
+}
+div > label {
+    background-color: pink;
+    .window;
+    display: block;
+}
+
+body > label {
+    background-color: pink;
+    .window;
+    display: block;
+}

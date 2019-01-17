@@ -1,0 +1,79 @@
+//
+//  THEME FILE
+//
+//
+//
+
+//
+//  SECTIONS VARIABLES
+//
+@total-height   : unit(@sections*100,vh);
+@sections       : 4;
+@section-height : 100vh;
+@default-left   : 7.5vw;
+@default-right  : 7.5vw;
+
+//
+//  COLOR VARIABLES
+//
+@black  : #131313;
+@white  : #ffffff;
+@red    : #e1321e;
+
+//
+//  THEME
+//
+.section {
+    .background {
+        .gradient(@color-1; @color-2; @top: 50%; @deg: 90deg) {
+            @half-1: @color-1 @top;
+            @half-2: @color-2 unit(100% - @top, %);
+            background: linear-gradient(@deg, @half-1, @half-2);
+        }  
+        .color(@color) {
+            background: @color;
+        }
+    }
+    .default() {
+        .background.color(@black);
+    }
+    .inverse() {
+        .background.color(@white);
+    }
+    .special() {
+        .background.gradient(@black; @red);
+    }
+}
+
+.layout() {
+    @head       :   "top    top"
+                    "link   text";
+    @default    :   "top    slide"
+                    "info   slide";
+    @footer     :   "head   slide"  
+                    "footer footer";
+    
+    @head-column    :   50% 50%; 
+    @head-row       :   75% 25%;
+    @default-column :   30% 70%;
+    @default-row    :   60% 40%;   
+    @footer-column  :   25% 75%;
+    @footer-row     :   62% 38%;
+
+    .set-grid(@layout) when (@layout = "head") {
+        .by-areas(@head);
+        .default(@head-column; @head-row);
+    }
+    .set-grid(@layout) when (@layout = "default") {
+        .by-areas(@default);
+        .default(@default-column; @default-row);
+    }
+    .set-grid(@layout) when (@layout = "footer") {
+        .by-areas(@footer);
+        .default(@footer-column; @footer-row);
+    }
+}
+.grid(@layout: "default") {
+     .layout();
+     .set-grid(@layout);
+ }

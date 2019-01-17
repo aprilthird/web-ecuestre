@@ -1,0 +1,21 @@
+/*
+ *  LAYOUT FILE
+ */
+
+@default: minmax(10vw,100vw);
+
+.grid-layout(@columns; @row: @default) {
+    display: grid;
+    grid-template-columns: @columns;
+    grid-template-rows: @rows;
+}
+
+.grid-layout(@columns; @rows; @gap: 10px) {
+    grid-gap: @gap;
+}
+
+.grid-position(@col: 1, @row: 1) {
+    grid-column: @col;
+    grid-row: @row;
+}
+

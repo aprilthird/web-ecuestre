@@ -17,7 +17,7 @@
 
 #info {
   margin-top: 15vh;
-  margin-left: 8vh;
+  margin-left: 10vh;
   margin-right: 4vh;
   color: white;
 }
@@ -63,9 +63,40 @@
   transition: transform 0.4s ease;
 }
 
-#slider:hover > label {
-  filter: brightness(70%);
+#slider  h1 {
+    display: none;
+    position: absolute;
+    top: 53%;
+    text-align:center;
+    width: 30%;
+    color: white;
+   /* opacity: 0;*/
+    z-index: 1000;
 }
+
+#s1:hover ~ #header1,
+#s2:hover ~ #header2,
+#s3:hover ~ #header3,
+#s4:hover ~ #header4 {
+  display: block;
+}
+
+#s1:hover ~ #slide1,#s1:hover ~ #slide2,#s1:hover ~ #slide3,#s1:hover ~ #slide4,
+#s2:hover ~ #slide1,
+#s2:hover ~ #slide2,
+#s2:hover ~ #slide3,
+#s2:hover ~ #slide4,
+#s3:hover ~ #slide1,
+#s3:hover ~ #slide2,
+#s3:hover ~ #slide3,
+#s3:hover ~ #slide4,
+#s4:hover ~ #slide1,
+#s4:hover ~ #slide2,
+#s4:hover ~ #slide3,
+#s4:hover ~ #slide4 {
+  filter: brightness(80%);
+}
+
 
 #s1:checked ~ #slide1,
 #s2:checked ~ #slide2,
@@ -99,15 +130,19 @@
   transform: translate3d(90%, 0, -300px);
 }
 
-#slide1 {
-  background: #00bcd4;
+.left-panel .next   {
+    padding-top: 1vh;
+    margin-left: 5vw;
+    color: #ffffff;
+    width: 200px;
+    height: 200px;
 }
-#slide2 {
-  background: #4caf50;
-}
-#slide3 {
-  background: #ff5722;
-}
-#slide4 {
-  background: #ffc107;
+
+.left-panel .next a {
+    border-style: solid;
+    padding: 0.2em 0.6em 0.4em 0.6em;
+    color: #ffffff;
+    font-size: 2em;
+    border-radius: 60px;
+    text-decoration: none;
 }

@@ -1,0 +1,32 @@
+//
+//  LAYOUT FILE
+//
+//
+
+.layout() {
+    @height : 100%;
+    @width  : 100%;
+
+    @lineal : "a b c";
+    @cube   : "a b c"
+              "d e f";
+
+    height  : @height;
+    width   : @width;
+    display : grid;
+
+    .default(@columns; @rows) {
+        grid-template-columns: @columns;
+        grid-template-rows: @rows;
+    }
+
+    .by-areas(@areas) {
+        grid-template-areas: @areas;
+    }
+
+}
+
+.location(@column; @row) {
+    grid-column : @column;
+    grid-row    : @row;
+}
