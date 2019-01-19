@@ -40,7 +40,7 @@
 }
 
 #slider {
-  width: 90vw;
+  width: auto;
   height: 98vh;
   perspective: 1000px;
   transform-style: preserve-3d;
@@ -52,7 +52,7 @@
 }
 
 #slider label {
-  width: 35%;
+  width: 50%;
   height: 80%;
   margin-top: 15vh;
   border-radius: 4px;

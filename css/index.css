@@ -49,11 +49,14 @@ body {
 #main-menu {
     margin-left: 5%;
     margin-right: 5%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 2%;
 }
 
 .main-logo img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 }
 
 .hamburger {
@@ -91,6 +94,13 @@ body {
     background-color: black;
 }
 
+@media only screen and (max-width: 600px) {
+    .main-logo img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
 /* main section */
 #main-carousel .carousel-item::after {
     content:'\A';
@@ -107,7 +117,7 @@ body {
     transform: translateY(-50%);
     max-width: 60%;
     z-index: 10;
-    font-size: 3.5em;
+    font-size: 4vw;
     color:white;
     padding-left: 5%;
     font-weight: bold;
@@ -118,9 +128,9 @@ body {
     top:85%;
     transform: translateY(-50%);
     color: white;
-    padding-left: 6%;
-    padding-right: 6%;
-    width: 100%;
+    margin-right: 5%;
+    margin-left: 5%;
+    width: 90%;
 }
 
 .btn-outline {
@@ -133,16 +143,39 @@ body {
 }
 
 .btn-white:hover {
-color:black;
-background-color: white;
+    color:black;
+    background-color: white;
 }
 
 .btn-contact {
     border-radius: 15px;
 }
 
-.footer-text {
-    margin-left: auto;
+.main-button {
+    padding: 0;
+}
+
+.main-text {
+    padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-footer {
+        top: 90%;
+    }
+
+    .main-title {
+        font-size: 10vw;
+        max-width: 80%;
+    }
+
+    .main-button {
+        margin-bottom: 5%;
+    }
+
+    .footer-text p {
+        text-align: left !important;
+    }
 }
 
 /* disciplines section */
@@ -372,4 +405,10 @@ padding-top: 2%;
 
 .social-networks a {
     text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    footer .table-menu {
+        display: none;
+    }
 }
