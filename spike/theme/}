@@ -1,0 +1,67 @@
+//
+//  BASE FILE
+//
+//
+@height : 100vh;
+@width  : 100%;
+
+body {
+    @height: total-height;
+    #screen.size(@@height);
+}
+
+.box-fixing() {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+header, section {
+    #screen.size(@height, @width);
+    padding: 0 @default-right 0 @default-left;
+    .box-fixing();
+}
+
+.text-color() {
+    .font(@color: @white);
+}
+
+.inverse-color {
+    .font(@color: @black);
+}
+
+h1:extend(.text-color) {}
+
+@themed: "default";
+
+.wrapper {
+    .grid();
+}
+
+#header {
+    @themed: "header";
+    .section.default();
+    .wrapper { .grid(@themed) }; 
+}
+
+#disciplines {
+    .section.special();
+    .wrapper { .grid(@themed) }; 
+}
+
+#rankings {
+    @themed: "rank";
+    .section.default();
+    .wrapper { .grid(@themed) }; 
+}
+
+#events {
+    @themed: "footer";
+    .section.background.gradient(@white; @black;@top: 62%;  @deg: 180deg);
+    .wrapper { .grid(@themed) };
+    footer {
+        #screen.size(@h: 100%, @w: 100%);
+        .location(@column: 1 / span 2; @row: 2);
+        .section.default();   
+    }
+}

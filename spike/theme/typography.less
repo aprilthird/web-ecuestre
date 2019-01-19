@@ -1,21 +1,9 @@
 //
 //  TYPOGRAPHY FILE
 //
-@default: white;
 
-.font(@size: 1em; @weight: 700; @color: @@default) {
+.font(@size: 1em; @weight: 700; @color: black) {
     font-size   : @size;
     font-weight : @weight; 
     color       : @color;
-}
-
-.title {
-    vertical-align:middle;
-    display:table-cell;
-}
-
-h1 {
-    .font(@size: 5em);
-    text-transform: uppercase;
-    width: 100%;
 }

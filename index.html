@@ -9,115 +9,60 @@
 
   <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' />
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="node_modules/cookieconsent/build/cookieconsent.min.css" />
-  <link rel="stylesheet" href="node_modules/hamburgers/dist/hamburgers.min.css" />
-  <link rel="stylesheet" href="css/swiper.min.css">
-  <link rel="stylesheet" href="css/index.css" />
-  <link rel="stylesheet" href="css/discipline.css" />
+
+  <link rel="stylesheet/less" type="text/css" href="less/styles.less" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
 </head>
 
 <body>
   <nav id="main-menu" class="navbar fixed-top navbar-dark">
-    <a class="navbar-brand" href="#">
-      <img src="img/oie_transparent.png" width="50%" />
-    </a>
+    <a class="navbar-brand" href="#"><img src="img/oie_transparent.png" width="50%" /></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <div class="hamburger hamburger--elastic" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
-        <div class="hamburger-box">
-          <div class="hamburger-inner"></div>
-        </div>
+        <div class="hamburger-box"><div class="hamburger-inner"></div></div>
       </div>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <table class="table-menu">
-        <thead>
-          <tr>
-            <th>
-              <a class="active" href="#">HOME</a>
-            </th>
-            <th>
-              <a href="#">NOSOTROS</a>
-            </th>
-            <th>
-              <a href="#">DISCIPLINAS</a>
-            </th>
-            <th>
-              <a href="#">CONCURSOS</a>
-            </th>
-            <th>
-              <a href="#">EVENTOS</a>
-            </th>
-            <th>
-              <a href="#">GALER&Iacute;A</a>
-            </th>
-            <th>
-              <a href="#">AFILIADOS</a>
-            </th>
+        <thead><tr>
+            <th><a class="active" href="#">HOME</a></th>
+            <th><a href="#">NOSOTROS</a></th>
+            <th><a href="#">DISCIPLINAS</a></th>
+            <th><a href="#">CONCURSOS</a></th>
+            <th><a href="#">EVENTOS</a></th>
+            <th><a href="#">GALER&Iacute;A</a></th>
+            <th><a href="#">AFILIADOS</a></th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
+        <tbody><tr>
             <td></td>
-            <td>
-              <a href="#">VISI&Oacute;N</a>
-            </td>
-            <td>
-              <a href="#">SALTO</a>
-            </td>
-            <td>
-              <a href="#">RESULTADOS</a>
-            </td>
+            <td><a href="#">VISI&Oacute;N</a></td>
+            <td><a href="#">SALTO</a></td>
+            <td><a href="#">RESULTADOS</a></td>
             <td></td>
             <td></td>
-            <td>
-              <a href="#">CLUBES</a>
-            </td>
-          </tr>
-          <tr>
+            <td><a href="#">CLUBES</a></td>
+          </tr><tr>
             <td></td>
-            <td>
-              <a href="#">MISI&Oacute;N</a>
-            </td>
-            <td>
-              <a href="#">ADIESTRAMIENTO</a>
-            </td>
-            <td>
-              <a href="#">RANKING</a>
-            </td>
+            <td><a href="#">MISI&Oacute;N</a></td>
+            <td><a href="#">ADIESTRAMIENTO</a></td>
+            <td><a href="#">RANKING</a></td>
             <td></td>
             <td></td>
-            <td>
-              <a href="#">JINETES</a>
-            </td>
-          </tr>
-          <tr>
+            <td><a href="#">JINETES</a></td>
+          </tr><tr>
             <td></td>
-            <td>
-              <a href="#">HISTORIA</a>
-            </td>
-            <td>
-              <a href="#">ENDURO</a>
-            </td>
-            <td>
-              <a href="#">FEI</a>
-            </td>
+            <td><a href="#">HISTORIA</a></td>
+            <td><a href="#">ENDURO</a></td>
+            <td><a href="#">FEI</a></td>
             <td></td>
             <td></td>
-            <td>
-              <a href="#">COACHES</a>
-            </td>
-          </tr>
-          <tr>
+            <td><a href="#">COACHES</a></td>
+          </tr><tr>
             <td></td>
-            <td>
-              <a href="#">ORGANIZACI&Oacute;N</a>
-            </td>
-            <td>
-              <a href="#">PRUEBA COMPLETA</a>
-            </td>
+            <td><a href="#">ORGANIZACI&Oacute;N</a></td>
+            <td><a href="#">PRUEBA COMPLETA</a></td>
             <td></td>
             <td></td>
             <td></td>
@@ -127,10 +72,9 @@
       </table>
     </div>
   </nav>
+
   <section id="main-section">
-    <div class="main-title">
-      FEDERACIÓN DEPORTIVA NACIONAL ECUESTRE
-    </div>
+    <div class="main-title">FEDERACIÓN DEPORTIVA NACIONAL ECUESTRE</div>
     <div id="main-carousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -146,66 +90,42 @@
     </div>
     <div class="main-footer row">
       <button class="btn btn-outline btn-white btn-contact">Cont&aacute;ctanos</button>
-      <div class="footer-text">
-        Promoviendo el deporte Ecuestre
-      </div>
+      <div class="footer-text">Promoviendo el deporte Ecuestre</div>
     </div>
   </section>
+
   <section id="disciplines-section">
   <div class="left-panel">
+    <div class="section-header">Disciplinas</div>
     <div id="info">
-      <h1>Disciplinas</h1>
-		<label class="static-margin-40">
 		<label for="s1" id="info1" class="slide-info">
 			<h2>Salto 1</h2>
-			 <p>
-			 Lorem ipsum dolor sit amet consectetur adipiscing elit massa netus augue lacinia, natoque magnis eleifend curabitur euismod imperdiet aliquam nascetur porta vitae, quisque erat gravida feugiat eros metus varius per turpis diam. Nam rutrum morbi luctus nascetur praesent natoque fames cras imperdiet facilisi cum sem at, suspendisse tempor tempus purus fringilla 
-			 </p>
+			 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium ac ipsum at varius. Ut ut massa eu ante elementum ornare tempus et est. Praesent tristique velit eu massa iaculis rutrum. Nam porta viverra magna vel fringilla. Pellentesque tristique, velit. </p>
 		</label>
 		<label for="s2" id="info2" class="slide-info" style="display:none">
 			<h2>Salto 2</h2>
-			 <p>
-			 Lorem ipsum dolor sit amet consectetur adipiscing elit massa netus augue lacinia, natoque magnis eleifend curabitur euismod imperdiet aliquam nascetur porta vitae, quisque erat gravida feugiat eros metus varius per turpis diam. Nam rutrum morbi luctus nascetur praesent natoque fames cras imperdiet facilisi cum sem at, suspendisse tempor tempus purus fringilla 
-			 </p>
+			 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium ac ipsum at varius. Ut ut massa eu ante elementum ornare tempus et est. Praesent tristique velit eu massa iaculis rutrum. Nam porta viverra magna vel fringilla. Pellentesque tristique, velit. </p>
 		</label>
 		<label for="s3" id="info3" class="slide-info" style="display:none">
-			<h2>Salto 3</h2>
-			 <p>
-			 Lorem ipsum dolor sit amet consectetur adipiscing elit massa netus augue lacinia, natoque magnis eleifend curabitur euismod imperdiet aliquam nascetur porta vitae, quisque erat gravida feugiat eros metus varius per turpis diam. Nam rutrum morbi luctus nascetur praesent natoque fames cras imperdiet facilisi cum sem at, suspendisse tempor tempus purus fringilla 
-			 </p>
+		  <h2>Salto 3</h2>
+			 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium ac ipsum at varius. Ut ut massa eu ante elementum ornare tempus et est. Praesent tristique velit eu massa iaculis rutrum. Nam porta viverra magna vel fringilla. Pellentesque tristique, velit. </p>
 		</label>
 		<label for="s4" id="info4" class="slide-info" style="display:none">
 			<h2>Salto 4</h2>
-			 <p>
-			 Lorem ipsum dolor sit amet consectetur adipiscing elit massa netus augue lacinia, natoque magnis eleifend curabitur euismod imperdiet aliquam nascetur porta vitae, quisque erat gravida feugiat eros metus varius per turpis diam. Nam rutrum morbi luctus nascetur praesent natoque fames cras imperdiet facilisi cum sem at, suspendisse tempor tempus purus fringilla 
-			 </p>
+			 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium ac ipsum at varius. Ut ut massa eu ante elementum ornare tempus et est. Praesent tristique velit eu massa iaculis rutrum. Nam porta viverra magna vel fringilla. Pellentesque tristique, velit. </p>
 		</label>
     </div>
-    <div class="next"><a href="#disciplines-section"><span>&gt</span></a></div>
   </div>
-  <div class="right-panel">
-    <div id="slider">
-      <input type="radio" name="slider" id="s1" onchange="changeSlideInfo(this);" checked>
-      <input type="radio" name="slider" id="s2" onchange="changeSlideInfo(this);">
-      <input type="radio" name="slider" id="s3" onchange="changeSlideInfo(this);">
-      <input type="radio" name="slider" id="s4" onchange="changeSlideInfo(this);">
-        <h1 id="header1">Salto 1</h1>
-        <h1 id="header2">Salto 2</h1>
-        <h1 id="header3">Salto 3</h1>
-        <h1 id="header4">Salto 4</h1>
-		<label for="s1" id="slide1">
-			<img src="img/main.jpg" alt="First slide">
-		</label>
-		<label for="s2" id="slide2">
-			<img src="img/main2.jpg" alt="Second slide">
-		</label>
-		<label for="s3" id="slide3">
-			<img src="img/main3.jpg" alt="Third slide">
-		</label>
-		<label for="s4" id="slide4">
-			<img src="img/main3.jpg" alt="Third slide">
-		</label>
-    </div>
+     <div class="gallery">
+       <input id="slide1" type="radio" name="grp1" onchange="showInfo(this);" checked>
+       <input id="slide2" type="radio" name="grp1" onchange="showInfo(this);">
+       <input id="slide3" type="radio" name="grp1" onchange="showInfo(this);">
+       <input id="slide4" type="radio" name="grp1" onchange="showInfo(this);">
+       <label id="label1" for="slide1" class="slide"><div class="b1"></div><div id="tip1" class="tip"><h1>Salto 1</h1></div></label>
+       <label id="label2" for="slide2" class="slide"><div class="b2"></div><div id="tip2" class="tip"><h1>Salto 2</h1></div></label>
+       <label id="label3" for="slide3" class="slide"><div class="b3"></div><div id="tip3" class="tip"><h1>Salto 3</h1></div></label>
+       <label id="label4" for="slide4" class="slide"><div class="b4"></div><div id="tip4" class="tip"><h1>Salto 4</h1></div></label>
+     </div>
   </div>
 </section>
   <section id="ranking-section">
@@ -228,7 +148,7 @@
       <div class="col-md-8">
         <div class="tab-content" id="v-pills-tabContent">
           <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-            <div class="row">
+            <div class="row wide">
               <div class="card col-md-3 first">
                 <div class="card-title">PRIMER PUESTO</div>
                 <div class="card-content">
@@ -348,8 +268,7 @@
   <section id="events-section">
     <div class="row">
       <div class="col-md-4">
-        <div class="section-header">
-          EVENTOS
+        <div class="section-header">EVENTOS
         </div>
       </div>
       <div class="col-md-8 swiper">
@@ -357,67 +276,38 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="event-card">
-                <div class="event-date">
-                  08 y 09 Set
-                </div>
-                <div class="event-name">
-                  CICOS 111 / FEI B
-                </div>
-                <div class="event-place">
-                  Club Ecuestre Huachipa
-                </div>
+                <div class="event-date">08 y 09 Set</div>
+                <div class="event-name">CICOS 111 / FEI B</div>
+                <div class="event-place">Club Ecuestre Huachipa</div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="event-card">
-                <div class="event-date">
-                  08 y 09 Set
-                </div>
-                <div class="event-name">
-                  CICOS 111 / FEI B
-                </div>
-                <div class="event-place">
-                  Club Ecuestre Huachipa
-                </div>
+                <div class="event-date">08 y 09 Set</div>
+                <div class="event-name">CICOS 111 / FEI B</div>
+                <div class="event-place">Club Ecuestre Huachipa</div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="event-card">
-                <div class="event-date">
-                  08 y 09 Set
-                </div>
-                <div class="event-name">
-                  CICOS 111 / FEI B
-                </div>
-                <div class="event-place">
-                  Club Ecuestre Huachipa
-                </div>
+                <div class="event-date">08 y 09 Set</div>
+                <div class="event-name">CICOS 111 / FEI B</div>
+                <div class="event-place">Club Ecuestre Huachipa</div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="event-card">
-                <div class="event-date">
-                  08 y 09 Set
-                </div>
-                <div class="event-name">
-                  CICOS 111 / FEI B
-                </div>
-                <div class="event-place">
-                  Club Ecuestre Huachipa
-                </div>
+                <div class="event-date">08 y 09 Set</div>
+                <div class="event-name">CICOS 111 / FEI B</div>
+                <div class="event-place">Club Ecuestre Huachipa</div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="event-card">
-                <div class="event-date">
-                  08 y 09 Set
+                <div class="event-date">08 y 09 Set
                 </div>
-                <div class="event-name">
-                  CICOS 111 / FEI B
-                </div>
-                <div class="event-place">
-                  Club Ecuestre Huachipa
-                </div>
+                <div class="event-name">CICOS 111 / FEI B</div>
+                <div class="event-place">Club Ecuestre Huachipa</div>
               </div>
             </div>
             </div>
@@ -427,96 +317,46 @@
   </section>
   <footer>
     <div class="row">
-      <div class="col-md-2">
-        <img src="img/oie_transparent.png" width="30%" />
-      </div>
+      <div class="col-md-2"><img src="img/oie_transparent.png" width="30%"/></div>
       <div class="col-md-8">
         <table class="table-menu">
-          <thead>
-            <tr>
-              <th>
-                <a class="active" href="#">HOME</a>
-              </th>
-              <th>
-                <a href="#">NOSOTROS</a>
-              </th>
-              <th>
-                <a href="#">DISCIPLINAS</a>
-              </th>
-              <th>
-                <a href="#">CONCURSOS</a>
-              </th>
-              <th>
-                <a href="#">EVENTOS</a>
-              </th>
-              <th>
-                <a href="#">GALER&Iacute;A</a>
-              </th>
-              <th>
-                <a href="#">AFILIADOS</a>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
+          <thead><tr>
+              <th><a class="active" href="#">HOME</a></th>
+              <th><a href="#">NOSOTROS</a></th>
+              <th><a href="#">DISCIPLINAS</a></th>
+              <th><a href="#">CONCURSOS</a></th>
+              <th><a href="#">EVENTOS</a></th>
+              <th><a href="#">GALER&Iacute;A</a></th>
+              <th><a href="#">AFILIADOS</a></th>
+            </tr></thead>
+          <tbody><tr>
               <td></td>
-              <td>
-                <a href="#">VISI&Oacute;N</a>
-              </td>
-              <td>
-                <a href="#">SALTO</a>
-              </td>
-              <td>
-                <a href="#">RESULTADOS</a>
-              </td>
+              <td><a href="#">VISI&Oacute;N</a></td>
+              <td><a href="#">SALTO</a></td>
+              <td><a href="#">RESULTADOS</a></td>
               <td></td>
               <td></td>
-              <td>
-                <a href="#">CLUBES</a>
-              </td>
-            </tr>
-            <tr>
+              <td><a href="#">CLUBES</a></td>
+            </tr><tr>
               <td></td>
-              <td>
-                <a href="#">MISI&Oacute;N</a>
-              </td>
-              <td>
-                <a href="#">ADIESTRAMIENTO</a>
-              </td>
-              <td>
-                <a href="#">RANKING</a>
-              </td>
+              <td><a href="#">MISI&Oacute;N</a></td>
+              <td><a href="#">ADIESTRAMIENTO</a></td>
+              <td><a href="#">RANKING</a></td>
               <td></td>
               <td></td>
-              <td>
-                <a href="#">JINETES</a>
-              </td>
-            </tr>
-            <tr>
+              <td><a href="#">JINETES</a></td>
+            </tr><tr>
               <td></td>
-              <td>
-                <a href="#">HISTORIA</a>
-              </td>
-              <td>
-                <a href="#">ENDURO</a>
-              </td>
-              <td>
-                <a href="#">FEI</a>
-              </td>
+              <td><a href="#">HISTORIA</a></td>
+              <td><a href="#">ENDURO</a></td>
+              <td><a href="#">FEI</a></td>
               <td></td>
               <td></td>
-              <td>
-                <a href="#">COACHES</a>
-              </td>
-            </tr>
-            <tr>
+              <td><a href="#">COACHES</a></td>
+            </tr><tr>
               <td></td>
-              <td>
-                <a href="#">ORGANIZACI&Oacute;N</a>
-              </td>
-              <td>
-                <a href="#">PRUEBA COMPLETA</a>
-              </td>
+              <td><a href="#">ORGANIZACI&Oacute;N</a></td>
+              <td><a href="#">PRUEBA COMPLETA</a></td>
               <td></td>
               <td></td>
               <td></td>
@@ -534,18 +374,10 @@
         <div class="social">
           <div class="social-follow">S&iacute;guenos en</div>
           <div class="social-networks">
-            <a href="#">
-              <i class="fa fa-twitter"></i>
-            </a>
-            <a href="#">
-              <i class="fa fa-instagram"></i>
-            </a>
-            <a href="#">
-              <i class="fa fa-facebook"></i>
-            </a>
-            <a href="#">
-              <i class="fa fa-youtube"></i>
-            </a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
           </div>
         </div>
       </div>
@@ -558,53 +390,32 @@
 <script src="node_modules/cookieconsent/build/cookieconsent.min.js"></script>
 <script src="node_modules/swiper/swiper.min.js"></script>
 <script>
-    
   function changeDisplayProperty(name, num)    {
     const maxOffset = 5;
     let id =  num;
     console.log('Trigger by Component Id:' + id);
-	if(id && id < maxOffset) {
-        id = name + num;
-		document.getElementById(id).style.display = 'block';
-	    console.log('property display changed to block: ' + id);
-		for(let i = maxOffset - 1; i > 0 ; i--) {
-			if(i !== num ) {
-				id = name + i;
-				document.getElementById(id).style.display = 'none';
-				console.log('property display changed to none: ' + id);
-				} 
-		}
-	} else {
-		console.log('greather than 5');
-	}
-  }
-   // changeOpacityProperty('header', 1);
-  function changeOpacityProperty(name, num)    {
-    const maxOffset = 5;
-    let id =  num;
-    console.log('Trigger by Component Id:' + id);
-	if(id && id < maxOffset) {
-        id = name + num;
-		document.getElementById(id).style.opacity = 1;
-	    console.log('property opacity changed to 1: ' + id);
-		for(let i = maxOffset - 1; i > 0 ; i--) {
-			if(i !== num ) {
-				id = name + i;
-				document.getElementById(id).style.opacity = 0;
-				console.log('property opacity changed to 0: ' + id);
-				} 
-		}
-	} else {
-		console.log('greather than 5');
-	}
-  }
-  function changeSlideInfo(html){
+  	if(id && id < maxOffset) {
+      id = name + num;
+  		document.getElementById(id).style.display = 'block';
+  	  console.log('property display changed to block: ' + id);
+  		for(let i = maxOffset - 1; i > 0 ; i--) {
+  			if(i !== num ) {
+  				id = name + i;
+  				document.getElementById(id).style.display = 'none';
+  				console.log('property display changed to none: ' + id);
+  				} 
+  		}
+  	} else {
+  		console.log('greather than 5');
+  	}
+  };
+
+  function showInfo(html){
 	const maxOffset = 5;
 	let id = html.getAttribute('id');
 	id = id ? id[id.length -1] : null;
 	id = id ? parseInt(id, maxOffset) : null;
 	changeDisplayProperty('info', id);
-   // changeOpacityProperty('header', id);
       let el = document.querySelector( ':focus' );
         if( el ) el.blur();
   };
