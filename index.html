@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/discipline.css" />
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet/less" type="text/css" href="less/styles.less" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
 </head>
 
 <body>
@@ -565,48 +570,28 @@
     const maxOffset = 5;
     let id =  num;
     console.log('Trigger by Component Id:' + id);
-	if(id && id < maxOffset) {
-        id = name + num;
-		document.getElementById(id).style.display = 'block';
-	    console.log('property display changed to block: ' + id);
-		for(let i = maxOffset - 1; i > 0 ; i--) {
-			if(i !== num ) {
-				id = name + i;
-				document.getElementById(id).style.display = 'none';
-				console.log('property display changed to none: ' + id);
-				}
-		}
-	} else {
-		console.log('greather than 5');
-	}
-  }
-   // changeOpacityProperty('header', 1);
-  function changeOpacityProperty(name, num)    {
-    const maxOffset = 5;
-    let id =  num;
-    console.log('Trigger by Component Id:' + id);
-	if(id && id < maxOffset) {
-        id = name + num;
-		document.getElementById(id).style.opacity = 1;
-	    console.log('property opacity changed to 1: ' + id);
-		for(let i = maxOffset - 1; i > 0 ; i--) {
-			if(i !== num ) {
-				id = name + i;
-				document.getElementById(id).style.opacity = 0;
-				console.log('property opacity changed to 0: ' + id);
-				}
-		}
-	} else {
-		console.log('greather than 5');
-	}
-  }
-  function changeSlideInfo(html){
+  	if(id && id < maxOffset) {
+      id = name + num;
+  		document.getElementById(id).style.display = 'block';
+  	  console.log('property display changed to block: ' + id);
+  		for(let i = maxOffset - 1; i > 0 ; i--) {
+  			if(i !== num ) {
+  				id = name + i;
+  				document.getElementById(id).style.display = 'none';
+  				console.log('property display changed to none: ' + id);
+  				} 
+  		}
+  	} else {
+  		console.log('greather than 5');
+  	}
+  };
+
+  function showInfo(html){
 	const maxOffset = 5;
 	let id = html.getAttribute('id');
 	id = id ? id[id.length -1] : null;
 	id = id ? parseInt(id, maxOffset) : null;
 	changeDisplayProperty('info', id);
-   // changeOpacityProperty('header', id);
       let el = document.querySelector( ':focus' );
         if( el ) el.blur();
   };

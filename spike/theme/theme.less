@@ -53,27 +53,52 @@
     @footer     :   "head   slide"  
                     "footer footer";
     
-    @head-column    :   50% 50%; 
+    @symmetrical    :   50% 50%;
     @head-row       :   75% 25%;
     @default-column :   30% 70%;
-    @default-row    :   60% 40%;   
-    @footer-column  :   25% 75%;
     @footer-row     :   62% 38%;
 
-    .set-grid(@layout) when (@layout = "head") {
+    .set-grid(@layout) when (@layout = "header") {
         .by-areas(@head);
-        .default(@head-column; @head-row);
+        .default(@symmetrical; @head-row);
     }
     .set-grid(@layout) when (@layout = "default") {
         .by-areas(@default);
-        .default(@default-column; @default-row);
+        .default(@default-column; @symmetrical);
+    }
+    .set-grid(@layout) when (@layout = "rank") {
+        .by-areas(@default);
+        .default(@default-column; 25% 75%);
     }
     .set-grid(@layout) when (@layout = "footer") {
         .by-areas(@footer);
-        .default(@footer-column; @footer-row);
+        .default(@default-column; @footer-row);
     }
 }
 .grid(@layout: "default") {
      .layout();
      .set-grid(@layout);
  }
+
+ .default-locations() {
+    .wide {
+        &-top {
+            .location(@column: 1 / span 2; @row: 1);
+        }
+        &-right {
+            .location(@column: 2; @row: 1 / span 2);
+        }
+        &-bottom {
+            .location(@column: 1 / span 2; @row: 2);
+        }
+    }
+ }    
+
+.text-color()   {
+    .default {
+        .font(@color: @white);
+    }
+    .inverse {
+        .font(@color: @black);
+    }
+}
