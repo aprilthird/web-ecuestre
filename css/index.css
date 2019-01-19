@@ -199,6 +199,47 @@ body {
     opacity: 1;
 }
 
+.info-panel {
+    padding: 0;
+}
+
+.slider-panel {
+    padding: 0;
+}
+
+#disciplines-section .row {
+    margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    #info {
+        margin: 5% !important;
+        color: white;
+    }
+
+    #slider {
+        height: 100% !important;
+    }
+
+    #slider label {
+        height: 70% !important;
+        width: 20%;
+        align-self: center !important;
+    }
+
+    .slider-panel {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .info-panel {
+        height: 50vh !important;
+    }
+
+    .static-margin-40 {
+        margin-top: 0 !important;
+    }
+}
 
 /* ranking section */
 #ranking-section {
@@ -266,7 +307,7 @@ color:  RGB(225, 49, 29);
 }
 
 .container p {
- margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .card.second {
@@ -275,6 +316,47 @@ color:  RGB(225, 49, 29);
 
 .card.third {
     margin-top: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+    .card.second {
+        margin-top: 0;
+    }
+
+    .card.third {
+        margin-top: 0;
+    }
+
+    .swiper-slide {
+        padding: 0;
+    }
+
+    .desktop-ranking {
+        display: none;
+    }
+
+    .mobile-ranking {
+        display: block;
+    }
+
+    #ranking-section .swiper-slide {
+        background-color: transparent;
+    }
+
+    .card {
+        font-size: 0.75em;
+        width: auto;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .desktop-ranking {
+        display: flex;
+    }
+
+    .mobile-ranking {
+        display: none;
+    }
 }
 
 /* events section */
@@ -323,7 +405,7 @@ color:  RGB(225, 49, 29);
   }
 
   .event-card:hover {
-      cursor: pointer;;
+      cursor: pointer;
   }
 
   .event-card .event-date {
@@ -339,76 +421,80 @@ color:  RGB(225, 49, 29);
       font-size: 0.65em;
   }
 
-  /* footer */
-footer {
-    height: 40vh;
-    background-color: black;
-    color: white;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 5%;
-    font-size: 0.65em;
-}
-
-footer a {
-    color: white;
-}
-
-footer a:hover {
-    color: white;
-}
-
-.outer-links {
-    text-decoration: underline;
-}
-
-.table-menu {
-    width: 100%;
-}
-
-.table-menu a:hover {
-    text-decoration: none;
-    color: RGB(225, 49, 29);
-}
-
-.table-menu a.active {
-    color: RGB(225, 49, 29);
-}
-
-.table-menu td, .table-menu th {
-    padding-right: 0%;
-}
-
-.table-menu td {
-    padding-top: 1%;
-}
-
-.table-menu th {
-    font-weight: normal;
-}
-
-.table-menu thead tr {
-    border-bottom: 1px solid white;
-}
-
-.table-menu tbody tr:first-child td {
-padding-top: 2%;
-}
-
-.social .social-networks {
-    font-size: 2em;
-}
-
-.social-networks a {
-    margin-right: 5%;
-}
-
-.social-networks a {
-    text-decoration: none;
-}
-
-@media only screen and (max-width: 600px) {
-    footer .table-menu {
-        display: none;
+    /* footer */
+    footer {
+        height: 40vh;
+        background-color: black;
+        color: white;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 5%;
+        font-size: 0.65em;
     }
-}
+
+        footer a {
+            color: white;
+        }
+
+            footer a:hover {
+                color: white;
+            }
+
+    .outer-links {
+        text-decoration: underline;
+    }
+
+    .table-menu {
+        width: 100%;
+    }
+
+        .table-menu a:hover {
+            text-decoration: none;
+            color: RGB(225, 49, 29);
+        }
+
+        .table-menu a.active {
+            color: RGB(225, 49, 29);
+        }
+
+        .table-menu td, .table-menu th {
+            padding-right: 0%;
+        }
+
+        .table-menu td {
+            padding-top: 1%;
+        }
+
+        .table-menu th {
+            font-weight: normal;
+        }
+
+        .table-menu thead tr {
+            border-bottom: 1px solid white;
+        }
+
+        .table-menu tbody tr:first-child td {
+            padding-top: 2%;
+        }
+
+    .social .social-networks {
+        font-size: 2em;
+    }
+
+    .social-networks a {
+        margin-right: 5%;
+    }
+
+    .social-networks a {
+        text-decoration: none;
+    }
+
+    @media only screen and (max-width: 600px) {
+        footer .table-menu {
+            display: none;
+        }
+
+        footer .logo {
+            display: none;
+        }
+    }

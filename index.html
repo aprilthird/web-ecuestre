@@ -165,20 +165,20 @@
     </section>
     <section id="disciplines-section">
         <div class="row">
-            <div class="col-md-4">
+            <div class="info-panel col-md-4 order-2 order-md-12">
                 <div id="info">
                     <h1>Disciplinas</h1>
                     <label class="static-margin-40">
                         <label for="s1" id="info1" class="slide-info">
                             <h2>Salto</h2>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipiscing elit massa netus augue lacinia, natoque magnis eleifend curabitur euismod imperdiet aliquam nascetur porta vitae, quisque erat gravida feugiat eros metus varius per turpis diam. Nam rutrum morbi luctus nascetur praesent natoque fames cras imperdiet facilisi cum sem at, suspendisse tempor tempus purus fringilla
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit massa netus augue lacinia, natoque magnis eleifend curabitur euismod imperdiet aliquam nascetur porta vitae, quisque erat gravida feugiat eros metus varius per turpis diam.
                             </p>
                         </label>
                         <label for="s2" id="info2" class="slide-info" style="display:none">
                             <h2>Adiestramiento</h2>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipiscing elit massa netus augue lacinia, natoque magnis eleifend curabitur euismod imperdiet aliquam nascetur porta vitae, quisque erat gravida feugiat eros metus varius per turpis diam. Nam rutrum morbi luctus nascetur praesent natoque fames cras imperdiet facilisi cum sem at, suspendisse tempor tempus purus fringilla
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit massa netus augue lacinia, natoque magnis eleifend curabitur euismod imperdiet aliquam nascetur porta vitae, quisque erat gravida feugiat eros metus varius per turpis diam.
                             </p>
                         </label>
                         <label for="s3" id="info3" class="slide-info" style="display:none">
@@ -196,7 +196,7 @@
                 </div>
                 <div class="next"><a href="#disciplines-section"><span>&gt</span></a></div>
             </div>
-            <div class="col-md-8">
+            <div class="slider-panel col-md-8 order-1 order-md-12">
                 <div id="slider">
                     <input type="radio" name="slider" id="s1" onchange="showInfo(this);" checked>
                     <input type="radio" name="slider" id="s2" onchange="showInfo(this);">
@@ -242,8 +242,8 @@
             <div class="col-xs-12 col-md-8">
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                        <div class="row">
-                            <div class="card col-xs-10 col-md-3 first">
+                        <div class="desktop-ranking row">
+                            <div class="card col-6 col-xs-10 col-md-3 first">
                                 <div class="card-title">PRIMER PUESTO</div>
                                 <div class="card-content">
                                     <img src="img/placeholder.png" alt="Avatar" style="width:100%">
@@ -254,7 +254,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card col-xs-10 col-md-3 second">
+                            <div class="card col-6 col-md-3 second">
                                 <div class="card-title">SEGUNDO PUESTO</div>
                                 <div class="card-content">
                                     <img class="card-image" src="img/placeholder.png" alt="Avatar" style="width:100%">
@@ -265,7 +265,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card col-xs-10 col-md-3 third">
+                            <div class="card col-6 col-md-3 third">
                                 <div class="card-title">TERCER PUESTO</div>
                                 <div class="card-content">
                                     <img src="img/placeholder.png" alt="Avatar" style="width:100%">
@@ -277,10 +277,55 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="mobile-ranking">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide col-6 col-md-3">
+                                        <div class="card first">
+                                            <div class="card-title">PRIMER PUESTO</div>
+                                            <div class="card-content">
+                                                <img src="img/placeholder.png" alt="Avatar" style="width:100%">
+                                                <div class="container">
+                                                    <p><strong>SVENJA ECHLER</strong></p>
+                                                    <p>CABALLO: SAMY</p>
+                                                    <p>PUNTOS: 92.09</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide col-6 col-md-3">
+                                        <div class="card second">
+                                            <div class="card-title">SEGUNDO PUESTO</div>
+                                            <div class="card-content">
+                                                <img class="card-image" src="img/placeholder.png" alt="Avatar" style="width:100%">
+                                                <div class="container">
+                                                    <p><strong>SVENJA ECHLER</strong></p>
+                                                    <p>CABALLO: PEPE</p>
+                                                    <p>PUNTOS: 90.10</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide col-6 col-md-3">
+                                        <div class="card third">
+                                            <div class="card-title">TERCER PUESTO</div>
+                                            <div class="card-content">
+                                                <img src="img/placeholder.png" alt="Avatar" style="width:100%">
+                                                <div class="container">
+                                                    <p><strong>SVENJA ECHLER</strong></p>
+                                                    <p>CABALLO: SUGAR</p>
+                                                    <p>PUNTOS: 84.56</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                        <div class="row">
-                            <div class="card col-md-3 first">
+                        <div class="desktop-ranking row">
+                            <div class="card col-6 col-md-3 first">
                                 <div class="card-title">PRIMER PUESTO</div>
                                 <div class="card-content">
                                     <img src="img/placeholder.png" alt="Avatar" style="width:100%">
@@ -291,7 +336,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card col-md-3 second">
+                            <div class="card col-6 col-md-3 second">
                                 <div class="card-title">SEGUNDO PUESTO</div>
                                 <div class="card-content">
                                     <img class="card-image" src="img/placeholder.png" alt="Avatar" style="width:100%">
@@ -303,10 +348,42 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="mobile-ranking">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide col-6 col-md-3">
+                                        <div class="card first">
+                                            <div class="card-title">PRIMER PUESTO</div>
+                                            <div class="card-content">
+                                                <img src="img/placeholder.png" alt="Avatar" style="width:100%">
+                                                <div class="container">
+                                                    <p><strong>SVENJA ECHLER</strong></p>
+                                                    <p>CABALLO: SAMY</p>
+                                                    <p>PUNTOS: 92.09</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide col-6 col-md-3">
+                                        <div class="card second">
+                                            <div class="card-title">SEGUNDO PUESTO</div>
+                                            <div class="card-content">
+                                                <img class="card-image" src="img/placeholder.png" alt="Avatar" style="width:100%">
+                                                <div class="container">
+                                                    <p><strong>SVENJA ECHLER</strong></p>
+                                                    <p>CABALLO: PEPE</p>
+                                                    <p>PUNTOS: 90.10</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                        <div class="row">
-                            <div class="card col-md-3 first">
+                        <div class="desktop-ranking row">
+                            <div class="card col-6 col-md-3 first">
                                 <div class="card-title">PRIMER PUESTO</div>
                                 <div class="card-content">
                                     <img src="img/placeholder.png" alt="Avatar" style="width:100%">
@@ -340,9 +417,54 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="mobile-ranking">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide col-6 col-md-3">
+                                        <div class="card first">
+                                            <div class="card-title">PRIMER PUESTO</div>
+                                            <div class="card-content">
+                                                <img src="img/placeholder.png" alt="Avatar" style="width:100%">
+                                                <div class="container">
+                                                    <p><strong>SVENJA ECHLER</strong></p>
+                                                    <p>CABALLO: SAMY</p>
+                                                    <p>PUNTOS: 92.09</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide col-6 col-md-3">
+                                        <div class="card second">
+                                            <div class="card-title">SEGUNDO PUESTO</div>
+                                            <div class="card-content">
+                                                <img class="card-image" src="img/placeholder.png" alt="Avatar" style="width:100%">
+                                                <div class="container">
+                                                    <p><strong>SVENJA ECHLER</strong></p>
+                                                    <p>CABALLO: PEPE</p>
+                                                    <p>PUNTOS: 90.10</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide col-6 col-md-3">
+                                        <div class="card third">
+                                            <div class="card-title">TERCER PUESTO</div>
+                                            <div class="card-content">
+                                                <img src="img/placeholder.png" alt="Avatar" style="width:100%">
+                                                <div class="container">
+                                                    <p><strong>SVENJA ECHLER</strong></p>
+                                                    <p>CABALLO: SUGAR</p>
+                                                    <p>PUNTOS: 84.56</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-                        <div class="row">
+                        <div class="desktop-ranking row">
                             <div class="card col-md-3 first">
                                 <div class="card-title">PRIMER PUESTO</div>
                                 <div class="card-content">
@@ -351,6 +473,25 @@
                                         <p><strong>SVENJA ECHLER</strong></p>
                                         <p>CABALLO: SAMY</p>
                                         <p>PUNTOS: 92.09</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile-ranking">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide col-6 col-md-3">
+                                        <div class="card first">
+                                            <div class="card-title">PRIMER PUESTO</div>
+                                            <div class="card-content">
+                                                <img src="img/placeholder.png" alt="Avatar" style="width:100%">
+                                                <div class="container">
+                                                    <p><strong>SVENJA ECHLER</strong></p>
+                                                    <p>CABALLO: SAMY</p>
+                                                    <p>PUNTOS: 92.09</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -370,7 +511,7 @@
             <div class="col-md-8 swiper">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <div class="swiper-slide col-6 col-md-3">
                             <div class="event-card">
                                 <div class="event-date">
                                     08 y 09 Set
@@ -383,7 +524,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide col-6 col-md-3">
                             <div class="event-card">
                                 <div class="event-date">
                                     08 y 09 Set
@@ -396,7 +537,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide col-6 col-md-3">
                             <div class="event-card">
                                 <div class="event-date">
                                     08 y 09 Set
@@ -409,7 +550,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide col-6 col-md-3">
                             <div class="event-card">
                                 <div class="event-date">
                                     08 y 09 Set
@@ -422,7 +563,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide col-6 col-md-3">
                             <div class="event-card">
                                 <div class="event-date">
                                     08 y 09 Set
@@ -442,7 +583,7 @@
     </section>
     <footer>
         <div class="row">
-            <div class="col-md-2">
+            <div class="logo col-md-2">
                 <img src="img/logo.png" width="100px" height="100px" />
             </div>
             <div class="col-md-8">
@@ -540,27 +681,29 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col-md-2">
-                <div class="outer-links">
-                    <p><a href="#">Cont&aacute;ctanos</a></p>
-                    <p><a href="#">T&eacute;rminos y Condiciones</a></p>
-                    <p><a href="#">Cookies</a></p>
-                </div>
-                <div class="social">
-                    <div class="social-follow">S&iacute;guenos en</div>
-                    <div class="social-networks">
-                        <a href="#">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa fa-instagram"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa fa-youtube"></i>
-                        </a>
+            <div class="col-md-2 col-12">
+                <div class="row">
+                    <div class="outer-links col-md-12 col-6">
+                        <p><a href="#">Cont&aacute;ctanos</a></p>
+                        <p><a href="#">T&eacute;rminos y Condiciones</a></p>
+                        <p><a href="#">Cookies</a></p>
+                    </div>
+                    <div class="social col-md-12 col-6">
+                        <div class="social-follow">S&iacute;guenos en</div>
+                        <div class="social-networks">
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -605,7 +748,7 @@
   };
 
   var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3,
+    slidesPerView: 'auto',
     spaceBetween: 30,
     freeMode: true,
     pagination: {
@@ -662,11 +805,7 @@
         link: '<a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_blank">{{link}}</a>',
         close: '<span class="btn btn-outline btn-white" aria-label="dismiss cookie message" tabindex="0">{{close}}</span>',
       }
-
-
     }
-
-
   });
 
 
