@@ -8,25 +8,6 @@
   color: $theme-color; 
 }
 
-.c-link {
-  text-transform: uppercase;
-  a {
-    color: $theme-color;
-    font-size: xx-small;
-    opacity: 0.5;
-    font-weight: 800;
-    padding-bottom: 0;
-    border-bottom: 2px solid $theme-color;
-    height: 1.5em;
-    line-height: 1em;
-    white-space: nowrap;
-    &:hover {
-      opacity: 1;
-      text-decoration: none;
-    }
-  }
-}
-
 h1 { 
   @extend .u-uppercase;
 }

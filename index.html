@@ -726,8 +726,8 @@
   <script>
 var slide3d = slide3d('js-3d-init');
 
-function slide3d(jsClassName) {
-  var slider = document.getElementsByClassName('js-3d-init');
+function slide3d(className) {
+  var slider = document.getElementsByClassName(className);
   if(slider.length > 0) {
     slider[0].checked = true;
     var input =  show(slider[0]);
