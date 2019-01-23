@@ -1,0 +1,22 @@
+// THEME FILE
+//---------------------------
+.t-dark {
+  background: $theme-dark; 
+  color: $theme-light;
+}
+
+.t-light {
+  background: $theme-light;
+  color: $theme-dark;
+}
+
+.t-focus {
+  background: $theme-focus;
+  color: $theme-light;
+}
+
+.t-gradient {
+  @include linear-gradient--half($theme-dark, $theme-focus);
+  color: $theme-light;
+}
+

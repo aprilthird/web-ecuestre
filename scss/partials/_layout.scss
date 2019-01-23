@@ -1,0 +1,69 @@
+// LAYOUT FILE
+//---------------------------
+$selector: o-box;
+.#{$selector} {
+  $self: &;
+  display: -webkit-flex;
+  display: flex;
+  height: inherit;
+  &--column {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+  }
+  &--row {
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+  &__item {
+    flex: 1;
+    z-index: inherit;
+  }
+  &--full {
+    height: 100%;
+  }
+}
+
+.c-align {
+  $self: &;
+  height: 100%;
+  @include display-flex();
+  @include justify-content(center);
+  @include align-items(center);
+  &--left {
+    @include justify-content(start);
+  }
+  &--right {
+    @include justify-content(end);
+  }
+  &__item {
+    &--top {
+      align-self: start;
+    }
+    &--bottom {
+      align-self: end;
+    }
+  }
+}
+
+.c-about {
+  height: 100vh;
+  .c-about__header {
+    background: url('../img/main.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    flex: 3
+  }
+  .c-about__select {
+    flex: 2;
+  }
+}
+.c-header {
+    margin: 0 22.5vw 0 22.5vw;
+}
+.c-mission {
+  margin: 0 7.5vw 0 7.5vw;
+}
+
+

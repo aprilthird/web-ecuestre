@@ -1,0 +1,168 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.t-dark {
+  background: #131313;
+  color: #ffffff;
+}
+
+.t-light {
+  background: #ffffff;
+  color: #131313;
+}
+
+.t-focus {
+  background: #e1321e;
+  color: #ffffff;
+}
+
+.t-gradient {
+  background: linear-gradient(90deg, #131313 50%, #e1321e 50%);
+  color: #ffffff;
+}
+
+.u-uppercase, h1, h2, h3 {
+  text-transform: uppercase;
+}
+
+.u-light {
+  color: #ffffff;
+}
+
+.c-link {
+  text-transform: uppercase;
+}
+
+.c-link a {
+  color: #ffffff;
+  font-size: xx-small;
+  opacity: 0.5;
+  font-weight: 800;
+  padding-bottom: 0;
+  border-bottom: 2px solid #ffffff;
+  height: 1.5em;
+  line-height: 1em;
+  white-space: nowrap;
+}
+
+.c-link a:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.o-box {
+  display: -webkit-flex;
+  display: flex;
+  height: inherit;
+}
+
+.o-box--column {
+  -webkit-flex-flow: column wrap;
+  flex-flow: column wrap;
+}
+
+.o-box--row {
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.o-box__item {
+  flex: 1;
+  z-index: inherit;
+}
+
+.o-box--full {
+  height: 100%;
+}
+
+.c-align {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.c-align--left {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
+}
+
+.c-align--right {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+}
+
+.c-align__item--top {
+  align-self: start;
+}
+
+.c-align__item--bottom {
+  align-self: end;
+}
+
+.c-about {
+  height: 100vh;
+}
+
+.c-about .c-about__header {
+  background: url("../img/main.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  flex: 3;
+}
+
+.c-about .c-about__select {
+  flex: 2;
+}
+
+.c-header {
+  margin: 0 22.5vw 0 22.5vw;
+}
+
+.c-mission {
+  margin: 0 7.5vw 0 7.5vw;
+}
+
+.c-gallery {
+  height: inherit;
+}
+
+.c-gallery__body {
+  height: 20vh;
+  width: 50vw;
+}
+
+.c-gallery__body__title {
+  flex: 2;
+}
+
+.c-gallery__img {
+  flex: 1;
+}
