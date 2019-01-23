@@ -69,11 +69,25 @@ $selector: o-box;
 .c-news {
   height: 100vh;
   .c-news__title {
-    margin: 0 0 0 7.5vw;
-    flex: 2;
+    flex: 3;
+    background: url('../img/main.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    /*
+    &::after {
+      content: "";
+      position: fixed;
+      top: 0; bottom: 0; left: 0; right: 0;
+      background: hsla(0%,0%,0%,0.25);
+      pointer-events: none;
+    }
+    */
   }
   .c-news__slideshow {
-    flex: 3;
+    flex: 2;
     position: relative;
     height: 100%;
     max-width: 100%;
@@ -107,5 +121,201 @@ $selector: o-box;
   }
   .swiper-button-prev {
     z-index: 2;
+  }
+}
+
+
+
+
+
+
+// UTILITIES
+//---------------------------
+.cover {
+  height: inherit;
+  width: inherit;
+  background: rgba(0,0,0,0.5);
+  sizing-box: border-box;
+  &--head {
+    padding-bottom: 5%; 
+  }
+}
+
+.align {
+  $self: &;
+  height: 100%;
+  @include display-flex();
+  @include justify-content(center);
+  @include align-items(center);
+  &--auto {
+    height: auto;
+  }
+  &--left {
+    @include justify-content(start);
+  }
+  &--right {
+    @include justify-content(end);
+  }
+  &__item {
+    &--top {
+      align-self: start;
+    }
+    &--bottom {
+      align-self: end;
+    }
+  }
+}
+
+.padding {
+  padding: 0 7.5vw 0 7.5vw;
+  &--light {
+    padding: 0 3.75vw 0 3.75vw;
+  }
+  &--top {
+    padding-top: 5vh;
+  }
+  &--bottom {
+    padding-bottom: 5vh;
+  }
+  &--cover {
+    padding: 0 28vw 0 28vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .padding {
+    & &--cover {
+      padding: 0 7.5vw 0 7.5vw;
+    }
+  }
+}
+// ABOUT PAGE
+//-------------------------------------
+
+.about-container {
+  height: 100vh;
+  display: grid;
+  sizing-box: border-box;
+  grid-template-rows: 3fr 1fr 2fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "header"
+  "about"
+  "body";
+  &__header {
+    position: relative;
+    grid-area: header;
+    background: url('../img/main.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  &__about {
+    grid-area: about;
+  }
+  &__body {
+    grid-area: body;
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+.mission {
+  flex: 1 1 500px;  
+}
+.vision {
+  @extend .mission;  
+}
+
+//  NEWS HEADLINE PAGE
+//---------------------------
+.news-container {
+  height: 100vh;
+  display: grid;
+  sizing-box: border-box;
+  grid-template-rows: 3fr 3fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "header"
+  "slideshow";
+  &__header {
+    grid-area: header;
+    position: relative;
+    background: url('../img/main.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  &__slideshow {
+    grid-area: slideshow;
+    position: relative;
+    height: 100%;
+    width: 99.4vw;
+    max-width: 100%;
+    sizing-box: border-box;
+    padding-bottom: 5vh;
+  }
+  &--single {
+  grid-template-rows: 3fr 3fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+  "header header header header"
+  "body body body thumbnail";
+  }
+  &__body {
+    grid-area: body;
+  }
+  &__thumbnail {
+    grid-area: thumbnail;
+    display:flex;
+    align-items: center;
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      widtht: auto;
+      height: auto;
+    }
+  }
+}
+
+.headline {
+  height: 100%;
+  /* index.css has conflicting classes*/
+  display: grid !important;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  sizing-box: border-box;
+  &__first {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 5vh 7.5vw 0 15vw;
+  }
+  &__second {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 5vh 15vw 0 7.5vw;
+  }
+}
+.headline-body {
+  height: 100%;
+  display: grid;
+  text-align: left !important;
+  sizing-box: border-box;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "date"
+    "headline"
+    "link";
+  &__date {
+    grid-area: date;
+  }
+  &__headline {
+    grid-area: headline;
+  }
+  &__link {
+    grid-area: link;
   }
 }

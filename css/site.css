@@ -138,12 +138,26 @@ body {
 }
 
 .c-news .c-news__title {
-  margin: 0 0 0 7.5vw;
-  flex: 2;
+  flex: 3;
+  background: url("../img/main.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  /*
+    &::after {
+      content: "";
+      position: fixed;
+      top: 0; bottom: 0; left: 0; right: 0;
+      background: hsla(0%,0%,0%,0.25);
+      pointer-events: none;
+    }
+    */
 }
 
 .c-news .c-news__slideshow {
-  flex: 3;
+  flex: 2;
   position: relative;
   height: 100%;
   max-width: 100%;
@@ -183,6 +197,212 @@ body {
 
 .c-swiper-focus .swiper-button-prev {
   z-index: 2;
+}
+
+.cover {
+  height: inherit;
+  width: inherit;
+  background: rgba(0, 0, 0, 0.5);
+  sizing-box: border-box;
+}
+
+.cover--head {
+  padding-bottom: 5%;
+}
+
+.align {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.align--auto {
+  height: auto;
+}
+
+.align--left {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
+}
+
+.align--right {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+}
+
+.align__item--top {
+  align-self: start;
+}
+
+.align__item--bottom {
+  align-self: end;
+}
+
+.padding {
+  padding: 0 7.5vw 0 7.5vw;
+}
+
+.padding--light {
+  padding: 0 3.75vw 0 3.75vw;
+}
+
+.padding--top {
+  padding-top: 5vh;
+}
+
+.padding--bottom {
+  padding-bottom: 5vh;
+}
+
+.padding--cover {
+  padding: 0 28vw 0 28vw;
+}
+
+@media screen and (max-width: 700px) {
+  .padding .padding--cover {
+    padding: 0 7.5vw 0 7.5vw;
+  }
+}
+
+.about-container {
+  height: 100vh;
+  display: grid;
+  sizing-box: border-box;
+  grid-template-rows: 3fr 1fr 2fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "about" "body";
+}
+
+.about-container__header {
+  position: relative;
+  grid-area: header;
+  background: url("../img/main.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.about-container__about {
+  grid-area: about;
+}
+
+.about-container__body {
+  grid-area: body;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.mission, .vision {
+  flex: 1 1 500px;
+}
+
+.news-container {
+  height: 100vh;
+  display: grid;
+  sizing-box: border-box;
+  grid-template-rows: 3fr 3fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "slideshow";
+}
+
+.news-container__header {
+  grid-area: header;
+  position: relative;
+  background: url("../img/main.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.news-container__slideshow {
+  grid-area: slideshow;
+  position: relative;
+  height: 100%;
+  width: 99.4vw;
+  max-width: 100%;
+  sizing-box: border-box;
+  padding-bottom: 5vh;
+}
+
+.news-container--single {
+  grid-template-rows: 3fr 3fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "header header header header" "body body body thumbnail";
+}
+
+.news-container__body {
+  grid-area: body;
+}
+
+.news-container__thumbnail {
+  grid-area: thumbnail;
+  display: flex;
+  align-items: center;
+}
+
+.news-container__thumbnail img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  widtht: auto;
+  height: auto;
+}
+
+.headline {
+  height: 100%;
+  /* index.css has conflicting classes*/
+  display: grid !important;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  sizing-box: border-box;
+}
+
+.headline__first {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 5vh 7.5vw 0 15vw;
+}
+
+.headline__second {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 5vh 15vw 0 7.5vw;
+}
+
+.headline-body {
+  height: 100%;
+  display: grid;
+  text-align: left !important;
+  sizing-box: border-box;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-areas: "date" "headline" "link";
+}
+
+.headline-body__date {
+  grid-area: date;
+}
+
+.headline-body__headline {
+  grid-area: headline;
+}
+
+.headline-body__link {
+  grid-area: link;
 }
 
 .c-gallery {
