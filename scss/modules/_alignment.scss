@@ -1,0 +1,12 @@
+// alignment with flex display
+@mixin align-items($mode: center) {
+  -webkit-align-items: $mode;
+  align-items: $mode;
+} 
+
+@mixin justify-content($mode: center) {
+  -webkit-box-pack: $mode;
+  -ms-flex-pack: $mode;
+  -webkit-justify-content: $mode;
+  justify-content: $mode;
+} 

@@ -1,61 +1,13 @@
-//  BASE FILE
-//---------------------------
-
 // VARIABLES
-//
 $image-path : "../images";
+/* Black color */
 $theme-dark : #131313;
+/* White color */
 $theme-light: #ffffff;
+/* Red color */
 $theme-focus: #e1321e;
+/* Font color */
 $theme-color: $theme-light;
+/* Responsive width */
 $break-small: 700px;
 
-// MIXINS
-//
-
-@mixin box-sizing($mode: border-box) {
-  -webkit-box-sizing: $mode;
-  -moz-box-sizing: $mode;
-  box-sizing: $mode;
-
-}
-@mixin linear-gradient--half($color-1, $color-2, $deg: 90deg) {
-  background: linear-gradient($deg, $color-1 50%, $color-2 50%);
-}
-@mixin align-items($mode: center) {
-  -webkit-align-items: $mode;
-  align-items: $mode;
-}
-
-@mixin justify-content($mode: center) {
-  -webkit-box-pack: $mode;
-  -ms-flex-pack: $mode;
-  -webkit-justify-content: $mode;
-  justify-content: $mode;
-}
-
-@mixin display-flex() {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display:flex;
-}
-
-@mixin flex-flow--wrap($flow: column) {
-  -webkit-flex-flow: $flow wrap;
-  flex-flow: $flow wrap;
-
-}
-
-// UNIVERSAL BOX SIZING FIX
-//
-html {
-  @include box-sizing(border-box);
-}
-*, *:before, *:after {
-  @include box-sizing(inherit);
-}
-body {
-  margin: 0;
-  padding: 0;
-}

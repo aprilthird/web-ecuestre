@@ -1,0 +1,48 @@
+// Flex display
+@mixin flex() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+} 
+@mixin flex-flow--wrap($flow: column, $wrap: wrap) {
+  -webkit-flex-flow: $flow $wrap;
+  flex-flow: $flow $wrap;
+}
+// Style
+@mixin linear-gradient--half($color-1, $color-2, $deg: 90deg) {
+  background: linear-gradient($deg, $color-1 50%, $color-2 50%);
+}
+// Roundabout
+@mixin box-sizing($mode: border-box) {
+  -webkit-box-sizing: $mode;
+  -moz-box-sizing: $mode;
+  box-sizing: $mode;
+}
+// Reset borders and padding roundabout
+@mixin box-reset() {
+  margin: 0;
+  padding: 0;
+}
+// Background opacity roundabout
+@mixin inherit-background-cover() {
+  height: inherit;
+  width: inherit;
+  background: rgba(0,0,0,0.5);
+  @include box-sizing(border-box);
+}
+// Background image on relative element 
+@mixin cover-background($image) {
+  position: relative;
+  background: url('#{$image}') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+@mixin rotate-text($rotation-deg: -90deg) {
+  display: inline-block;
+  position: absolute;
+  transform: rotate($rotation-deg);
+  -webkit-transform: rotate($rotation-deg);
+}

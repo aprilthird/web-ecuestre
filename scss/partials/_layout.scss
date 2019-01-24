@@ -1,114 +1,15 @@
-// LAYOUT FILE
-//---------------------------
-$selector: o-box;
-.#{$selector} {
-  $self: &;
-  display: -webkit-flex;
-  display: flex;
-  height: inherit;
-  &--column {
-    -webkit-flex-flow: column wrap;
-    flex-flow: column wrap;
-  }
-  &--row {
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-  }
-  &__item {
-    flex: 1;
-    z-index: inherit;
-  }
-  &--full {
-    height: 100%;
-  }
+// Universal box sizing fix
+html {
+  @include box-sizing(border-box);
+} 
+*, *:before, *:after {
+  @include box-sizing(inherit);
 }
-
-.c-align {
-  $self: &;
-  height: 100%;
-  @include display-flex();
-  @include justify-content(center);
-  @include align-items(center);
-  &--left {
-    @include justify-content(start);
-  }
-  &--right {
-    @include justify-content(end);
-  }
-  &__item {
-    &--top {
-      align-self: start;
-    }
-    &--bottom {
-      align-self: end;
-    }
-  }
-}
-
-.c-about {
-  height: 100vh;
-  .c-about__header {
-    background: url('../img/main.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    flex: 3
-  }
-  .c-about__select {
-    flex: 2;
-  }
-}
-.c-header {
-    margin: 0 22.5vw 0 22.5vw;
-}
-.c-mission {
-  margin: 0 7.5vw 0 7.5vw;
-}
-
-.c-news {
-  height: 100vh;
-  .c-news__title {
-    flex: 3;
-    background: url('../img/main.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    position: relative;
-    /*
-    &::after {
-      content: "";
-      position: fixed;
-      top: 0; bottom: 0; left: 0; right: 0;
-      background: hsla(0%,0%,0%,0.25);
-      pointer-events: none;
-    }
-    */
-  }
-  .c-news__slideshow {
-    flex: 2;
-    position: relative;
-    height: 100%;
-    max-width: 100%;
-    margin-bottom: 4%;
-  }
-}
-.swiper-slide {
-  display: block;
-}
-.c-news-headline {
-  height: inherit;
-  width: inherit;
-  text-align: left;
-  &__left {
-    padding: 0 7.5% 0 20%;
-  }
-  &__right {
-    padding: 0 15% 0 7.5%;
-  }
-}
-
+// Reset padding and border to 0
+body {
+  @include box-reset();
+} 
+// UTILITIES
 .c-swiper-focus {
   height: 100%;
   width: 4%;
@@ -123,28 +24,16 @@ $selector: o-box;
     z-index: 2;
   }
 }
-
-
-
-
-
-
-// UTILITIES
-//---------------------------
 .cover {
-  height: inherit;
-  width: inherit;
-  background: rgba(0,0,0,0.5);
-  sizing-box: border-box;
+  @include inherit-background-cover();
   &--head {
     padding-bottom: 5%; 
   }
 }
-
 .align {
   $self: &;
   height: 100%;
-  @include display-flex();
+  @include flex();
   @include justify-content(center);
   @include align-items(center);
   &--auto {
@@ -165,7 +54,6 @@ $selector: o-box;
     }
   }
 }
-
 .padding {
   padding: 0 7.5vw 0 7.5vw;
   &--light {
@@ -181,7 +69,6 @@ $selector: o-box;
     padding: 0 28vw 0 28vw;
   }
 }
-
 @media screen and (max-width: 700px) {
   .padding {
     & &--cover {
@@ -190,8 +77,6 @@ $selector: o-box;
   }
 }
 // ABOUT PAGE
-//-------------------------------------
-
 .about-container {
   height: 100vh;
   display: grid;
@@ -203,13 +88,8 @@ $selector: o-box;
   "about"
   "body";
   &__header {
-    position: relative;
     grid-area: header;
-    background: url('../img/main.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    @include cover-background('../img/main.jpg');
   }
   &__about {
     grid-area: about;
@@ -226,9 +106,10 @@ $selector: o-box;
 .vision {
   @extend .mission;  
 }
-
+//  HISTORY PAGE
+.history-container {
+}
 //  NEWS HEADLINE PAGE
-//---------------------------
 .news-container {
   height: 100vh;
   display: grid;
@@ -240,12 +121,7 @@ $selector: o-box;
   "slideshow";
   &__header {
     grid-area: header;
-    position: relative;
-    background: url('../img/main.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    @include cover-background('../img/main.jpg');
   }
   &__slideshow {
     grid-area: slideshow;
@@ -279,7 +155,6 @@ $selector: o-box;
     }
   }
 }
-
 .headline {
   height: 100%;
   /* index.css has conflicting classes*/
@@ -317,5 +192,70 @@ $selector: o-box;
   }
   &__link {
     grid-area: link;
+  }
+}
+//  HISTORY
+.history {
+  $self: &;
+  height: 100vh;
+  display: grid;
+  sizing-box: border-box;
+  grid-template-rows: 3fr 3fr;
+  grid-template-columns: 4fr 2fr;
+  grid-template-areas:
+  "header header"
+  "body aside";
+  &__header {
+    grid-area: header;
+    @include cover-background('../img/main.jpg');
+  }
+  &__body {
+    grid-area: body;
+    position: relative;
+    padding: 5% 0 5% 7.5%;
+    @include flex();
+    @include flex-flow--wrap(column, nowrap);
+    /* Overflow required min-height to parent flex display to work*/
+    min-height: 0%;
+    #{ $self }__textblock {
+      flex-grow: 1;
+      overflow-y: scroll;
+      min-height: 100%;
+    }
+  }
+  &__timeline {
+    padding-top: 5%;
+    grid-area: aside;
+    position: relative;
+    height: 100%;
+    display: grid;
+    sizing-box: border-box;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "timeline highline";
+    #{ $self }__decades {
+      grid-area: timeline;
+      @include flex();
+      @include flex-flow--wrap(column);
+      padding: 5%;
+      height: 100%;
+      > div {
+        position: relative;
+        flex: 1;
+        > a { 
+          @include rotate-text(-90deg);
+        }
+      }
+    }
+    #{ $self }__highline {
+      grid-area: highline;
+      > div {
+        position: relative;
+        > h1 {
+          @include rotate-text(-90deg);
+          font-size: 7em;
+        }
+      }
+    }
   }
 }
