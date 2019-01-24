@@ -23,6 +23,7 @@
   </head>
 
   <body>
+    <script src="js/site.js"></script>
     <nav id="main-menu" class="navbar fixed-top navbar-dark">
       <div class="main-logo">
         <a class="navbar-brand" href="#">
@@ -90,17 +91,21 @@
         </div>
         <div class="history__timeline">
           <div class="history__decades">
-            <div class="align align--right">
-              <a href="#headline-00"><h4 class="u-uppercase"><strong>00&apos;s</strong></h4></a></div>
-            <div class="align align--right">
-              <a href="#headline-90"><h4 class="u-uppercase"><strong>90&apos;s</strong></h4></a></div>
-            <div class="align align--right">
-              <a href="#headline-80"><h4 class="u-uppercase"><strong>80&apos;s</strong></h4></a></div>
-            <div class="align align--right">
-              <a href="#headline-50"><h4 class="u-uppercase"><strong>50&apos;s</strong></h4></a></div>
+            <div class="align align--right ">
+              <a  class="link" href="#headline-00" onclick="standout(this);">
+                <h4 class="u-uppercase"><strong>00&apos;s</strong></h4></a></div>
+            <div class="align align--right  ">
+              <a  class="link" href="#headline-90" onclick="standout(this);">
+                <h4 class="u-uppercase"><strong>90&apos;s</strong></h4></a></div>
+            <div class="align align--right ">
+              <a class="link"  href="#headline-80" onclick="standout(this);">
+                <h4 class="u-uppercase"><strong>80&apos;s</strong></h4></a></div>
+            <div class="align align--right ">
+              <a class="link link--active"  href="#headline-50" onclick="standout(this);">
+                <h4 class="u-uppercase"><strong>50&apos;s</strong></h4></a></div>
           </div>
           <div class="history__highline t-focus">
-            <div class="align"><h1>50&apos;s</h1></div>
+            <div class="align js-standout-container"><h1>50&apos;s</h1></div>
           </div>
         </div>
         <div class="history__body">

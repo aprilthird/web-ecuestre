@@ -27,3 +27,21 @@
     }
   }
 }
+.active {
+  color: $theme-focus !important;
+}
+
+.link { 
+  color: $theme-light;  
+  &:hover {
+    color: $theme-focus;
+    text-decoration: none;
+    border-top: 2px solid $theme-focus;
+    line-height: 2em;
+  }
+
+  &--active {
+    color: $theme-focus;
+  }
+}
+
