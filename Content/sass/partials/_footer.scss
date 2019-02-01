@@ -1,0 +1,48 @@
+.footer {
+  @include flexbox();
+  @include flex-direction(row);
+  @include reset();
+  width: 100%;
+  $this: &;
+  &__brand {
+    @include flex(2);
+    @include flexbox();
+    @include justify-content(center);
+    padding-top: 2.5%;
+  }
+  &__menu {
+    @include flex(8);
+    padding: 3% 1% 5%;
+  }
+  &__address {
+    @include flex(2);
+    @include flexbox();
+    @include flex-direction(column);
+    padding:3.5% 1% 5%;
+    #{$this}__links {
+      @include flexbox();
+      @include flex-direction(column);
+      @include flex(2);
+      .link {
+        @include flex(1);
+      }
+    }
+    #{$this}__networks {
+      @include flex(1);
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    $this: &;
+    &__brand {
+      display: none;
+    }
+    &__menu {
+      display: none;
+    }
+    &__address {
+      }
+    }
+  }
