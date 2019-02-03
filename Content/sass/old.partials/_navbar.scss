@@ -3,17 +3,17 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 90;
   @include reset();
   $this: &;
-  z-index: 50;
   &__collapsible-container {
     overflow: hidden;
     padding: 0% 21% 4% 17%;
     width: 100%;
     top: 0;
     left: 0;
-    max-height: 0;
     opacity: 0;
+    max-height: 0;
     padding-top: 0%;
   }
   &__input {
@@ -22,7 +22,8 @@
   &__brand {
     @include menu-image(90px, true);
     top: 8vh;
-    left: 7vw;
+    left: 5vw;
+    z-index: 100;
   }
   &__icon {
     background-color: $theme-white;
@@ -33,7 +34,8 @@
     display: block;
     cursor: pointer;
     top: 10vh;
-    right: 8vw;
+    right: 6vw;
+    z-index: 100;
   }
 }
 .collapse-in {
@@ -53,13 +55,10 @@
     font-size: 0.8em;
     $this: &;
     &__collapsible-container {
-      width: 77vw;
       bottom: 0;
-      height: 100vh;
-      max-height: 100%;
       opacity: 0;
-      padding: 35% 10% 10% 15%;
-      max-width: 0;
+      // padding: 35% 10% 10% 15%;
+      max-width: 0%;
     }
     &__brand {
       @include menu-image(70px, true);

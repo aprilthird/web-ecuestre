@@ -1,96 +1,90 @@
-@mixin bold(){
-  font-weight: 700;
+%heading-family {
+  font-family: $heading-family;
 }
-@mixin medium(){
+
+%default-family {
+  font-family: $default-family;
+}
+.bold {
   font-weight: 500;
 }
-@mixin regular(){
+.regular {
   font-weight: 400;
 }
-@mixin light(){
+.light {
   font-weight: 300;
 }
-
-.font-family--heading {
-  font-family: $font-heading;
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.justify {
+  text-align: justify;
+}
+.upcase {
+  text-transform: uppercase;
+}
+.title {
+  text-transform: uppercase;
+  line-height: 1.4em;
 }
 
-.font-family--default {
-  font-family: $font-default;
-}
-// All font-size default are mean to 
-// 5333px width screens
 h1 {
-  // 177px;
-  font-size: 5em;
-  @extend .font-family--heading;
-  &.title {
-    text-transform: uppercase;
-    line-height: 3.5em;
-    @include bold();
-  }
+  font-size: 4.2em;
+  color: inherit;
+  @extend %heading-family;
 }
 h5 {
-  // 40px
   font-size: 1.3em;
-  @extend .font-family--heading;
-  &.light {
-    @include light();
-  }
-  &.medium {
-    @include medium();
-  }
+  color: inherit;
+  @extend %heading-family;
+}
+h6 {
+  font-size: 1.2em;
+  @extend %heading-family;
 }
 h2 {
-  // 122px
-  font-size: 4em;
-  @extend .font-family--heading;
-  &.title {
-    text-transform: uppercase;
-    @include bold();
-  }
+  font-size: 2.8em;
+  color: inherit;
+  white-space: nowrap;
+  @extend %heading-family;
 }
 h3 {
-  // 75px
   font-size: 2.5em;
-  @extend .font-family--heading;
-  &.subtitle {
-    text-transform: uppercase;
-    @include medium();
-  }
-  &.headline {
-    text-transform: uppercase;
-    @include bold();
-  }
+  color: inherit;
+  @extend %heading-family;
 }
 p {
-  font-size: 0.8em;
-  line-height: 1em;
-  @include light();
-  @extend .font-family--default;
+  font-size: 1em;
+  line-height: 1.3em;
+  color: inherit;
+  @extend %default-family;
 }
 
 h4 {
-  // 45 px 
   font-size: 1.5em;
-  @extend .font-family--heading;
-  &.light {
-    @include light();
-  }
-  &.medium {
-    @include medium();
-  }
+  color: inherit;
+  @extend %heading-family;
 }
 
 a {
-  @extend .font-family--heading;
-  &.link {
-    // 30px;
-    font-size: 1em;
-    display: block;
+  @extend %heading-family;
+  color: inherit;
+  font-size: 1em;
+  &.menu__link {
+    text-transform: uppercase;
+    font-size: 1.1em;  
   }
+}
 
-  &.link--address{
-    text-decoration: underline;
-  }
+.lorem {
+  &::before {
+  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut pharetra sem. Suspendisse potenti. Pellentesque ac velit aliquam, ullamcorper nulla et, accumsan neque. Vivamus vehicula non purus at molestie. Cras vehicula est in leo eleifend placerat. Praesent eget turpis in.";
+}
+
 }

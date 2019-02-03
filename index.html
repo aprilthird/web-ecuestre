@@ -17,79 +17,33 @@
   </head>
 
   <body>
-    <nav class="navbar" role="navigation">
-      <img class="navbar__brand"  src="Content/img/logo.png" alt="logo"></img>
-      <input class="navbar__input js-toggle" type="checkbox" id="menu">
-      <label class="navbar__icon" for="menu"></label>
-      <div class="t-menu navbar__collapsible-container">
-        <ul class="menu">
-          <li class="menu__item"><a class="menu__link link">home</a></li>
-          <li class="menu__item js-submenu"><a class="menu__link link">nosotros</a>
-            <ul class="menu__dropdown">
-              <li class="menu__item"><a class="menu__link link">visi&oacute;n</a></li>
-              <li class="menu__item"><a class="menu__link link">misi&oacute;n</a></li>
-              <li class="menu__item"><a class="menu__link link">historia</a></li>
-              <li class="menu__item"><a class="menu__link link">organizaci&oacute;n</a></li>
-            </ul>
-          </li>
-          <li class="menu__item js-submenu"><a class="menu__link link">disciplinas</a>
-            <ul class="menu__dropdown">
-              <li class="menu__item"><a class="menu__link link">salto</a></li>
-              <li class="menu__item"><a class="menu__link link">adiestramiento</a></li>
-              <li class="menu__item"><a class="menu__link link">enduro</a></li>
-              <li class="menu__item"><a class="menu__link link">prueba completa</a></li>
-            </ul>
-          </li>
-          <li class="menu__item js-submenu"><a class="menu__link link">concursos</a>
-            <ul class="menu__dropdown">
-              <li class="menu__item"><a class="menu__link link">resultados</a></li>
-              <li class="menu__item"><a class="menu__link link">ranking</a></li>
-              <li class="menu__item"><a class="menu__link link">fei</a></li>
-            </ul>
-          </li>
-          <li class="menu__item"><a class="menu__link link">eventos</a></li>
-          <li class="menu__item"><a class="menu__link link">galer&iacute;a</a></li>
-          <li class="menu__item js-submenu"><a class="menu__link link">afiliados</a>
-            <ul class="menu__dropdown">
-              <li class="menu__item"><a class="menu__link link">clubes</a></li>
-              <li class="menu__item"><a class="menu__link link">jinetes</a></li>
-              <li class="menu__item"><a class="menu__link link">coaches</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </nav>
 
     <!--body -->
-    <section class="section" id="main-section">
-      <div class="main-title">
-        <h1 class="title">FEDERACIÓN DEPORTIVA NACIONAL ECUESTRE</h1>
-      </div>
+    <section class="section t-dark" id="main-section">
       <div id="main-carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100" src="Content/img/main.jpg" alt="First slide" width="100%" style="height: 100vh;">
+            <div class="slide" id="slide-1">
+              <div class="slide-opacity">
+                <h1 class="title">Federaci&oacute;n deportiva ecuestre del per&uacute;</h1>
+              </div>
+            </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="Content/img/main2.jpg" alt="Second slide" width="100%" style="height: 100vh;">
+            <div class="slide" id="slide-2">
+              <div class="slide-opacity">
+                <h1 class="title">Federaci&oacute;n deportiva ecuestre del per&uacute;</h1>
+              </div>
+            </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="Content/img/main3.jpg" alt="Third slide" width="100%" style="height: 100vh;">
+            <div class="slide" id="slide-3">
+              <div class="slide-opacity">
+                <h1 class="title">Federaci&oacute;n deportiva ecuestre del per&uacute;</h1>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="main-footer row">
-        <div class="main-button col-md-2">
-          <button class="btn btn-outline btn-white btn-contact">Cont&aacute;ctanos</button>
-        </div>
-        <div class="main-text col-md-10">
-          <div class="footer-text">
-            <p class="text-right">
-            Promoviendo el deporte Ecuestre
-            </p>
-          </div>
-        </div>
-
       </div>
     </section>
     <!--section-->
@@ -97,11 +51,11 @@
       <div class="row">
         <div class="info-panel col-md-4 order-2 order-md-12">
           <div id="info">
-            <h1 class="text-mobile">Disciplinas</h1>
+            <h2 class="title">Disciplinas</h1>
             <label class="static-margin-40"></label>
             <div id="info1" class="c-tooltip">
               <div class="c-tooltip__title">
-                <h3 class="u-uppercase">Salto</h3>
+                <h3 class="subtitle">Salto</h3>
               </div>
               <div class="c-tooltip__tip">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget co    mmodo     augue, eu vehicula quam. Aliquam pharetra nunc id urna molestie efficitur. Donec a r    honcus turpis. In ne    que libero, pretium nec lobortis vitae, vestibulum in justo. Duis vel     quam dapibus. </p>
@@ -109,7 +63,7 @@
             </div>
             <div id="info2" class="c-tooltip">
               <div class="c-tooltip__title">
-                <h3 class="u-uppercase">Adiestramiento</h3>
+                <h3 class="subtitle">Adiestramiento</h3>
               </div>
               <div class="c-tooltip__tip">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget co    mmodo     augue, eu vehicula quam. Aliquam pharetra nunc id urna molestie efficitur. Donec a r    honcus turpis. In ne    que libero, pretium nec lobortis vitae, vestibulum in justo. Duis vel     quam dapibus. </p>
@@ -117,7 +71,7 @@
             </div>
             <div id="info3" class="c-tooltip">
               <div class="c-tooltip__title">
-                <h3 class="u-uppercase">Enduro</h3>
+                <h3 class="subtitle">Enduro</h3>
               </div>
               <div class="c-tooltip__tip">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget co    mmodo     augue, eu vehicula quam. Aliquam pharetra nunc id urna molestie efficitur. Donec a r    honcus turpis. In ne    que libero, pretium nec lobortis vitae, vestibulum in justo. Duis vel     quam dapibus. </p>
@@ -125,7 +79,7 @@
             </div>
             <div id="info4" class="c-tooltip">
               <div class="c-tooltip__title">
-                <h3 class="u-uppercase">Prueba completa</h3>
+                <h3 class="subtitle">Prueba completa</h3>
               </div>
               <div class="c-tooltip__tip">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget co    mmodo     augue, eu vehicula quam. Aliquam pharetra nunc id urna molestie efficitur. Donec a r    honcus turpis. In ne    que libero, pretium nec lobortis vitae, vestibulum in justo. Duis vel     quam dapibus. </p>
@@ -141,19 +95,19 @@
             <input type="radio" name="3d" id="s4" onchange="show(this);">
             <label for="s1" id="slide1">
               <img src="~/Content/img/main.jpg" alt="First slide">
-              <div id="header1" class="c-align"><h1 class="u-uppercase">Salto</h1></div>
+              <div id="header1" class="c-align"><h2 class="title">Salto</h2></div>
             </label>
             <label for="s2" id="slide2">
               <img src="~/Content/img/main2.jpg" alt="Second slide">
-              <div id="header2" class="c-align"><h1 class="u-uppercase">Adiestramiento</h1></div>
+              <div id="header2" class="c-align"><h2 class="title">Adiestramiento</h2></div>
             </label>
             <label for="s3" id="slide3">
               <img src="~/Content/img/main3.jpg" alt="Third slide">
-              <div id="header3" class="c-align"><h1 class="u-uppercase">Enduro</h1></div>
+              <div id="header3" class="c-align"><h2 class="title">Enduro</h2></div>
             </label>
             <label for="s4" id="slide4">
               <img src="~/Content/img/main3.jpg" alt="Third slide">
-              <div id="header4" class="c-align"><h1 class="u-uppercase">Prueba completa</h1></div>
+              <div id="header4" class="c-align"><h2 class="title">Prueba completa</h2></div>
             </label>
           </div>
         </div>
@@ -163,7 +117,7 @@
     <div class="row">
       <div class="col-xs-12 col-md-4">
         <div class="section-header">
-          RANKING
+          <h2 class="title">RANKING</h2>
         </div>
         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical    ">
           <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role    ="tab"
@@ -183,7 +137,7 @@
               <div class="card col-6 col-xs-10 col-md-3 first">
                 <div class="card-title">PRIMER PUESTO</div>
                 <div class="card-content">
-                  <img src="~/Content/img/placeholder.png" alt="Avatar" style="width:100%">
+                  <img src="Content/img/placeholder.png" alt="Avatar" style="width:100%">
                   <div class="container">
                     <p><strong>SVENJA ECHLER</strong></p>
                     <p>CABALLO: SAMY</p>
@@ -527,41 +481,6 @@
         <img src="Content/img/logo.png" width="100px" height="100px" />
       </div>
       <div class="footer__menu">
-        <ul class="menu">
-          <li class="menu__item"><a class="menu__link link">home</a></li>
-          <li class="menu__item js-submenu"><a class="menu__link link">nosotros</a>
-            <ul class="menu__dropdown">
-              <li class="menu__item"><a class="menu__link link">visi&oacute;n</a></li>
-              <li class="menu__item"><a class="menu__link link">misi&oacute;n</a></li>
-              <li class="menu__item"><a class="menu__link link">historia</a></li>
-              <li class="menu__item"><a class="menu__link link">organizaci&oacute;n</a></li>
-            </ul>
-          </li>
-          <li class="menu__item js-submenu"><a class="menu__link link">disciplinas</a>
-            <ul class="menu__dropdown">
-              <li class="menu__item"><a class="menu__link link">salto</a></li>
-              <li class="menu__item"><a class="menu__link link">adiestramiento</a></li>
-              <li class="menu__item"><a class="menu__link link">enduro</a></li>
-              <li class="menu__item"><a class="menu__link link">prueba completa</a></li>
-            </ul>
-          </li>
-          <li class="menu__item js-submenu"><a class="menu__link link">concursos</a>
-            <ul class="menu__dropdown">
-              <li class="menu__item"><a class="menu__link link">resultados</a></li>
-              <li class="menu__item"><a class="menu__link link">ranking</a></li>
-              <li class="menu__item"><a class="menu__link link">fei</a></li>
-            </ul>
-          </li>
-          <li class="menu__item"><a class="menu__link link">eventos</a></li>
-          <li class="menu__item"><a class="menu__link link">galer&iacute;a</a></li>
-          <li class="menu__item js-submenu"><a class="menu__link link">afiliados</a>
-            <ul class="menu__dropdown">
-              <li class="menu__item"><a class="menu__link link">clubes</a></li>
-              <li class="menu__item"><a class="menu__link link">jinetes</a></li>
-              <li class="menu__item"><a class="menu__link link">coaches</a></li>
-            </ul>
-          </li>
-        </ul>
       </div>
       <div class="footer__address">
         <div class="footer__links">

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="Content/css/base.css" rel="stylesheet">
+  <link href="Content/css/lib/swiper/swiper.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <!--heading-->
+    <section class="heading bg-black">
+      <div class="frame"><img src="Content/img/main.jpg"/></div>
+      <div class="heading__body">
+        <div class="heading__contact">
+          <a class="bold stylish">Cont&aacute;ctanos</a></div>
+        <div class="heading__msg">
+          <h4 class="bold right">Promoviendo el deporte Ecuestre</h4></div>
+      </div>
+    </section>
+    <!--/heading-->
+    <!--discipline-->
+    <section class="section bg-blackred">
+      <div class="section__aside">
+        <div class="stack">
+          <div class="stack__head">
+            <h2 class="title bold">disciplinas</h2>
+          </div>
+          <div class="stack__body">
+            <div class="stack" id="info1">
+              <div class="stack__head"><h3 class="title regular">salto</h3></div>
+              <div class="stack__body"><p class="lorem"></p></div>
+            </div>
+            <div class="stack" id="info2">
+              <div class="stack__head">
+                <h3 class="title regular">adiestramiento</h3></div>
+              <div class="stack__body"><p class="lorem"></p></div>
+            </div>
+            <div class="stack" id="info3">
+              <div class="stack__head"><h3 class="title regular">enduro</h3></div>
+              <div class="stack__body"><p class="lorem"></p></div>
+            </div>
+            <div class="stack" id="info4">
+              <div class="stack__head"><h3 class="title regular">prueba completa</h3></div>
+              <div class="stack__body"><p class="lorem"></p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section__body">
+        <div id="slider" class="3d-slideshow">
+          <input type="radio" name="3d" id="s1" class="js-3d-init" onchange="show(this);    ">
+          <input type="radio" name="3d" id="s2" onchange="show(this);">
+          <input type="radio" name="3d" id="s3" onchange="show(this);">
+          <input type="radio" name="3d" id="s4" onchange="show(this);">
+          <label for="s1" id="slide1">
+            <div class="frame"><img src="Content/img/main.jpg" alt="Third slide"></div>
+            <div id="header1"><h3 class="title">Salto</h3></div>
+          </label>
+          <label for="s2" id="slide2">
+            <div class="frame"><img src="Content/img/main2.jpg" alt="Third slide"></div>
+            <div id="header2"><h3 class="title">Adiestramiento</h3></div>
+          </label>
+          <label for="s3" id="slide3">
+            <div class="frame"><img src="Content/img/main2.jpg" alt="Third slide"></div>
+            <div id="header3"><h3 class="title">Enduro</h3></div>
+          </label>
+          <label for="s4" id="slide4">
+            <div class="frame"><img src="Content/img/main2.jpg" alt="Third slide"></div>
+            <div id="header4"><h3 class="title">Prueba completa</h3></div>
+          </label>
+        </div>
+      </div>
+    </section>
+    <!--/discipline-->
+    <!--rankings-->
+    <section class="section section--reverse bg-black">
+      <div class="section__aside">
+        <div class="stack">
+          <div class="stack__head">
+            <h2 class="title bold">ranking</h2>
+          </div>
+          <div class="stack__body stack__body--expanded">
+            <div class="stack">
+              <div class="stack__body">
+                <div class="menu js-rankings">
+                  <div class="menu__item">
+                    <a class="menu__link js-rank-1">adiestramiento</a></div>
+                  <div class="menu__item">
+                    <a class="menu__link js-rank-2">enduro</a></div>
+                  <div class="menu__item">
+                    <a class="menu__link js-rank-3">salto</a></div>
+                  <div class="menu__item">
+                    <a class="menu__link js-rank-4">prueba completa</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section__body">
+        <div class="rankings">
+          <div class="rankings__container swiper-container">
+            <div class="swiper-wrapper">
+              <div class="rankings__slide swiper-slide js-rank-1">
+                <div class="stack ranking__rider">
+                  <div class="stack__head ranking__headline"><h5 class="bold">PRIMER PUESTO</h5></div>
+                  <div class="stack__body ranking__body profile">
+                    <div class="frame"><img src="Content/img/placeholder.png"/></div>
+                    <div class="profile__metrics">
+                      <h6 class="bold">SVENJA ECHLER</h5>
+                      <h6 class="light">CABALLO: SAMY</h6>
+                      <h6 class="light">PUNTOS: 92.09</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rankings__slide swiper-slide js-rank-1">
+                <div class="stack ranking__rider">
+                  <div class="stack__head ranking__headline"><h5 class="bold">SEGUNDO PUESTO</h5></div>
+                  <div class="stack__body ranking__body profile">
+                    <div class="frame"><img src="Content/img/placeholder.png"/></div>
+                    <div class="profile__metrics">
+                      <h6 class="bold">SVENJA ECHLER</h5>
+                      <h6 class="light">CABALLO: SAMY</h6>
+                      <h6 class="light">PUNTOS: 92.09</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rankings__slide swiper-slide js-rank-1">
+                <div class="stack ranking__rider">
+                  <div class="stack__head ranking__headline"><h5 class="bold">TERCER PUESTO</h5></div>
+                  <div class="stack__body ranking__body profile">
+                    <div class="frame"><img src="Content/img/placeholder.png"/></div>
+                    <div class="profile__metrics">
+                      <h6 class="bold">SVENJA ECHLER</h5>
+                      <h6 class="light">CABALLO: SAMY</h6>
+                      <h6 class="light">PUNTOS: 92.09</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rankings__slide swiper-slide js-rank-2">
+                <div class="stack ranking__rider">
+                  <div class="stack__head ranking__headline"><h5 class="bold">PRIMER PUESTO</h5></div>
+                  <div class="stack__body ranking__body profile">
+                    <div class="frame"><img src="Content/img/placeholder.png"/></div>
+                    <div class="profile__metrics">
+                      <h6 class="bold">SVENJA ECHLER</h5>
+                      <h6 class="light">CABALLO: SAMY</h6>
+                      <h6 class="light">PUNTOS: 92.09</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rankings__slide swiper-slide js-rank-2">
+                <div class="stack ranking__rider">
+                  <div class="stack__head ranking__headline"><h5 class="bold">SEGUNDO PUESTO</h5></div>
+                  <div class="stack__body ranking__body profile">
+                    <div class="frame"><img src="Content/img/placeholder.png"/></div>
+                    <div class="profile__metrics">
+                      <h6 class="bold">SVENJA ECHLER</h5>
+                      <h6 class="light">CABALLO: SAMY</h6>
+                      <h6 class="light">PUNTOS: 92.09</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rankings__slide swiper-slide js-rank-2">
+                <div class="stack ranking__rider">
+                  <div class="stack__head ranking__headline"><h5 class="bold">TERCER PUESTO</h5></div>
+                  <div class="stack__body ranking__body profile">
+                    <div class="frame"><img src="Content/img/placeholder.png"/></div>
+                    <div class="profile__metrics">
+                      <h6 class="bold">SVENJA ECHLER</h5>
+                      <h6 class="light">CABALLO: SAMY</h6>
+                      <h6 class="light">PUNTOS: 92.09</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rankings__slide swiper-slide js-rank-3">
+                <div class="stack ranking__rider">
+                  <div class="stack__head ranking__headline"><h5 class="bold">PRIMER PUESTO</h5></div>
+                  <div class="stack__body ranking__body profile">
+                    <div class="frame"><img src="Content/img/placeholder.png"/></div>
+                    <div class="profile__metrics">
+                      <h6 class="bold">SVENJA ECHLER</h5>
+                      <h6 class="light">CABALLO: SAMY</h6>
+                      <h6 class="light">PUNTOS: 92.09</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rankings__slide swiper-slide js-rank-3">
+                <div class="stack ranking__rider">
+                  <div class="stack__head ranking__headline"><h5 class="bold">SEGUNDO PUESTO</h5></div>
+                  <div class="stack__body ranking__body profile">
+                    <div class="frame"><img src="Content/img/placeholder.png"/></div>
+                    <div class="profile__metrics">
+                      <h6 class="bold">SVENJA ECHLER</h5>
+                      <h6 class="light">CABALLO: SAMY</h6>
+                      <h6 class="light">PUNTOS: 92.09</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rankings__slide swiper-slide js-rank-3">
+                <div class="stack ranking__rider">
+                  <div class="stack__head ranking__headline"><h5 class="bold">TERCER PUESTO</h5></div>
+                  <div class="stack__body ranking__body profile">
+                    <div class="frame"><img src="Content/img/placeholder.png"/></div>
+                    <div class="profile__metrics">
+                      <h6 class="bold">SVENJA ECHLER</h5>
+                      <h6 class="light">CABALLO: SAMY</h6>
+                      <h6 class="light">PUNTOS: 92.09</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rankings__slide swiper-slide js-rank-4">
+                <div class="stack ranking__rider">
+                  <div class="stack__head ranking__headline"><h5 class="bold">PRIMER PUESTO</h5></div>
+                  <div class="stack__body ranking__body profile">
+                    <div class="frame"><img src="Content/img/placeholder.png"/></div>
+                    <div class="profile__metrics">
+                      <h6 class="bold">SVENJA ECHLER</h5>
+                      <h6 class="light">CABALLO: SAMY</h6>
+                      <h6 class="light">PUNTOS: 92.09</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rankings__slide swiper-slide js-rank-4">
+                <div class="stack ranking__rider">
+                  <div class="stack__head ranking__headline"><h5 class="bold">SEGUNDO PUESTO</h5></div>
+                  <div class="stack__body ranking__body profile">
+                    <div class="frame"><img src="Content/img/placeholder.png"/></div>
+                    <div class="profile__metrics">
+                      <h6 class="bold">SVENJA ECHLER</h5>
+                      <h6 class="light">CABALLO: SAMY</h6>
+                      <h6 class="light">PUNTOS: 92.09</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rankings__slide swiper-slide js-rank-4">
+                <div class="stack ranking__rider">
+                  <div class="stack__head ranking__headline"><h5 class="bold">TERCER PUESTO</h5></div>
+                  <div class="stack__body ranking__body profile">
+                    <div class="frame"><img src="Content/img/placeholder.png"/></div>
+                    <div class="profile__metrics">
+                      <h6 class="bold">SVENJA ECHLER</h5>
+                      <h6 class="light">CABALLO: SAMY</h6>
+                      <h6 class="light">PUNTOS: 92.09</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/rankings-->
+    <!--events-->
+    <section class="section section--reverse section--sibling bg-white">
+      <div class="section__aside">
+        <div class="stack stack--align-center">
+          <div class="stack__body stack__body--expanded">
+            <h2 class="title bold center">eventos</h2>
+          </div>
+        </div>
+      </div>
+      <div class="section__body">
+        <div class="events">
+          <!-- Swiper -->
+            <div class="events__container swiper-container">
+              <div class="swiper-wrapper">
+                <div class="events__slide swiper-slide">
+                  <div class="bg-red news-container">
+                    <div class="news-container__date"> <h6>08 y 09 Set</h6> </div>
+                    <div class="news-container__headline"><h3 class="bold">cicos 111 /FEI B</h3> </div>
+                    <div class="news-container__footer"><h5>Club Ecuestre</h5> </div> 
+                  </div>
+                </div>
+                <div class="events__slide swiper-slide">
+                  <div class="bg-red news-container">
+                    <div class="news-container__date"> <h6>08 y 09 Set</h6> </div>
+                    <div class="news-container__headline"><h3 class="bold">cicos 111 /FEI B</h3> </div>
+                    <div class="news-container__footer"><h5>Club Ecuestre</h5> </div> 
+                  </div>
+                </div>
+                <div class="events__slide swiper-slide">
+                  <div class="bg-red news-container">
+                    <div class="news-container__date"> <h6>08 y 09 Set</h6> </div>
+                    <div class="news-container__headline"><h3 class="bold">cicos 111 /FEI B</h3> </div>
+                    <div class="news-container__footer"><h5>Club Ecuestre</h5> </div> 
+                  </div>
+                </div>
+                <div class="events__slide swiper-slide">
+                  <div class="bg-red news-container">
+                    <div class="news-container__date"> <h6>08 y 09 Set</h6> </div>
+                    <div class="news-container__headline"><h3 class="bold">cicos 111 /FEI B</h3> </div>
+                    <div class="news-container__footer"><h5>Club Ecuestre</h5> </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div> 
+      </div>
+    </section>
+  </main>
+  <script type="text/javascript" src="Content/js/_img.js"></script>
+  <script type="text/javascript" src="Content/js/_slider.js"></script>
+  <script type="text/javascript" src="Content/js/lib/swiper/swiper.min.js"></script>
+    <script>
+      var swiper = new Swiper('.rankings__container', {
+        slidesPerView: 3,
+        spaceBetween: 50,
+        // init: false,
+        breakpoints: {
+          1300: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          }
+        }
+      });
+      var swiper = new Swiper('.events__container', {
+        slidesPerView: 2,
+        spaceBetween: 100,
+        // init: false,
+        breakpoints: {
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          }
+        }
+      });
+  </script>
+</body>
+
+</html>

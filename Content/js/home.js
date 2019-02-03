@@ -1,4 +1,3 @@
-(function() {
   function changeDisplayProperty(name, num)    {
     const maxOffset = 5;
     let id =  num;
@@ -19,7 +18,7 @@
     }
   };
 
-  function showInfo(html){
+  function show(html){
     const maxOffset = 5;
     let id = html.getAttribute('id');
     id = id ? id[id.length -1] : null;
@@ -29,6 +28,7 @@
     if( el ) el.blur();
   };
 
+(function() {
   var swiper = new Swiper('.swiper-container', {
     slidesPerView: 'auto',
     spaceBetween: 30,
