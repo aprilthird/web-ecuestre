@@ -1,0 +1,25 @@
+.link {
+  cursor: pointer;
+  color: $link-color;
+  text-decoration: none;
+  &:active { color: $link-visited-color; }
+  &:hover { color: $link-visited-color; }
+  &--button {
+    padding: 1em 1.5em;
+    border: 1px solid;
+    border-radius: 30px;
+    &:hover { background-color: $white; border-color: $white; color: $black; }
+    &:active { background-color: $lightgray; }
+    &:visited { background-color: $darkgray; }
+  }
+}
+
+.cool-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: $red;
+  transition: width .3s;
+  &:hover:after { width: 60%; }
+}

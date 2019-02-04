@@ -1,0 +1,17 @@
+@mixin grid() {
+  display: grid;
+}
+@mixin grid-cols($columns) {
+  grid-template-columns: $columns;
+}
+@mixin grid-rows($columns) {
+  grid-template-rows: $columns;
+}
+@mixin col($start, $end) {
+  grid-column-start: $start;
+  grid-column-end: $end;
+}
+@mixin row($start, $end) {
+  grid-row-start: $start;
+  grid-row-end: $end;
+}

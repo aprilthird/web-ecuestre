@@ -1,0 +1,11 @@
+body {
+  @include box-sizing(border-box);
+  overflow: hidden;
+  background: $base-background-color;
+  color: $text-color;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  letter-spacing: $base-letter-spacing;
+  line-height: 1.3;
+}

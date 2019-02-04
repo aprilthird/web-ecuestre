@@ -1,0 +1,4 @@
+aside {
+  @include flexbox();
+  @include flex-direction(column);
+}

@@ -1,0 +1,17 @@
+.flex-inline {
+  @include flexbox();
+  @include flex-flow(row wrap);
+  padding: 0 $lateral-padding;
+  $this: &;
+  &__side { 
+    @include box-sizing(border-box);
+    @include flex(2 2 $basis-side); 
+    @include order(1); 
+    h2 {
+      margin: 15vh 5px;
+      text-transform: uppercase; 
+      @extend .h2;
+    }
+  }
+  &__body { @include flex(10 1 $basis-body); @include order(2); }
+}

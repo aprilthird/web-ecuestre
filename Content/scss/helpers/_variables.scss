@@ -1,0 +1,35 @@
+$lateral-padding: 5vw;
+$lateral-margin: 10px;
+$black: #1a1919;
+$white: #ffffff;
+$red: #b73827;
+$darkgray: #5d5d5d;
+$lightgray: #87868a;
+
+$basis-side: 300px;
+$basis-body: 300px;
+
+$base-background-color: $black;
+
+@import url('https://fonts.googleapis.com/css?family=K2D:300,400,500|PT+Sans');
+$text-color: $white;
+$quiet-color: $lightgray;
+$loud-color: $red;
+$heading-color: $white;
+
+$link-color: $white;
+$link-hover-color: $red;
+$link-visited-color: $lightgray;
+$link-active-color: $red;
+
+$base-letter-spacing: 2px;
+$base-font-family: 'Myriad', 'PT Sans';
+$base-font-size: 18px;
+$base-font-weight: 300;
+
+$fixed-font-family: 'Myriad', 'PT sans';;
+$fixed-font-size: 15px;
+$fixed-line-height: 1.2;
+
+$heading-font-family: 'K2D', 'sans-serif';
+$heading-font-weight: 500;

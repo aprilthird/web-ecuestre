@@ -6,11 +6,16 @@ function find(el) {
 }
 (function() {
   find('.frame').forEach(function(frame) {
-    let img  = frame.querySelector('img'); 
-    let rule = (img.width/img.height) > 1 
-      ? 'img-wide'
-      : 'img-tall';
-   img.classList.add(rule);
-  })
+    let media  = frame.querySelector('img');
+    media = !media 
+      ? frame.querySelector('video') 
+      : media;
+    if(media) {
+      let rule = (media.width/media.height) > 1 
+        ? 'frame__wide'
+        : 'frame__tall';
+      media.classList.add(rule);
+    }
+  });
 })();
 

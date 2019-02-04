@@ -1,0 +1,5 @@
+%box-sizing { @include box-sizing(inherit); }
+* { margin: 0; padding: 0; @extend %box-sizing;
+  &:before  { @extend %box-sizing; } 
+  &:after   { @extend %box-sizing; }
+}

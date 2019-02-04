@@ -1,0 +1,24 @@
+.slider3d-caption {
+  width: 100%;
+  height: 100%;
+  @include box-sizing();
+  @include flexbox();
+  @include flex-flow(column nowrap);
+  @include justify-content(center);
+  &__text {
+    display: none;
+    @include flex(3 0.5 auto);
+    h3 {
+      margin: 2vh 5px;
+      text-transform: uppercase; 
+      @extend .h3; 
+    } 
+    p {
+      margin: 5px;
+      @extend .p;
+    }
+  }
+  &__action {
+    @include flex(1 3 auto);
+  }
+}

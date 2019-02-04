@@ -1,0 +1,7 @@
+@mixin border($direction, $border) {
+  border-#{$direction}: $border;
+}
+
+@mixin clean-border($direction) {
+  border-#{$direction}: none;
+}
