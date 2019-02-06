@@ -1,1 +1,0 @@
-node-sass --watch Content/scss/ --output Content/css/ --output-style expanded

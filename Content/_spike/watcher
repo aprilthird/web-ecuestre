@@ -1,1 +1,0 @@
-node-sass --output-style expanded _slide.scss > ../css/_slide.css

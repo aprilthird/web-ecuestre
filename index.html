@@ -1,515 +1,312 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Web Ecuestre</title>
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="Content/css/lib/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="Content/css/lib/cookieconsent/cookieconsent.min.css" />
-    <link rel="stylesheet" href="Content/css/lib/hamburgers/hamburgers.min.css" />
-    <link rel="stylesheet" href="Content/css/lib/swiper/swiper.min.css">
-    <link rel="stylesheet" href="Content/css/index.css" />
-    <link rel="stylesheet" href="Content/css/discipline.css" />
-    <link rel="stylesheet" href="Content/css/base.css" />
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="Content/css/site.css" rel="stylesheet">
+    <link href="Content/css/lib/swiper/swiper.min.css" rel="stylesheet">
   </head>
 
   <body>
-
-    <!--body -->
-    <section class="section t-dark" id="main-section">
-      <div id="main-carousel" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="slide" id="slide-1">
-              <div class="slide-opacity">
-                <h1 class="title">Federaci&oacute;n deportiva ecuestre del per&uacute;</h1>
-              </div>
-            </div>
+    <main class="container">
+      <!--heading-->
+      <section class="container__item cover" id="heading">
+        <div class="cover__picture frame">
+          <!--<img src="Content/img/main.jpg"/> -->
+          <video autoplay>
+            <source src="Content/video/animals.ogg" type="video/mp4">
+          </video>
+        </div>
+        <div class="cover__caption flex-inline">
+          <div class="flex-inline__side">
+            <a class="link link--button">Cont&aacute;ctanos</a>
           </div>
-          <div class="carousel-item">
-            <div class="slide" id="slide-2">
-              <div class="slide-opacity">
-                <h1 class="title">Federaci&oacute;n deportiva ecuestre del per&uacute;</h1>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="slide" id="slide-3">
-              <div class="slide-opacity">
-                <h1 class="title">Federaci&oacute;n deportiva ecuestre del per&uacute;</h1>
-              </div>
-            </div>
+          <div class="flex-inline__body">
+            <h4 class="bold text-right">Promoviendo el deporte Ecuestre</h4>
           </div>
         </div>
-      </div>
-    </section>
-    <!--section-->
-    <section class="section" id="disciplines-section">
-      <div class="row">
-        <div class="info-panel col-md-4 order-2 order-md-12">
-          <div id="info">
-            <h2 class="title">Disciplinas</h1>
-            <label class="static-margin-40"></label>
-            <div id="info1" class="c-tooltip">
-              <div class="c-tooltip__title">
-                <h3 class="subtitle">Salto</h3>
-              </div>
-              <div class="c-tooltip__tip">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget co    mmodo     augue, eu vehicula quam. Aliquam pharetra nunc id urna molestie efficitur. Donec a r    honcus turpis. In ne    que libero, pretium nec lobortis vitae, vestibulum in justo. Duis vel     quam dapibus. </p>
-              </div>
+      </section>
+      <!--/heading-->
+      <!--disciplines-->
+      <section class="container__item flex-inline" id="disciplines">
+        <aside class="flex-inline__side">
+          <h2 class="bold">disciplinas</h2>
+          <div class="slider3d-caption">
+            <div class="slider3d-caption__text is-active" id="info1">
+              <h3>Salto</h3> <p class="lorem"></p>
             </div>
-            <div id="info2" class="c-tooltip">
-              <div class="c-tooltip__title">
-                <h3 class="subtitle">Adiestramiento</h3>
-              </div>
-              <div class="c-tooltip__tip">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget co    mmodo     augue, eu vehicula quam. Aliquam pharetra nunc id urna molestie efficitur. Donec a r    honcus turpis. In ne    que libero, pretium nec lobortis vitae, vestibulum in justo. Duis vel     quam dapibus. </p>
-              </div>
+            <div class="slider3d-caption__text" id="info2">
+              <h3>Adiestramiento</h3> <p class="lorem"></p> 
             </div>
-            <div id="info3" class="c-tooltip">
-              <div class="c-tooltip__title">
-                <h3 class="subtitle">Enduro</h3>
-              </div>
-              <div class="c-tooltip__tip">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget co    mmodo     augue, eu vehicula quam. Aliquam pharetra nunc id urna molestie efficitur. Donec a r    honcus turpis. In ne    que libero, pretium nec lobortis vitae, vestibulum in justo. Duis vel     quam dapibus. </p>
-              </div>
+            <div class="slider3d-caption__text" id="info3">
+              <h3>Enduro</h3> <p class="lorem"></p>
             </div>
-            <div id="info4" class="c-tooltip">
-              <div class="c-tooltip__title">
-                <h3 class="subtitle">Prueba completa</h3>
-              </div>
-              <div class="c-tooltip__tip">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget co    mmodo     augue, eu vehicula quam. Aliquam pharetra nunc id urna molestie efficitur. Donec a r    honcus turpis. In ne    que libero, pretium nec lobortis vitae, vestibulum in justo. Duis vel     quam dapibus. </p>
-              </div>
-            </div>
+            <div class="slider3d-caption__text" id="info4">
+              <h3>PRueba Completa</h3> <p class="lorem"></p>
+            </div>  
+            <div class="slider3d-caption__action">
+              <a class="link link--button">&gt;</a>
+            </div>  
           </div>
-        </div>
-        <div class="slider-panel col-md-8 order-1 order-md-12">
+        </aside>
+        <div class="flex-inline__body">
           <div id="slider" class="3d-slideshow">
-            <input type="radio" name="3d" id="s1" class="js-3d-init" onchange="show(this);    ">
-            <input type="radio" name="3d" id="s2" onchange="show(this);">
-            <input type="radio" name="3d" id="s3" onchange="show(this);">
-            <input type="radio" name="3d" id="s4" onchange="show(this);">
+            <input type="radio" name="3d" id="s1" checked/>
+            <input type="radio" name="3d" id="s2"/>
+            <input type="radio" name="3d" id="s3"/>
+            <input type="radio" name="3d" id="s4"/>
             <label for="s1" id="slide1">
-              <img src="~/Content/img/main.jpg" alt="First slide">
-              <div id="header1" class="c-align"><h2 class="title">Salto</h2></div>
+              <div class="frame frame--light">
+                <img src="Content/img/main.jpg" alt="Third slide"></div>
+              <div id="header1"><h3>Salto</h3></div>
             </label>
             <label for="s2" id="slide2">
-              <img src="~/Content/img/main2.jpg" alt="Second slide">
-              <div id="header2" class="c-align"><h2 class="title">Adiestramiento</h2></div>
+              <div class="frame frame--light">
+                <img src="Content/img/main2.jpg" alt="Third slide"></div>
+              <div id="header2"><h3>Adiestramiento</h3></div>
             </label>
             <label for="s3" id="slide3">
-              <img src="~/Content/img/main3.jpg" alt="Third slide">
-              <div id="header3" class="c-align"><h2 class="title">Enduro</h2></div>
+              <div class="frame frame--light">
+                <img src="Content/img/main2.jpg" alt="Third slide"></div>
+              <div id="header3"><h3>Enduro</h3></div>
             </label>
             <label for="s4" id="slide4">
-              <img src="~/Content/img/main3.jpg" alt="Third slide">
-              <div id="header4" class="c-align"><h2 class="title">Prueba completa</h2></div>
+              <div class="frame frame--light">
+                <img src="Content/img/main2.jpg" alt="Third slide"></div>
+              <div id="header4"><h3>Prueba completa</h3></div>
             </label>
           </div>
         </div>
-      </div>
-    </section>
-   <section class="section"  id="ranking-section">
-    <div class="row">
-      <div class="col-xs-12 col-md-4">
-        <div class="section-header">
-          <h2 class="title">RANKING</h2>
-        </div>
-        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical    ">
-          <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role    ="tab"
-                                                                              aria-controls="v-pills-home" aria-selected="true">Adiestramiento</a>
-          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role=    "tab"
-                                                                          aria-controls="v-pills-profile" aria-selected="false">Enduro</a>
-          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" rol    e="tab"
-                                                                                                           aria-controls="v-pills-messages" aria-selected="false">Salto</a>
-          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" rol    e="tab"
-                                                                                                           aria-controls="v-pills-settings" aria-selected="false">Prueba Completa</a>
-        </div>
-      </div>
-      <div class="col-xs-12 col-md-8">
-        <div class="tab-content" id="v-pills-tabContent">
-          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-p    ills-home-tab">
-            <div class="desktop-ranking row">
-              <div class="card col-6 col-xs-10 col-md-3 first">
-                <div class="card-title">PRIMER PUESTO</div>
-                <div class="card-content">
-                  <img src="Content/img/placeholder.png" alt="Avatar" style="width:100%">
-                  <div class="container">
-                    <p><strong>SVENJA ECHLER</strong></p>
-                    <p>CABALLO: SAMY</p>
-                    <p>PUNTOS: 92.09</p>
-                  </div>
-                </div>
-              </div>
-              <div class="card col-6 col-md-3 second">
-                <div class="card-title">SEGUNDO PUESTO</div>
-                <div class="card-content">
-                  <img class="card-image" src="~/Content/img/placeholder.png" alt="Avatar" styl    e="width:100%">
-                  <div class="container">
-                    <p><strong>SVENJA ECHLER</strong></p>
-                    <p>CABALLO: PEPE</p>
-                    <p>PUNTOS: 90.10</p>
-                  </div>
-                </div>
-              </div>
-              <div class="card col-6 col-md-3 third">
-                <div class="card-title">TERCER PUESTO</div>
-                <div class="card-content">
-                  <img src="~/Content/img/placeholder.png" alt="Avatar" style="width:100%">
-                  <div class="container">
-                    <p><strong>SVENJA ECHLER</strong></p>
-                    <p>CABALLO: SUGAR</p>
-                    <p>PUNTOS: 84.56</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="mobile-ranking">
-              <div class="swiper-container">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide col-6 col-md-3">
-                    <div class="card first">
-                      <div class="card-title">PRIMER PUESTO</div>
-                      <div class="card-content">
-                        <img src="~/Content/img/placeholder.png" alt="Avatar" style="widt    h:100%">
-                        <div class="container">
-                          <p><strong>SVENJA ECHLER</strong></p>
-                          <p>CABALLO: SAMY</p>
-                          <p>PUNTOS: 92.09</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide col-6 col-md-3">
-                    <div class="card second">
-                      <div class="card-title">SEGUNDO PUESTO</div>
-                      <div class="card-content">
-                        <img class="card-image" src="~/Content/img/placeholder.png" alt="    Avatar" style="width:100%">
-                        <div class="container">
-                          <p><strong>SVENJA ECHLER</strong></p>
-                          <p>CABALLO: PEPE</p>
-                          <p>PUNTOS: 90.10</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide col-6 col-md-3">
-                    <div class="card third">
-                      <div class="card-title">TERCER PUESTO</div>
-                      <div class="card-content">
-                        <img src="~/Content/img/placeholder.png" alt="Avatar" style="widt    h:100%">
-                        <div class="container">
-                          <p><strong>SVENJA ECHLER</strong></p>
-                          <p>CABALLO: SUGAR</p>
-                          <p>PUNTOS: 84.56</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      </section>
+      <!--/disciplines-->
+      <!--rankings-->
+      <section class="container__item flex-inline" id="rankings">
+        <aside class="flex-inline__side">
+          <h2 class="bold">ranking</h2>
+          <div class="menu js-rankings">
+            <div class="menu__item">
+              <a class="menu__link is-active">adiestramiento</a></div>
+            <div class="menu__item">
+              <a class="menu__link">enduro</a></div>
+            <div class="menu__item">
+              <a class="menu__link">salto</a></div>
+            <div class="menu__item">
+              <a class="menu__link">prueba completa</a></div>
           </div>
-          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-prof    ile-tab">
-            <div class="desktop-ranking row">
-              <div class="card col-6 col-md-3 first">
-                <div class="card-title">PRIMER PUESTO</div>
-                <div class="card-content">
-                  <img src="~/Content/img/placeholder.png" alt="Avatar" style="width:100%">
-                  <div class="container">
-                    <p><strong>SVENJA ECHLER</strong></p>
-                    <p>CABALLO: SAMY</p>
-                    <p>PUNTOS: 92.09</p>
-                  </div>
-                </div>
-              </div>
-              <div class="card col-6 col-md-3 second">
-                <div class="card-title">SEGUNDO PUESTO</div>
-                <div class="card-content">
-                  <img class="card-image" src="~/Content/img/placeholder.png" alt="Avatar" styl    e="width:100%">
-                  <div class="container">
-                    <p><strong>SVENJA ECHLER</strong></p>
-                    <p>CABALLO: PEPE</p>
-                    <p>PUNTOS: 90.10</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="mobile-ranking">
-              <div class="swiper-container">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide col-6 col-md-3">
-                    <div class="card first">
-                      <div class="card-title">PRIMER PUESTO</div>
-                      <div class="card-content">
-                        <img src="~/Content/img/placeholder.png" alt="Avatar" style="widt    h:100%">
-                        <div class="container">
-                          <p><strong>SVENJA ECHLER</strong></p>
-                          <p>CABALLO: SAMY</p>
-                          <p>PUNTOS: 92.09</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide col-6 col-md-3">
-                    <div class="card second">
-                      <div class="card-title">SEGUNDO PUESTO</div>
-                      <div class="card-content">
-                        <img class="card-image" src="~/Content/img/placeholder.png" alt="    Avatar" style="width:100%">
-                        <div class="container">
-                          <p><strong>SVENJA ECHLER</strong></p>
-                          <p>CABALLO: PEPE</p>
-                          <p>PUNTOS: 90.10</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-mes    sages-tab">
-            <div class="desktop-ranking row">
-              <div class="card col-6 col-md-3 first">
-                <div class="card-title">PRIMER PUESTO</div>
-                <div class="card-content">
-                  <img src="~/Content/img/placeholder.png" alt="Avatar" style="width:100%">
-                  <div class="container">
-                    <p><strong>SVENJA ECHLER</strong></p>
-                    <p>CABALLO: SAMY</p>
-                    <p>PUNTOS: 92.09</p>
-                  </div>
-                </div>
-              </div>
-              <div class="card col-md-3 second">
-                <div class="card-title">SEGUNDO PUESTO</div>
-                <div class="card-content">
-                  <img class="card-image" src="~/Content/img/placeholder.png" alt="Avatar" styl    e="width:100%">
-                  <div class="container">
-                    <p><strong>SVENJA ECHLER</strong></p>
-                    <p>CABALLO: PEPE</p>
-                    <p>PUNTOS: 90.10</p>
-                  </div>
-                </div>
-              </div>
-              <div class="card col-md-3 third">
-                <div class="card-title">TERCER PUESTO</div>
-                <div class="card-content">
-                  <img src="~/Content/img/placeholder.png" alt="Avatar" style="width:100%">
-                  <div class="container">
-                    <p><strong>SVENJA ECHLER</strong></p>
-                    <p>CABALLO: SUGAR</p>
-                    <p>PUNTOS: 84.56</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="mobile-ranking">
-              <div class="swiper-container">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide col-6 col-md-3">
-                    <div class="card first">
-                      <div class="card-title">PRIMER PUESTO</div>
-                      <div class="card-content">
-                        <img src="~/Content/img/placeholder.png" alt="Avatar" style="widt    h:100%">
-                        <div class="container">
-                          <p><strong>SVENJA ECHLER</strong></p>
-                          <p>CABALLO: SAMY</p>
-                          <p>PUNTOS: 92.09</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide col-6 col-md-3">
-                    <div class="card second">
-                      <div class="card-title">SEGUNDO PUESTO</div>
-                      <div class="card-content">
-                        <img class="card-image" src="~/Content/img/placeholder.png" alt="    Avatar" style="width:100%">
-                        <div class="container">
-                          <p><strong>SVENJA ECHLER</strong></p>
-                          <p>CABALLO: PEPE</p>
-                          <p>PUNTOS: 90.10</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide col-6 col-md-3">
-                    <div class="card third">
-                      <div class="card-title">TERCER PUESTO</div>
-                      <div class="card-content">
-                        <img src="~/Content/img/placeholder.png" alt="Avatar" style="widt    h:100%">
-                        <div class="container">
-                          <p><strong>SVENJA ECHLER</strong></p>
-                          <p>CABALLO: SUGAR</p>
-                          <p>PUNTOS: 84.56</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-set    tings-tab">
-            <div class="desktop-ranking row">
-              <div class="card col-md-3 first">
-                <div class="card-title">PRIMER PUESTO</div>
-                <div class="card-content">
-                  <img src="~/Content/img/placeholder.png" alt="Avatar" style="width:100%">
-                  <div class="container">
-                    <p><strong>SVENJA ECHLER</strong></p>
-                    <p>CABALLO: SAMY</p>
-                    <p>PUNTOS: 92.09</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="mobile-ranking">
-              <div class="swiper-container">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide col-6 col-md-3">
-                    <div class="card first">
-                      <div class="card-title">PRIMER PUESTO</div>
-                      <div class="card-content">
-                        <img src="~/Content/img/placeholder.png" alt="Avatar" style="widt    h:100%">
-                        <div class="container">
-                          <p><strong>SVENJA ECHLER</strong></p>
-                          <p>CABALLO: SAMY</p>
-                          <p>PUNTOS: 92.09</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </section>
-    <section class="section" id="events-section">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="section-header">
-            EVENTOS
-          </div>
-        </div>
-        <div class="col-md-8 swiper">
-          <div class="swiper-container">
+        </aside>
+        <div class="flex-inline__body ranking">
+          <div class="ranking__container swiper-container">
             <div class="swiper-wrapper">
-              <div class="swiper-slide col-6 col-md-3">
-                <div class="event-card">
-                  <div class="event-date">
-                    08 y 09 Set
+              <div class="ranking__slide swiper-slide">
+                <div class="profile">
+                  <h5 class="bold">PRIMER PUESTO</h5>
+                  <div class="profile__picture">
+                    <div class="frame frame--light">
+                      <img src="Content/img/placeholder.png"/>
+                    </div>
                   </div>
-                  <div class="event-name">
-                    CICOS 111 / FEI B
-                  </div>
-                  <div class="event-place">
-                    Club Ecuestre Huachipa
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide col-6 col-md-3">
-                <div class="event-card">
-                  <div class="event-date">
-                    08 y 09 Set
-                  </div>
-                  <div class="event-name">
-                    CICOS 111 / FEI B
-                  </div>
-                  <div class="event-place">
-                    Club Ecuestre Huachipa
+                  <div class="profile__metrics">
+                    <h5 class="bold">SVENJA ECHLER</h5>
+                    <h6>CABALLO: SAMY</h6>
+                    <h6>PUNTOS: 92.09</h6>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide col-6 col-md-3">
-                <div class="event-card">
-                  <div class="event-date">
-                    08 y 09 Set
+              <div class="swiper-slide">
+                <div class="profile">
+                  <h5 class="bold">PRIMER PUESTO</h5>
+                  <div class="profile__picture">
+                    <div class="frame frame--light">
+                      <img src="Content/img/placeholder.png"/>
+                    </div>
                   </div>
-                  <div class="event-name">
-                    CICOS 111 / FEI B
-                  </div>
-                  <div class="event-place">
-                    Club Ecuestre Huachipa
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide col-6 col-md-3">
-                <div class="event-card">
-                  <div class="event-date">
-                    08 y 09 Set
-                  </div>
-                  <div class="event-name">
-                    CICOS 111 / FEI B
-                  </div>
-                  <div class="event-place">
-                    Club Ecuestre Huachipa
+                  <div class="profile__metrics">
+                    <h5 class="bold">SVENJA ECHLER</h5>
+                    <h6>CABALLO: SAMY</h6>
+                    <h6>PUNTOS: 92.09</h6>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide col-6 col-md-3">
-                <div class="event-card">
-                  <div class="event-date">
-                    08 y 09 Set
+              <div class="swiper-slide">
+                <div class="profile">
+                  <h5 class="bold">PRIMER PUESTO</h5>
+                  <div class="profile__picture">
+                    <div class="frame frame--light">
+                      <img src="Content/img/placeholder.png"/>
+                    </div>
                   </div>
-                  <div class="event-name">
-                    CICOS 111 / FEI B
-                  </div>
-                  <div class="event-place">
-                    Club Ecuestre Huachipa
+                  <div class="profile__metrics">
+                    <h5 class="bold">SVENJA ECHLER</h5>
+                    <h6>CABALLO: SAMY</h6>
+                    <h6>PUNTOS: 92.09</h6>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!--/body -->
-
-    <!--footer-->
-    <footer class="t-menu footer">
-      <div class="footer__brand logo">
-        <img src="Content/img/logo.png" width="100px" height="100px" />
-      </div>
-      <div class="footer__menu">
-      </div>
-      <div class="footer__address">
-        <div class="footer__links">
-          <a class="link link--address" href="#">Cont&aacute;ctanos</a>
-          <a class="link link--address" href="#">T&eacute;rminos y Condiciones</a>
-          <a class="link link--address" href="#">Cookies</a>
-        </div>
-        <div class="footer__networks">
-          <div class="social-follow">S&iacute;guenos en</div>
-          <div class="social-networks">
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-youtube"></i></a>
+      </section>
+      <!--/rankings-->
+      <!--events-->
+      <section class="container__item flex-inline" id="events">
+        <aside class="flex-inline__side">
+          <h2 class="title bold center">eventos</h2>
+        </aside>
+        <div class="flex-inline__body headline">
+          <!-- Swiper -->
+          <div class="headline__container swiper-container">
+            <div class="swiper-wrapper">
+              <div class="events__slide swiper-slide">
+                <div class=" headline__item">
+                  <h6>08 y 09 Set</h6> 
+                  <h3 class="bold">cicos 111 /FEI B</h3> 
+                  <h5>Club Ecuestre</h5>  
+                </div>
+              </div>
+              <div class="events__slide swiper-slide">
+                <div class=" headline__item">
+                  <h6>08 y 09 Set</h6> 
+                  <h3 class="bold">cicos 111 /FEI B</h3>
+                  <h5>Club Ecuestre</h5> 
+                </div>
+              </div>
+              <div class="events__slide swiper-slide">
+                <div class=" headline__item">
+                  <h6>08 y 09 Set</h6> 
+                  <h3 class="bold">cicos 111 /FEI B</h3> 
+                  <h5>Club Ecuestre</h5> 
+                </div>
+              </div>
+              <div class="events__slide swiper-slide">
+                <div class=" headline__item">
+                  <h6>08 y 09 Set</h6> 
+                  <h3 class="bold">cicos 111 /FEI B</h3> 
+                  <h5>Club Ecuestre</h5>  
+                </div>
+              </div>
+            </div>
           </div>
+        </div> 
+      </section>
+    </main>
+        <footer>
+        <div class="row">
+            <div class="logo col-md-2">
+                <img src="~/Content/img/logo.png" width="100px" height="100px" />
+            </div>
+            <div class="col-md-8">
+             <ul class="menu">
+          <li class="menu__item"><a class="menu__link link">home</a></li>
+          <li class="menu__item js-submenu"><a class="menu__link link">nosotros</a>
+            <ul class="menu__dropdown">
+              <li class="menu__item"><a class="menu__link link">visi&oacute;n</a></li>
+              <li class="menu__item"><a class="menu__link link">misi&oacute;n</a></li>
+              <li class="menu__item"><a class="menu__link link">historia</a></li>
+              <li class="menu__item"><a class="menu__link link">organizaci&oacute;n</a></li>
+            </ul>
+          </li>
+          <li class="menu__item js-submenu"><a class="menu__link link">disciplinas</a>
+            <ul class="menu__dropdown">
+              <li class="menu__item"><a class="menu__link link">salto</a></li>
+              <li class="menu__item"><a class="menu__link link">adiestramiento</a></li>
+              <li class="menu__item"><a class="menu__link link">enduro</a></li>
+              <li class="menu__item"><a class="menu__link link">prueba completa</a></li>
+            </ul>
+          </li>
+          <li class="menu__item js-submenu"><a class="menu__link link">concursos</a>
+            <ul class="menu__dropdown">
+              <li class="menu__item"><a class="menu__link link">resultados</a></li>
+              <li class="menu__item"><a class="menu__link link">ranking</a></li>
+              <li class="menu__item"><a class="menu__link link">fei</a></li>
+            </ul>
+          </li>
+          <li class="menu__item"><a class="menu__link link">eventos</a></li>
+          <li class="menu__item"><a class="menu__link link">galer&iacute;a</a></li>
+          <li class="menu__item js-submenu"><a class="menu__link link">afiliados</a>
+            <ul class="menu__dropdown">
+              <li class="menu__item"><a class="menu__link link">clubes</a></li>
+              <li class="menu__item"><a class="menu__link link">jinetes</a></li>
+              <li class="menu__item"><a class="menu__link link">coaches</a></li>
+            </ul>
+          </li>
+        </ul>
+            </div>
+            <div class="col-md-2 col-12">
+                <div class="row">
+                    <div class="outer-links col-md-12 col-6">
+                        <p><a href="#">Cont&aacute;ctanos</a></p>
+                        <p><a href="#">T&eacute;rminos y Condiciones</a></p>
+                        <p><a href="#">Cookies</a></p>
+                    </div>
+                    <div class="social col-md-12 col-6">
+                        <div class="social-follow">S&iacute;guenos en</div>
+                        <div class="social-networks">
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      </div>
     </footer>
-    <!--/footer-->
-    <script src="Content/js/lib/jquery/jquery.min.js"></script>
-    <script src="Content/js/lib/popper/popper.min.js"></script>
-    <script src="Content/js/lib/bootstrap/bootstrap.min.js"></script>
-    <script src="Content/js/lib/cookieconsent/cookieconsent.js"></script>
-    <script src="Content/js/slider-3d.js"></script>
-    <script src="Content/js/menu.js"></script>
-
-    <script src="Content/js/lib/swiper/swiper.min.js"></script>
-    <script src="Content/js/home.js"></script>
-
+    <script type="text/javascript" src="Content/js/_img.js"></script>
+    <script type="text/javascript" src="Content/js/_slider.js"></script>
+    <script type="text/javascript" src="Content/js/lib/swiper/swiper.min.js"></script>
+    <script>
+      var swiper = new Swiper('.ranking__container', {
+        slidesPerView: 3,
+        spaceBetween: 50,
+        // init: false,
+        breakpoints: {
+          1500: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          }
+        }
+      });
+var swiper = new Swiper('.headline__container', {
+  slidesPerView: 3,
+  spaceBetween: 100,
+  // init: false,
+  breakpoints: {
+    1500: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    }
+  }
+});
+    </script>
   </body>
+
 </html>
