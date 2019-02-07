@@ -20,8 +20,8 @@
     @include flexbox();
     @include flex-direction(column);
     @include justify-content(center);
-    h6 { @extend .h6; @extend %headlines-margin;}
-    h5 { @extend .h5; @extend %headlines-margin;}
-    h3 { @extend .h3; @extend %headlines-margin; text-transform: uppercase; }
+    h6 { @extend %headlines-margin;}
+    h5 { @extend %headlines-margin;}
+    h3 { @extend %headlines-margin; text-transform: uppercase; }
   }
 }

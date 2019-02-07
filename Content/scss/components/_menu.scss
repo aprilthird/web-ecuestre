@@ -1,10 +1,8 @@
 .menu {
   @include flexbox();
   @include flex-flow(column nowrap);
-  @include reset();
   height: 100%;
   a {
-    @extend .a; 
     text-transform: uppercase; 
     cursor: pointer;
   }

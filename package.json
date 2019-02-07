@@ -4,8 +4,8 @@
   "description": "AppWeb",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js" ,
-    "watch": "node-sass  -r --output-style expanded -w Content/sass/ -o Content/css"
+    "start": "node server.js",
+    "watch": "node-sass  -r --output-style expanded -w Content/scss/ -o Content/css"
   },
   "repository": {
     "type": "git",

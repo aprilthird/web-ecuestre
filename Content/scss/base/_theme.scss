@@ -1,0 +1,7 @@
+%bg-black { background: $black; color: $white; }
+%bg-white { background: $white; color: $red; }
+%bg-red   { background: $red;   color: $white; }
+%bg-grad  { 
+  background: linear-gradient(90deg, $black 50%, $red 50%); 
+  color: $white;
+}

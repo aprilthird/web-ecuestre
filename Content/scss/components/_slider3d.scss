@@ -25,7 +25,7 @@
   right: 0;
   cursor: pointer;
   transition: z-index 0.1s ease, transform 0.4s ease;
-  h3 {@extend .h3; text-transform: uppercase; }
+  h3 {text-transform: uppercase; }
 }
 
 #slider label > div {

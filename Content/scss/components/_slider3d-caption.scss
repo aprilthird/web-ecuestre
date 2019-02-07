@@ -11,11 +11,9 @@
     h3 {
       margin: 2vh 5px;
       text-transform: uppercase; 
-      @extend .h3; 
     } 
     p {
       margin: 5px;
-      @extend .p;
     }
   }
   &__action {

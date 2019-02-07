@@ -10,7 +10,6 @@
     h2 {
       margin: 15vh 5px;
       text-transform: uppercase; 
-      @extend .h2;
     }
   }
   &__body { @include flex(10 1 $basis-body); @include order(2); }
