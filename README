@@ -2,3 +2,5 @@
 02-11-2019 (add) (t) added aboutus  template
 02-11-2019 (bug) (1) image resize script do not initialize images on reload
 02-11-2019 (bug) (2) page script has instance of other page fucntions
+02-11-2019 (add) (t) timeline template (no target links)
+02-11-2019 (add) (t) newsdetail template

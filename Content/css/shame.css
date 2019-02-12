@@ -62,6 +62,47 @@ address {
   overflow: hidden;
 }
 
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 400px;
+  min-width: 180px;
+  min-height: 180px;
+  position: relative;
+}
+
+.thumbnail_image {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.thumbnail_caption {
+  width: 100%;
+  height: 32%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(26, 25, 25, 0.75);
+  color: #ffffff;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.thumbnail:hover .thumbnail_caption {
+  opacity: 1;
+}
+
+.thumbnail-delicate .thumbnail_caption {
+  height: 22%;
+}
+
 .dropdown {
   height: 0;
   display: none;
@@ -254,30 +295,30 @@ footer {
 /*
  *  Discipline template
  */
-.page {
+.page, .news {
   display: grid;
   grid-template: "header" 35vh "aside" auto "section" auto;
 }
 
-.page header {
+.page header, .news header {
   grid-area: header;
 }
 
-.page aside {
+.page aside, .news aside {
   grid-area: aside;
 }
 
-.page section {
+.page section, .news section {
   grid-area: section;
 }
 
 @media only screen and (min-width: 700px) {
-  .page {
+  .page, .news {
     font-size: 16px;
     grid-template: "header header" 35vh "section aside" / 70% 30%;
     height: 100vh;
   }
-  .page .flowAside .menu {
+  .page .flowAside .menu, .news .flowAside .menu {
     -webkit-flex-direction: column;
     -moz-flex-direction: column;
     -ms-flex-direction: column;
@@ -434,6 +475,38 @@ footer {
   }
   .history_overflow {
     overflow-y: scroll;
+  }
+}
+
+.news_detail {
+  grip-area: section;
+}
+
+.news_detail .flowSection_header {
+  margin-left: 0;
+}
+
+.news_detail .flowArticle_header {
+  color: #b73827;
+}
+
+.news_thumbnail {
+  display: none;
+  background: #ffffff;
+  grid-area: aside;
+  padding: 2.5vw 0;
+}
+
+.news_thumbnail .thumbnail {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media only screen and (min-width: 700px) {
+  .news_thumbnail {
+    display: block;
   }
 }
 
