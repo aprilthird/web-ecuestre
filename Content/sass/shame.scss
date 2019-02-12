@@ -38,7 +38,9 @@ $deco-icon: "../img/decoration.svg";
         text-align: center;
     }
 }
-
+/*
+ *  Discipline template
+ */
 .page {
     display: grid;
     grid-template: "header" 35vh "aside" auto "section" auto;
@@ -52,7 +54,6 @@ $deco-icon: "../img/decoration.svg";
         grid-area: section;
     }
 }
-
 @media only screen and (min-width: $breakpoint ) {
     .page {
         font-size: 16px;
@@ -66,6 +67,51 @@ $deco-icon: "../img/decoration.svg";
         }
     }
 }
+/*
+ * About us template
+ */
+.about {
+    display: grid;
+    grid-template: "header" 35vh "summary" auto "mission" auto "vision" auto;
+    &_header {
+        grid-area: header;
+    }
+    &_summary {
+        grid-area: summary;
+        background: $white;
+        color: $black;
+        padding: 0 $pad;
+        text-align: center;
+        & .flowArticle {
+            margin: $pad $pad*2;
+            display: block;
+        }
+    }
+    &_mission {
+        grid-area: mission;
+        padding: $pad;
+        background: $black;
+        color: $white;
+    }
+    &_vision {
+        grid-area: vision;
+        padding: $pad;
+        background: $red;
+        color: $white;
+    }
+    & .flowArticle_header {
+        text-transform: none;
+        font-weight: 700;
+    }
+}
+@media only screen and (min-width: $breakpoint ) {
+    .about {
+        font-size: 16px;
+        grid-template: "header header" 35vh "summary summary" auto "mission vision" auto / 50% 50%;
+        height: 100vh;
+    }
+}
+
 .navIcon {
     width:  60px;
     height: 60px;

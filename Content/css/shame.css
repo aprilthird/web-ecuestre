@@ -242,6 +242,9 @@ footer {
   text-align: center;
 }
 
+/*
+ *  Discipline template
+ */
 .page {
   display: grid;
   grid-template: "header" 35vh "aside" auto "section" auto;
@@ -271,6 +274,58 @@ footer {
     -ms-flex-direction: column;
     flex-direction: column;
     row-gap: 2.5em;
+  }
+}
+
+/*
+ * About us template
+ */
+.about {
+  display: grid;
+  grid-template: "header" 35vh "summary" auto "mission" auto "vision" auto;
+}
+
+.about_header {
+  grid-area: header;
+}
+
+.about_summary {
+  grid-area: summary;
+  background: #ffffff;
+  color: #1a1919;
+  padding: 0 5vw;
+  text-align: center;
+}
+
+.about_summary .flowArticle {
+  margin: 5vw 10vw;
+  display: block;
+}
+
+.about_mission {
+  grid-area: mission;
+  padding: 5vw;
+  background: #1a1919;
+  color: #ffffff;
+}
+
+.about_vision {
+  grid-area: vision;
+  padding: 5vw;
+  background: #b73827;
+  color: #ffffff;
+}
+
+.about .flowArticle_header {
+  text-transform: none;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 700px) {
+  .about {
+    font-size: 16px;
+    grid-template: "header header" 35vh "summary summary" auto "mission vision" auto / 50% 50%;
+    height: 100vh;
   }
 }
 
