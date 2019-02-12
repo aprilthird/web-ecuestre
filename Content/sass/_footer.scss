@@ -1,0 +1,26 @@
+footer {
+    position: relative;
+    margin: 0;
+    padding: $pad;
+    width: auto;
+    height: 25vh;
+    text-align: left;
+    background: $black;
+    color: $white;
+}
+
+.contact {
+    display: grid;
+    grid-template: "address icons" / auto 150px;
+    width: 100%;
+    height: 100%;
+    & .flowLink {
+        text-decoration: underline;
+    }
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    fill: $white;;
+}

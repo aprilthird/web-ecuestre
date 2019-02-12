@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="Content/sass/shame.css" rel="stylesheet">
+</head>
+
+<body>
+  <script>
+    document.addEventListener('readystatechange',function() {
+      if(document.readyState === 'complete') {
+        console.log('Document ready');
+        let base = document.querySelector('.screenResizer'); 
+        let x = base.querySelector('#x');
+        let meta = document.head.querySelector("[name=viewport]");
+        console.log(meta);
+        x.max = window.innerWidth;
+        x.addEventListener('change', function() {
+          let content = `width=${x.value}`; 
+          console.log(content);
+          meta.content = content;
+        }, false);
+      }
+    }, false);
+  </script>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; width: auto; height: 100vh; }
+    nav.screenResizer {
+        width: auto;
+        height: 10%;
+        background: gray;
+        border: 5px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main.container {
+      border: 5px solid blue;
+      width: auto;
+      height: 90%;
+    }
+  </style>
+  <nav class="screenResizer">
+    <label for="x">Abcisa</label>
+    <input id="x" type="range" min="100" max="1000" step="10">
+  </nav>
+  <main class="container">
+    <a class="a-link lorem3"></a>
+  </main>
+</body>
+
+</html>
+

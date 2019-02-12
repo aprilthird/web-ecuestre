@@ -1,0 +1,59 @@
+// Link
+.flowLink {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover { color: $red; }
+  &.isActive { color: $red; }
+  &-gray {
+      &:hover { color: $gray; }
+      &.isActive { color: $gray-dark; }
+  }
+}
+
+// Articles
+.flowArticle {
+    width: inherit;
+    height: inherit;
+    position: relative;
+    display: none;
+    &.isActive {
+        display: block;
+    }
+    &_header {
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    } 
+    &_main {
+        overflow: hidden;
+        p {
+            margin: 20px;
+        }
+    }         
+}
+
+// Sections
+.flowSection {
+    background: $white;
+    color: $black;
+    padding: 0 $pad $pad $pad;
+    &_header {
+        margin: 15px;
+        text-transform: uppercase;
+    }
+    &_container {
+        margin: 15px;
+    }
+}
+
+// Asides
+.flowAside {
+    background: $black;
+    color: $white;
+    padding: 0 $pad;
+    text-align: center;
+    @include flexbox();
+    @include flex-direction(column); 
+    @include justify-content(center);
+}
+

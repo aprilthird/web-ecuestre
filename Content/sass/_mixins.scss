@@ -1,0 +1,13 @@
+@mixin box-sizing($value: border-box){
+    -webkit-box-sizing: $value;
+    -moz-box-sizing: $value;
+    box-sizing: $value;
+}
+@mixin setInheritFit() {
+  width: inherit;
+  height: inherit;
+}
+@mixin setMinScreen($w, $h) {
+  min-width: $w;
+  min-height: $h;
+}

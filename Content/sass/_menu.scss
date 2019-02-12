@@ -1,0 +1,14 @@
+.menu {
+    @include flexbox();
+    @include flex-wrap(wrap);
+    list-style-type: none;
+    &_item {
+        text-transform: uppercase;
+        flex: 1 1 auto;    
+        margin: 1em;
+        text-align: inherit;
+    }
+    &-fixed {
+        @include flex-direction(column);
+    }
+}

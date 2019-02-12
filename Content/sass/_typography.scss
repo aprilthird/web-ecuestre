@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=K2D:300,400,500|PT+Sans');
+$fixed-font-family: 'Myriad', 'PT sans';;
+$fixed-font-size: 12px;
+$fixed-line-height: 1.2;
+$fixed-letter-spacing: 2px;
+$fixed-font-weight: 300;
+$heading-font-family: 'K2D', 'sans-serif';
+$heading-font-weight: 500;
+
+@mixin setHeadTypography () {
+    font-family: $heading-font-family; 
+    font-weight: $heading-font-weight;
+}
+.headingTypography {
+    @include setHeadTypography();
+}
+.fixedTypography { 
+    font-family: $fixed-font-family; 
+    font-size: $fixed-font-size; 
+    line-height: $fixed-line-height; 
+    letter-spacing: $fixed-letter-spacing;
+    font-weight: $fixed-font-weight;
+}
+
+%line-height-1-1 { line-height: 1.1; }
+%line-height-1-3 { line-height: 1.3; }
+
+h1 { font-size: 4em;  @extend .headingTypography; @extend %line-height-1-1; }
+h2 { font-size: 3em;    @extend .headingTypography; @extend %line-height-1-1; }
+h3 { font-size: 2em;    @extend .headingTypography; @extend %line-height-1-3; }
+h4 { font-size: 1.5em;  @extend .headingTypography; @extend %line-height-1-3; }
+h5 { font-size: 1.3em;  @extend .headingTypography; }
+h6 { font-size: 1.2em;    @extend .headingTypography; }
+p { font-size: 1.1em; }
+a { font-size: 1.1em; }

@@ -1,0 +1,113 @@
+$pad: 5vw;
+$margin: 10px;
+$black: #1a1919;
+$white: #ffffff;
+$red: #b73827;
+$gray-dark: #5d5d5d;
+$gray: #87868a;
+$breakpoint: 700px;
+$logo-icon: "../img/logo.svg";
+$menu-icon: "../img/menu-icon.svg";
+$deco-icon: "../img/decoration.svg";
+@import 'test';
+@import 'mixins';
+@import 'flexbox';
+@import 'base';
+@import 'flow-content';
+@import 'menu';
+@import 'footer';
+
+.largeHero {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &_image {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    &_text {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        position: absolute;
+        right: 0;
+        left:0;
+        bottom: 15%;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+.page {
+    display: grid;
+    grid-template: "header" 35vh "aside" auto "section" auto;
+    & header {
+        grid-area: header;
+    }
+    & aside {
+        grid-area: aside;
+    }
+    & section {
+        grid-area: section;
+    }
+}
+
+@media only screen and (min-width: $breakpoint ) {
+    .page {
+        font-size: 16px;
+        grid-template: "header header" 35vh "section aside" / 70% 30%;
+        height: 100vh;
+        & .flowAside {
+            & .menu {
+                @include flex-direction(column);
+                row-gap: 2.5em;
+            }
+        }
+    }
+}
+.navIcon {
+    width:  60px;
+    height: 60px;
+    z-index: 2;
+    position: fixed;
+    top: $pad;
+    &-left { left: $pad; }
+    &-right { right: $pad; }
+    &_wrapper { display: block; cursor: pointer; }
+    &_logo {
+        width: inherit;
+        height: inherit;
+        & .body { fill:$white; }
+        & .fd   { fill:$black; }
+        & .ne   { fill:$red; }
+    }
+    &_menu {
+        width: inherit;
+        height: inherit;
+        & .menu { fill: $white; }
+    }
+}
+.navigation {
+    width: 0;
+    height: 100vh;
+    padding-top: $pad*5;
+    padding-left: $pad*3;
+    opacity: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: $black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    &.isActive {
+        width: 70%;
+        opacity: 1;
+    }
+    &  .menu {
+        white-space: nowrap;
+        @include flex-direction(column);
+        row-gap: 15px;
+    }
+}

@@ -1,0 +1,44 @@
+html {
+    @include box-sizing();
+}
+*,*:before,*:after {
+    @include box-sizing(inherit);
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: $black;
+    color: $white;
+}
+main {
+}
+address {
+    font-style: normal;
+}
+.media {
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: var(--w, auto);
+    height: var(--h, auto);
+    -webkit-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%)
+}
+.picture {
+    @include setInheritFit();
+    position: relative;
+    overflow: hidden;
+}
+.dropdown {
+    height: 0;
+    display: none;
+    transition: height .5 ease;
+    &.isActive {
+        height: 250px;
+        display: block;
+    }
+    & .menu {
+        margin-top: 15px;
+        margin-left: 5px;
+    }
+}
