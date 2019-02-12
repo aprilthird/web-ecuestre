@@ -1,0 +1,21 @@
+.lorem40:after {
+  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis ultrices nibh non pretium. Phasellus ante orci, laoreet eget nibh vitae, tempus elementum ex. Ut blandit tellus fermentum erat tempor placerat. Integer massa nunc, sollicitudin volutpat ligula ut, eleifend dignissim.";
+}
+
+.lorem30:after {
+  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis ultrices nibh non pretium. Phasellus ante orci, laoreet eget nibh vitae, tempus elementum ex. Ut blandit tellus fermentum erat tempor placerat.";
+}
+
+.lorem5:after {
+  content: "Lorem ipsum dolor sit amet.";
+}
+
+.lorem3:after {
+  content: "Lorem ipsum dolor";
+}
+
+.lorem:after {
+  content: "Lorem ipsum";
+}
+
+/*# sourceMappingURL=test.css.map */
