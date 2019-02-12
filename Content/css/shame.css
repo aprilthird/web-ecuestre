@@ -1,3 +1,7 @@
+.lorem300:after {
+  content: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis, mi vitae interdum dapibus, elit sem mattis ex, id convallis ante quam sed felis. Pellentesque eu libero non arcu fringilla luctus at in turpis. Nam eleifend porttitor accumsan. Aliquam ut convallis mi, id fringilla erat. Aliquam erat volutpat. Mauris id scelerisque diam, non consectetur lacus. Nam lacinia sed eros id consequat. Aenean tincidunt vulputate convallis. Donec tempus neque eu mattis lobortis. Pellentesque eget tortor sit amet nunc imperdiet varius sed eget nibh. Duis non scelerisque ex. Proin lacinia felis a turpis fringilla, vitae posuere massa aliquam. Etiam vel nisi facilisis, tempus nisi non, tincidunt turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin tempor justo in massa accumsan, at fringilla justo ullamcorper. Nam ullamcorper eros nec dolor feugiat, in dapibus nisl ultrices.  Quisque eget nibh ut mauris scelerisque sagittis. Mauris id erat varius, placerat nunc nec, lobortis magna. Cras eu urna dignissim, varius eros sagittis, consectetur diam. Morbi non risus a risus ullamcorper aliquet. Maecenas vehicula commodo nulla aliquet hendrerit. Donec vel magna sit amet ligula mollis luctus vitae eu lectus. Vivamus leo nulla, congue quis sollicitudin et, suscipit nec erat. Quisque sit amet sem mauris. Nam vulputate, metus sit amet porta pharetra, leo purus viverra magna, vitae ultrices erat lorem non libero. Maecenas auctor libero et tempus rhoncus. Aliquam sagittis neque non tellus pretium aliquam. Sed sed elementum turpis, vel euismod eros. Nunc convallis a orci sed vehicula. Ut eleifend suscipit nisi, ac consequat orci.  Cras in bibendum diam. Donec efficitur quam nec lectus rutrum, suscipit maximus enim scelerisque. Vivamus at nisi tellus. Vestibulum porta, nunc id placerat eleifend, lacus lectus egestas orci, ut congue massa elit elementum ligula. Aliquam et neque ante. Nam eu risus hendrerit, tincidunt metus nec, fermentum erat. Nulla. ";
+}
+
 .lorem40:after {
   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis ultrices nibh non pretium. Phasellus ante orci, laoreet eget nibh vitae, tempus elementum ex. Ut blandit tellus fermentum erat tempor placerat. Integer massa nunc, sollicitudin volutpat ligula ut, eleifend dignissim.";
 }
@@ -215,6 +219,7 @@ footer {
   width: 100%;
   height: 100%;
   position: relative;
+  grid-area: header;
 }
 
 .largeHero_image {
@@ -330,6 +335,105 @@ footer {
     font-size: 16px;
     grid-template: "header header" 35vh "summary summary" auto "mission vision" auto / 50% 50%;
     height: 100vh;
+  }
+}
+
+/*
+ * History template
+ */
+.timeline {
+  width: auto;
+  height: 100%;
+  text-transform: uppercase;
+  display: grid;
+  grid-template: "selectors timeline" auto / 50% 50%;
+}
+
+.timeline_selectors {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  font-size: 18px;
+  margin-left: 80%;
+  row-gap: 100px;
+}
+
+.timeline_selectors .flowLink {
+  transform: rotate(270deg);
+}
+
+.timeline_highlight {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  background: #b73827;
+  color: #ffffff;
+  width: 100%;
+}
+
+.timeline_highlight h1 {
+  transform: rotate(270deg);
+}
+
+.history {
+  display: grid;
+  grid-template: "header" 35vh "overflow" auto;
+}
+
+.history_timeline {
+  grid-area: timeline;
+  margin: 5vw 0 0 0;
+  display: none;
+}
+
+.history_overflow {
+  grid-area: overflow;
+  margin: 5vw 0;
+  background: #1a1919;
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 700px) {
+  .history {
+    font-size: 16px;
+    grid-template: "header header" 35vh "overflow timeline" auto / 72% 28%;
+    height: 100vh;
+  }
+  .history_timeline {
+    display: block;
+  }
+  .history_overflow {
+    overflow-y: scroll;
   }
 }
 

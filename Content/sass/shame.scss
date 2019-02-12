@@ -21,6 +21,7 @@ $deco-icon: "../img/decoration.svg";
     width: 100%;
     height: 100%;
     position: relative;
+    grid-area: header;
     &_image {
         width: 100%;
         height: 100%;
@@ -113,6 +114,71 @@ $deco-icon: "../img/decoration.svg";
         height: 100vh;
     }
 }
+
+/*
+ * History template
+ */
+.timeline {
+    width: auto;
+    height: 100%;
+    text-transform: uppercase;
+    display: grid;
+    grid-template: "selectors timeline" auto / 50% 50%;
+    &_selectors {
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(center);
+        font-size: 18px;
+        margin-left: 80%;
+        row-gap: 100px;
+        & .flowLink {
+            transform: rotate(270deg);
+        }
+    }
+    &_highlight {
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(center);
+        background: $red;
+        color: $white;
+        width: 100%;
+        h1 {
+            transform: rotate(270deg);
+        }
+    }
+}
+
+.history {
+    display: grid;
+    grid-template: "header" 35vh "overflow" auto;
+    &_timeline {
+        grid-area: timeline;
+        margin: $pad 0 0 0;
+        display: none;
+    }
+    &_overflow {
+        grid-area: overflow;
+        margin: $pad 0;
+        background: $black;
+        color: $white;
+    }
+}
+@media only screen and (min-width: $breakpoint ) {
+    .history {
+        font-size: 16px;
+        grid-template: "header header" 35vh "overflow timeline" auto / 72% 28%;
+        height: 100vh;
+        &_timeline {
+            display: block;
+        }
+        &_overflow {
+            overflow-y: scroll;
+        }
+    }
+}
+
 
 .navIcon {
     width:  60px;
