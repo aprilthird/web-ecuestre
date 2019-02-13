@@ -3,6 +3,10 @@ let SwiperPlugin = (function() {
     class swiper {
 
         constructor(addons) {
+            if(typeof($extendObj) == "undefined") {
+                console.log("load utils.js before running this script!");
+            }
+
             let _ = this;
             _.def = {
                 container: document.querySelector('main'),
@@ -20,6 +24,7 @@ let SwiperPlugin = (function() {
                     translateY: '--ty',
                 }
             }
+            $extendObj(_.def, addons);
         }
 
         init() {
@@ -61,14 +66,19 @@ let SwiperPlugin = (function() {
                 if(locked) {
                     currentX += tx;
                     currentY += ty;
-                    if(!_.def.options.limitless) {
-
-                    }
                     if(_.def.options.abscissa) {
+                        if(!_.def.options.limitless) {
+                            currentX = (currentX < 0) ? currentX : 0;
+                            currentX = (_.def.dragable.offsetWidth*(-1) < currentX) ?  currentX : _.def.dragable.offsetWidth*(-1);
+                        }
                         _.def.dragable.style.setProperty(_.def.variables.currentX, `${currentX}px`);
                         _.def.dragable.style.setProperty(_.def.variables.translateX, "0px");
                     }
                     if(_.def.options.ordinate) {
+                        if(!_.def.options.limitless) {
+                            currentX = (currentY < 0) ? currentY : 0;
+                            currentX = (_.def.dragable.offsetHeight*(-1) < currentY) ?  currentY : _.def.dragable.offsetHeight*(-1);
+                        }
                         _.def.dragable.style.setProperty(_.def.variables.currentY, `${currentY}px`);
                         _.def.dragable.style.setProperty(_.def.variables.translateY, "0px");
                     }
