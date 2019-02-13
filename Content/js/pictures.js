@@ -48,6 +48,7 @@ let Pictures = (function loadPictures() {
                     } else {
                         media.addEventListener('load', function() {
                             resize(media, wrapper);
+                            media.draggable = false;
                         }, options);
                     }
                 });

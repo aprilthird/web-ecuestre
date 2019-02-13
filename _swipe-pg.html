@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="author" content="">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script async src="Content/js/utils.js"></script>
+    </head>
+
+    <body>
+        <style>
+            * {
+                margin: 0;
+            }
+            body {
+                width: 500px;
+                height: 500px;
+                border: 2px solid red;
+            }
+
+            .ymain  {
+                width: inherit;
+                height: inherit;
+                overflow: auto;
+                background: blue;
+                overflow: hidden;
+            }
+            .ydiv {
+                height: 5000px;
+                width: auto;
+                background: gray;
+             }
+            .ydiv.translate {
+                transition: transform 0s cubic-bezier(.01, .96, .44, .99);
+                transform: translate(0px, calc(var(--iy, 0px) + var(--ty, 0px)));
+            }
+            h1.yh1 {
+                height: 4000px;
+                width: 50px;
+                background: red;
+            }
+
+            .xmain {
+                width: inherit;
+                height: inherit;
+                overflow: auto;
+                background: blue;
+                overflow: hidden;
+            }
+            .xdiv {
+                width: 5000px;
+                height: 100%;
+                background: gray;
+             }
+            .xdiv.translate {
+                transition: transform 0s cubic-bezier(.01, .96, .44, .99);
+                transform: translate(calc(var(--ix, 0px) + var(--tx, 0px)));
+            }
+            h1.xh1 {
+                width: 4000px;
+                height: 50px;
+                background: red;
+            }
+        </style>
+        
+        <main class="xmain">
+            <div class="xdiv">
+                <h1 class="xh1">testi1234567899876543211234567899876543211234567899876543211234567899876543211234567899876354321</h1>
+            </div>
+        </main>
+        <main class="ymain">
+            <div class="ydiv">
+                <h1 class="yh1">test21</h1>
+            </div>
+        </main>
+        <script src="Content/js/swiper-plugin.js"></script> 
+    <script>
+        let a = new SwiperPlugin({
+            container: $1('.ymain'),
+            draggable: $1('.ydiv'),
+            options : {
+                abscissa: false,
+                ordinate: true,
+                limitless: false
+            }
+        }).init();
+        let a2 = new SwiperPlugin({
+            container: $1('.xmain'),
+            draggable: $1('.xdiv'),
+            options : {
+                abscissa: true,
+                ordinate: false,
+                limitless: false
+            }
+        }).init();
+        </script>
+
+    </body>
+
+</html>
+

@@ -10,7 +10,7 @@ let SwiperPlugin = (function() {
             let _ = this;
             _.def = {
                 container: document.querySelector('main'),
-                dragable: document.querySelector('div'),
+                draggable: document.querySelector('div'),
                 options: {
                     abscissa: true,
                     ordinate: true,
@@ -19,7 +19,7 @@ let SwiperPlugin = (function() {
                 variables: {
                     className: 'translate',
                     currentX: '--ix',
-                    currentY: '--ix',
+                    currentY: '--iy',
                     translateX: '--tx',
                     translateY: '--ty',
                 }
@@ -44,8 +44,8 @@ let SwiperPlugin = (function() {
             function lock(e) {
                 let aux = unify(e);
                 x0 = aux.clientX;
-                y0 = aux.clientX;
-                _.def.dragable.classList.toggle(_.def.variables.className, (locked = true));
+                y0 = aux.clientY;
+                _.def.draggable.classList.toggle(_.def.variables.className, (locked = true));
             };
 
             function drag(e) {
@@ -53,11 +53,11 @@ let SwiperPlugin = (function() {
                 if(locked) {
                     if(_.def.options.abscissa) {
                         tx = Math.round((unify(e).clientX - x0));
-                        _.def.dragable.style.setProperty(_.def.variables.translateX, `${tx}px`);
+                        _.def.draggable.style.setProperty(_.def.variables.translateX, `${tx}px`);
                     }
                     if(_.def.options.ordinate) {
                         ty = Math.round((unify(e).clientY - y0));
-                        _.def.dragable.style.setProperty(_.def.variables.translateY, `${ty}px`);
+                        _.def.draggable.style.setProperty(_.def.variables.translateY, `${ty}px`);
                     }
                 }
             };
@@ -69,20 +69,22 @@ let SwiperPlugin = (function() {
                     if(_.def.options.abscissa) {
                         if(!_.def.options.limitless) {
                             currentX = (currentX < 0) ? currentX : 0;
-                            currentX = (_.def.dragable.offsetWidth*(-1) < currentX) ?  currentX : _.def.dragable.offsetWidth*(-1);
+                            currentX = (_.def.draggable.offsetWidth*(-1) < currentX) 
+                                ?  currentX : _.def.draggable.offsetWidth*(-1);
                         }
-                        _.def.dragable.style.setProperty(_.def.variables.currentX, `${currentX}px`);
-                        _.def.dragable.style.setProperty(_.def.variables.translateX, "0px");
+                        _.def.draggable.style.setProperty(_.def.variables.currentX, `${currentX}px`);
+                        _.def.draggable.style.setProperty(_.def.variables.translateX, "0px");
                     }
                     if(_.def.options.ordinate) {
                         if(!_.def.options.limitless) {
-                            currentX = (currentY < 0) ? currentY : 0;
-                            currentX = (_.def.dragable.offsetHeight*(-1) < currentY) ?  currentY : _.def.dragable.offsetHeight*(-1);
+                            currentY = (currentY < 0) ? currentY : 0;
+                            currentY = (_.def.draggable.offsetHeight*(-1) < currentY) 
+                                ?  currentY : _.def.draggable.offsetHeight*(-1);
                         }
-                        _.def.dragable.style.setProperty(_.def.variables.currentY, `${currentY}px`);
-                        _.def.dragable.style.setProperty(_.def.variables.translateY, "0px");
+                        _.def.draggable.style.setProperty(_.def.variables.currentY, `${currentY}px`);
+                        _.def.draggable.style.setProperty(_.def.variables.translateY, "0px");
                     }
-                    _.def.dragable.classList.toggle(_.def.variables.className, !(locked = false));
+                    _.def.draggable.classList.toggle(_.def.variables.className, !(locked = false));
                     x0 = null;
                     tx = null;
                 }
@@ -91,8 +93,8 @@ let SwiperPlugin = (function() {
             _.def.container.addEventListener("mousedown", lock, false);
             _.def.container.addEventListener("touchstart", lock, false);
 
-            _.def.container.addEventListener("mouseup", move, false);
-            _.def.container.addEventListener("touchend", move, false);
+            window.addEventListener("mouseup", move, false);
+            window.addEventListener("touchend", move, false);
 
             _.def.container.addEventListener("mousemove", drag, false);
             _.def.container.addEventListener("touchmove", drag, false);

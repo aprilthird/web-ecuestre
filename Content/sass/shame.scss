@@ -214,6 +214,7 @@ $deco-icon: "../img/decoration.svg";
 .gallery {
     width: 100%;
     height: 100vh;
+        overflow: hidden;
     $this: &;
     &_mask {
         width: 100%;
@@ -237,5 +238,9 @@ $deco-icon: "../img/decoration.svg";
             max-width: 100%;
             max-height: 100%;
         }
+    }
+    &_translate {
+        transition: transform .5s cubic-bezier(.01, .96, .44, .99);
+        transform: translateY(calc(var(--iy, 0px) + var(--ty, 0px)));
     }
 }

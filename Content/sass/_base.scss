@@ -15,6 +15,9 @@ main {
 address {
     font-style: normal;
 }
+img {
+    @include setNoSelect();
+}
 
 /**DEPRICATED*/
 .media {
@@ -31,14 +34,12 @@ address {
     position: relative;
     overflow: hidden;
     &_media {
-        background: url(https://via.placeholder.com/500) no-repeat fixed center;
-        position: absolute;
         top:50%;
         left:50%;
         width: var(--w, 100%);
         height: var(--h, 100%);
         -webkit-transform:translate(-50%,-50%);
-        transform:translate(-50%,-50%)
+        transform:translate(-50%,-50%);
     }
 }
 .thumbnail {
@@ -69,6 +70,7 @@ address {
     color: $white;
     opacity: 0;
     transition: .5s ease;
+    @include setNoSelect();
   }
   $this: &;
   &:hover {
