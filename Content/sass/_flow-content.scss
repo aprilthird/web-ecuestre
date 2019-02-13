@@ -46,4 +46,13 @@
     }
 }
 
-
+// Asides
+.flowAside {
+    background: $black;
+    color: $white;
+    padding: 0 $pad;
+    text-align: center;
+    @include flexbox();
+    @include flex-direction(column); 
+    @include justify-content(center);
+}
