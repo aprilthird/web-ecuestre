@@ -19,8 +19,6 @@ let LinkMenu = (function() {
 
     linker.prototype.trigger = function() {
         let _ = this;
-        console.log(_.def.itemChildren);
-        console.log(_.def.anchorChildren.length);
         if(_.def.itemChildren.length === _.def.anchorChildren.length) {
             for(let i = 0; i < _.def.anchorChildren.length; i++) {
                 _.def.anchorChildren[i].addEventListener('click', function(e) {

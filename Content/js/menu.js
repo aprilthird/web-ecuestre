@@ -15,12 +15,10 @@
         });
         return elements;
     }
-    function execute() {
-        let pictures = new Pictures().init(); 
-        let menu = new LinkMenu();
 
-        let anchorObj = $1('.navIcon-right');
-        let nav = new LinkMenu({
+    function execute() {
+        let anchorObj = $1('.navIcon-right'),
+            nav = new LinkMenu({
             itemParent: $1('nav'),
             anchorParent: anchorObj, 
             itemChildren: $('nav'),
@@ -47,6 +45,7 @@
                 }
             });
     }
-    document.addEventListener('DOMContentLoaded', 
-        execute, true);
+
+    let options = { once: true };
+    document.addEventListener('DOMContentLoaded', execute, options);
 })();
