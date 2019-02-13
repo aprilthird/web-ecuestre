@@ -15,6 +15,8 @@ main {
 address {
     font-style: normal;
 }
+
+/**DEPRICATED*/
 .media {
     position: absolute;
     top:50%;
@@ -28,6 +30,16 @@ address {
     @include setInheritFit();
     position: relative;
     overflow: hidden;
+    &_media {
+        background: url(https://via.placeholder.com/500) no-repeat fixed center;
+        position: absolute;
+        top:50%;
+        left:50%;
+        width: var(--w, 100%);
+        height: var(--h, 100%);
+        -webkit-transform:translate(-50%,-50%);
+        transform:translate(-50%,-50%)
+    }
 }
 .thumbnail {
   width: 100%;
@@ -77,5 +89,23 @@ address {
     & .menu {
         margin-top: 15px;
         margin-left: 5px;
+    }
+}
+.background {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    &_graphic {
+        width: inherit;
+        height: inherit;
+    }
+    &_upperside {
+        fill: $red;
+    }
+    &_lowerside {
+        fill: $black;
     }
 }

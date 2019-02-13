@@ -4,3 +4,6 @@
 02-11-2019 (bug) (2) page script has instance of other page fucntions
 02-11-2019 (add) (t) timeline template (no target links)
 02-11-2019 (add) (t) newsdetail template
+02-12-2019 (fix) (1) image resize onload fix
+02-12-2019 (fix) (2) modular scripting
+02-12-2019 (partial) (t) added gallery template
