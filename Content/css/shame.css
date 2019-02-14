@@ -167,6 +167,12 @@ img {
   fill: #1a1919;
 }
 
+.icon {
+  width: 30px;
+  height: 30px;
+  fill: #ffffff;
+}
+
 .flowLink {
   color: inherit;
   cursor: pointer;
@@ -181,12 +187,34 @@ img {
   color: #b73827;
 }
 
-.flowLink-gray:hover {
+.flowLink-gray {
   color: #87868a;
+}
+
+.flowLink-gray:hover {
+  color: #5d5d5d;
+}
+
+.flowLink-gray:hover .flowLink_inIcon {
+  fill: #5d5d5d;
 }
 
 .flowLink-gray.isActive {
   color: #5d5d5d;
+}
+
+.flowLink-gray.isActive .flowLink_inIcon {
+  fill: #5d5d5d;
+}
+
+.flowLink-gray .flowLink_inIcon {
+  fill: #87868a;
+}
+
+.flowLink_inIcon {
+  width: 0.7em;
+  height: 0.7em;
+  fill: #b73827;
 }
 
 .flowArticle {
@@ -210,7 +238,7 @@ img {
 }
 
 .flowArticle_main p {
-  margin: 20px;
+  margin: 2px;
 }
 
 .flowSection {
@@ -220,12 +248,12 @@ img {
 }
 
 .flowSection_header {
-  margin: 15px;
+  margin: 15px 0;
   text-transform: uppercase;
 }
 
 .flowSection_container {
-  margin: 15px;
+  margin: 15px 0;
 }
 
 .flowAside {
@@ -374,12 +402,6 @@ footer {
   text-decoration: underline;
 }
 
-.icon {
-  width: 30px;
-  height: 30px;
-  fill: #ffffff;
-}
-
 .largeHero {
   width: 100%;
   height: 100%;
@@ -467,12 +489,10 @@ footer {
   grid-area: summary;
   background: #ffffff;
   color: #1a1919;
-  padding: 0 5vw;
-  text-align: center;
+  padding: 5vw;
 }
 
 .about_summary .flowArticle {
-  margin: 5vw 10vw;
   display: block;
 }
 

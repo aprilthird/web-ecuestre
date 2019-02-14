@@ -83,10 +83,8 @@ $deco-icon: "../img/decoration.svg";
         grid-area: summary;
         background: $white;
         color: $black;
-        padding: 0 $pad;
-        text-align: center;
+        padding: $pad;
         & .flowArticle {
-            margin: $pad $pad*2;
             display: block;
         }
     }

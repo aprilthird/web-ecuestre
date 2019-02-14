@@ -3,11 +3,27 @@
   color: inherit;
   cursor: pointer;
   text-decoration: none;
+  $this: &;
   &:hover { color: $red; }
   &.isActive { color: $red; }
   &-gray {
-      &:hover { color: $gray; }
-      &.isActive { color: $gray-dark; }
+      color: $gray;
+      &:hover { 
+          color: $gray-dark; 
+          #{$this}_inIcon { fill: $gray-dark; }
+      }
+      &.isActive { 
+          color: $gray-dark; 
+          #{$this}_inIcon { fill: $gray-dark; }
+      }
+      #{$this}_inIcon {
+          fill: $gray;
+      }
+  }
+  &_inIcon {
+      width: 0.7em;
+      height: 0.7em;
+      fill: $red;
   }
 }
 
@@ -27,7 +43,7 @@
     &_main {
         overflow: hidden;
         p {
-            margin: 20px;
+            margin: 2px;
         }
     }         
 }
@@ -38,11 +54,11 @@
     color: $black;
     padding: 0 $pad $pad $pad;
     &_header {
-        margin: 15px;
+        margin: 15px 0;
         text-transform: uppercase;
     }
     &_container {
-        margin: 15px;
+        margin: 15px 0;
     }
 }
 
