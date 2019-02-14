@@ -383,7 +383,7 @@ img {
 footer {
   position: relative;
   margin: 0;
-  padding: 5vw;
+  padding: 20px 5vw;
   width: auto;
   height: 25vh;
   text-align: left;
@@ -649,6 +649,9 @@ footer {
 }
 
 @media only screen and (min-width: 800px) {
+  .news_detail {
+    padding: 5vw;
+  }
   .news_thumbnail {
     display: block;
   }
