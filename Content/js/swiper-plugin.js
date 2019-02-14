@@ -37,6 +37,8 @@ let SwiperPlugin = (function() {
                 tx = 0, 
                 ty = 0;
 
+            let negativeMaxHeight = (_.def.draggable.offsetHeight - _.def.container.offsetHeight)*(-1),
+                negativeMaxWidth  = _.def.draggable.offsetWidth*(-1);
             function unify(e) { 
                 return e.changedTouches ? e.changedTouches[0] : e 
             };
@@ -46,6 +48,9 @@ let SwiperPlugin = (function() {
                 x0 = aux.clientX;
                 y0 = aux.clientY;
                 _.def.draggable.classList.toggle(_.def.variables.className, (locked = true));
+                console.log("down");
+            _.def.container.addEventListener("mousemove", drag, false);
+            _.def.container.addEventListener("touchmove", drag, false);
             };
 
             function drag(e) {
@@ -60,6 +65,7 @@ let SwiperPlugin = (function() {
                         _.def.draggable.style.setProperty(_.def.variables.translateY, `${ty}px`);
                     }
                 }
+                console.log("drag");
             };
 
             function move(e) {
@@ -69,8 +75,7 @@ let SwiperPlugin = (function() {
                     if(_.def.options.abscissa) {
                         if(!_.def.options.limitless) {
                             currentX = (currentX < 0) ? currentX : 0;
-                            currentX = (_.def.draggable.offsetWidth*(-1) < currentX) 
-                                ?  currentX : _.def.draggable.offsetWidth*(-1);
+                            currentX = (negativeMaxWidth < currentX) ?  currentX : negativeMaxWidth;
                         }
                         _.def.draggable.style.setProperty(_.def.variables.currentX, `${currentX}px`);
                         _.def.draggable.style.setProperty(_.def.variables.translateX, "0px");
@@ -78,8 +83,7 @@ let SwiperPlugin = (function() {
                     if(_.def.options.ordinate) {
                         if(!_.def.options.limitless) {
                             currentY = (currentY < 0) ? currentY : 0;
-                            currentY = (_.def.draggable.offsetHeight*(-1) < currentY) 
-                                ?  currentY : _.def.draggable.offsetHeight*(-1);
+                            currentY = (negativeMaxHeight < currentY) ?  currentY : negativeMaxHeight;
                         }
                         _.def.draggable.style.setProperty(_.def.variables.currentY, `${currentY}px`);
                         _.def.draggable.style.setProperty(_.def.variables.translateY, "0px");
@@ -88,16 +92,17 @@ let SwiperPlugin = (function() {
                     x0 = null;
                     tx = null;
                 }
+                console.log("up");
+            _.def.container.removeEventListener("mousemove", drag, false);
+            _.def.container.removeEventListener("touchmove", drag, false);
             }
 
             _.def.container.addEventListener("mousedown", lock, false);
             _.def.container.addEventListener("touchstart", lock, false);
 
-            window.addEventListener("mouseup", move, false);
-            window.addEventListener("touchend", move, false);
+            _.def.container.addEventListener("mouseup", move, false);
+            _.def.container.addEventListener("touchend", move, false);
 
-            _.def.container.addEventListener("mousemove", drag, false);
-            _.def.container.addEventListener("touchmove", drag, false);
             return _;
         }
     } 

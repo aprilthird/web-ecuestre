@@ -2,9 +2,8 @@
     function execute() {
         let pictures = new Pictures({
             figures: $('.picture'),
-            mediaClass: '.picture_media'
+            mediaClass: '.media'
         }).init(); 
-
         let swiper = new SwiperPlugin({
             container: $1('.gallery_mask'),
             draggable: $1('.gallery_album'),
