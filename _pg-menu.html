@@ -11,116 +11,72 @@
 
     <body>
         <style>
-*,*:after,*:before  {
-    margin: 0;
-    padding: 0;
-}
-ul  { 
-    list-style-type: none; 
-} 
-.menu {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    list-style-type: none;
-}
-
-.menu_item {
-    text-transform: uppercase;
-    flex: 1 1 auto;
-    margin: 1em;
-    text-align: inherit;
-}
-    div.nav {
-        padding: 25px 0;
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-    }
-    div.nav .menu {
-        flex-direction: column;
-    }
-    div.nav .menu_item {
-        flex: 0;
-    }
-    div.nav a {
-        margin: 1em;
-        flex: 0;
-    }
-    .nav_item {
-        padding: 25px 0;
-        display: flex;
-        flex-direction: column;
-
-    }
+            *,*:after,*:before  {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                width: auto;
+                height: 100vh;
+            }
+            ul  { 
+                list-style-type: none; 
+            }
+            li {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            div {
+                width: auto;
+                height: 40px;
+                border: 1px solid red;
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            .menu { 
+                display: flex;
+                flex-direction: column;
+            }
+            .menu_item {
+                flex: 1 1 60px;
+            }
+            .menu-submenu {
+                flex-direction: column;
+                margin-bottom: 25px;
+            }
+            .menu.menu-submenu li:nth-child(1) {
+                background: blue;
+                padding-top: 25px;
+            }
+            .collapse {
+                display: none;
+            }
         </style>
+        <ul class="menu">
+            <li class="menu_item">
+                <div><a>value1</a> </div>
+                <ul class="menu menu-submenu collapse">
+                    <li class="menu_item"><div>1</div></li>
+                    <li class="menu_item"><div>2</div></li>
+                    <li class="menu_item"><div>3</div></li>
+                    <li class="menu_item"><div>4</div></li>
+                </ul>
+            </li>
+            <li class="menu_item"><div>2</div></li>
+            <li class="menu_item"><div>value</div>
+                <ul class="menu menu-submenu collapse">
+                    <li class="menu_item"><div>1</div></li>
+                    <li class="menu_item"><div>2</div></li>
+                    <li class="menu_item"><div>3</div></li>
+                    <li class="menu_item"><div>4</div></li>
+                </ul>
+            </li>
+            <li class="menu_item"><div>4</div></li>
+            <li class="menu_item"><div>5</div></li>
+            <li class="menu_item"><div>6</div></li>
+            <li class="menu_item"><div>7</div></li>
+            <li class="menu_item"><div>8</div></li>
+        </ul>
     </body>
-    <div class="nav">
-        <div class="nav_item">
-            <div class="nav_item">
-                <a>123456789</a>
-            </div>
-            <ul class="menu">
-                <li class="menu_item">231456</li>
-                <li class="menu_item">231456</li>
-                <li class="menu_item">231456</li>
-                <li class="menu_item">231456</li>
-                <li class="menu_item">231456</li>
-            </ul>
-        </div>
-        <div class="nav_item">
-            <div class="nav_item">
-                <a>123456789</a>
-            </div>
-            <ul class="menu">
-                <li class="menu_item">31456</li>
-                <li class="menu_item">31456</li>
-                <li class="menu_item">31456</li>
-                <li class="menu_item">31456</li>
-            </ul>
-        </div>
-        <div class="nav_item">
-            <div class="nav_item">
-                <a>123456789</a>
-            </div>
-        </div>
-        <div class="nav_item">
-            <div class="nav_item">
-                <a>123456789</a>
-            </div>
-        </div>
-        <div class="nav_item">
-            <div class="nav_item">
-                <a>123456789</a>
-            </div>
-            <ul class="menu">
-                <li class="menu_item">31456</li>
-                <li class="menu_item">31456</li>
-                <li class="menu_item">31456</li>
-            </ul>
-        </div>
-        <div class="nav_item">
-            <div class="nav_item">
-                <a>123456789</a>
-            </div>
-        </div>
-        <div class="nav_item">
-            <div class="nav_item">
-                <a>123456789</a>
-            </div>
-            <ul class="menu">
-                <li class="menu_item">31456</li>
-                <li class="menu_item">31456</li>
-                <li class="menu_item">31456</li>
-            </ul>
-        </div>
-    </div>
-
-    </div>
 </html>
 

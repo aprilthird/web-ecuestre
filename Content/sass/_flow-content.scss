@@ -36,6 +36,9 @@
     &.isActive {
         display: block;
     }
+    &_pre {
+        text-transform: uppercase;
+    }
     &_header {
         text-transform: uppercase;
         margin-bottom: 15px;

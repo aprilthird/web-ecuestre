@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link href="Content/css/shame.css" rel="stylesheet">-->
+  <script async src="Content/js/utils.js"></script>
+  <script async src="Content/js/menu-linker.js"></script>
+</head>
+
+<body>
+    <style>
+        body {
+            width: auto;
+            height: 100vh;
+        } 
+        ul {
+            list-style-type:none;
+            margin: 0;
+            padding: 0;
+        }
+        .lorem:after {
+            content: 'Lorem';
+        }
+        .navigation {
+            width: auto;
+            height: 100%;
+            display: flex;   
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        .navigation_menu {
+            display: flex;
+            flex-flow: column nowrap;
+            padding-left: 15px;
+        }
+        
+    </style>
+
+        <nav class="navigation isActive">
+            <ul class="navigation_menu menu">
+                <li class="menu_item">
+                    <a class="flowLink isActive lorem">1</a>
+                </li>
+                <li class="menu_item">
+                    <a class="flowLink lorem">2</a>
+                    <div class="navigation_dropdown">
+                        <ul class="menu">
+                            <li class="menu_item"><a class="flowLink isActive lorem">1</a></li>
+                            <li class="menu_item"><a class="flowLink lorem">2</a></li>
+                            <li class="menu_item"><a class="flowLink lorem">3</a></li>
+                            <li class="menu_item"><a class="flowLink lorem">4</a></li>
+                            <li class="menu_item"><a class="flowLink lorem">4</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu_item">
+                    <a class="flowLink lorem">3</a>
+                    <div class="navigation_dropdown">
+                        <ul class="menu">
+                            <li class="menu_item"><a class="flowLink isActive lorem">1</a></li>
+                            <li class="menu_item"><a class="flowLink lorem">2</a></li>
+                            <li class="menu_item"><a class="flowLink lorem">3</a></li>
+                            <li class="menu_item"><a class="flowLink lorem">4</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu_item"><a class="flowLink lorem">4</a></li>
+                <li class="menu_item"><a class="flowLink lorem">1</a></li>
+                <li class="menu_item"><a class="flowLink lorem">2</a></li>
+                <li class="menu_item"><a class="flowLink lorem">3</a></li>
+                <li class="menu_item"><a class="flowLink lorem">4</a></li>
+            </ul>
+        </nav>
+
+  <script async src="Content/js/menu.js"></script>
+</body>
+
+</html>
+

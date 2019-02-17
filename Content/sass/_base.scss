@@ -81,19 +81,6 @@ img {
     #{$this}_caption { height: 22%; }
   }
 }
-.dropdown {
-    height: 0;
-    display: none;
-    transition: height .5 ease;
-    &.isActive {
-        height: 250px;
-        display: block;
-    }
-    & .menu {
-        margin-top: 15px;
-        margin-left: 5px;
-    }
-}
 .background {
     width: 100%;
     height: auto;

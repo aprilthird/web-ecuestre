@@ -55,3 +55,34 @@ let LinkMenu = (function() {
     }
     return linker;
 })();
+
+
+/*
+let Linker = (function() {
+
+    class builder {
+        constructor(addons) {
+            if(typeof($extendObj) == "undefined") {
+                console.log("add util script to DOM");
+                return;
+            }
+            let _ = this;
+            _.def = {
+                itemParent: $1('section'),
+                anchorParent: $1('aside'),
+                itemChildren: 'article',
+                anchorChildren: 'a',
+                activeClass: 'isActive',
+                options: {
+                    childrenSubmited: false,
+                    singleToggled: true,
+                    isValidated: false
+                }
+            }
+            $extendObj(_.def, userSettings);
+            _.init();
+        }
+    }
+    return builder;
+})();
+*/

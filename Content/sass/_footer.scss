@@ -20,39 +20,6 @@
         & .menu { fill: $white; }
     }
 }
-.navigation {
-    width: 0;
-    height: 100vh;
-    opacity: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background: $black;
-    overflow-x: hidden;
-    transition: 0.5s;
-    &.isActive {
-        width: 70%;
-        opacity: 1;
-    }
-    &  .menu {
-        padding-top: $pad*5;
-        padding-left: $pad*3;
-        white-space: nowrap;
-        @include flex-direction(column);
-        row-gap: 15px;
-    }
-}
-footer {
-    position: relative;
-    margin: 0;
-    padding: 20px  $pad;
-    width: auto;
-    height: 25vh;
-    text-align: left;
-    color: $white;
-    overflow: hidden;
-}
 
 .contact {
     display: grid;
@@ -62,5 +29,49 @@ footer {
     & .flowLink {
         text-decoration: underline;
     }
+    &_address { grid-area: address; }
+    &_icons { grid-area: icons; }
 }
 
+.footer {
+    position: relative;
+    margin: 0;
+    padding: 50px  $pad;
+    width: auto;
+    height: 40vh;
+    text-align: left;
+    color: $white;
+    overflow: hidden;
+    display: grid;
+    grid-template: "social"  auto /auto;
+    &_logo {
+        grid-area: logo;
+        display: none;
+        & .navIcon {
+            position: relative;
+            top: 0;
+        }
+    }
+    &_menu{
+        grid-area: menu;
+        display: none;
+    }
+    &_social{
+        grid-area: social;
+    }
+}
+
+@media only screen and (min-width: $breakpoint) {
+    .footer {
+        grid-template: "logo menu social" auto / 2fr 8fr 2fr;
+        &_logo {
+            display: block;
+        }
+        &_menu {
+            display: block;
+        }
+        &_social {
+            grid-template: "address" 80% "icons" 20% / auto;
+        }
+    }
+}
