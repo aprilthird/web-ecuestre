@@ -1,358 +1,130 @@
-$pad: 5vw;
-$margin: 10px;
-$black: #1a1919;
+// Default Font 
+$fixed-font-family: 'Myriad', 'PT sans';;
+$fixed-font-size: 12px;
+$fixed-line-height: 1.2;
+$fixed-letter-spacing: 2px;
+$fixed-font-weight: 300;
+// Heading Font
+$heading-font-family: 'K2D', 'sans-serif';
+$heading-font-weight: 500;
+// Theme color
 $white: #ffffff;
-$red: #b73827;
-$gray-dark: #5d5d5d;
-$gray: #87868a;
-$breakpoint: 800px;
-$logo-icon: "../img/logo.svg";
-$menu-icon: "../img/menu-icon.svg";
-$deco-icon: "../img/decoration.svg";
-@import 'test';
-@import 'mixins';
-@import 'flexbox';
-@import 'base';
-@import 'flow-content';
-@import 'menu';
-@import 'footer';
+$black: #1a1919;
+$red:   #b73827;
+// Font-face imports
+@import url('https://fonts.googleapis.com/css?family=K2D:300,400,500|PT+Sans');
+@import 'mixin/_flexbox';
+@import 'mixin/_mixins';
+/*
+ *  Base style
+ */
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+}
 
-.largeHero {
+%headingTypography {
+    font-family: $heading-font-family; 
+    font-weight: $heading-font-weight;
+}
+
+.typography { 
+    font-family:    $fixed-font-family; 
+    font-size:      $fixed-font-size; 
+    line-height:    $fixed-line-height; 
+    letter-spacing: $fixed-letter-spacing;
+    font-weight:    $fixed-font-weight;
+}
+
+.h1  { font-size: 4.0em;  @extend %headingTypography; }
+.h2  { font-size: 3.0em;  @extend %headingTypography; }
+.h3  { font-size: 2.0em;  @extend %headingTypography; }
+.h4  { font-size: 1.5em;  @extend %headingTypography; }
+.h5  { font-size: 1.3em;  @extend %headingTypography; }
+.h6  { font-size: 1.2em;  @extend %headingTypography; }
+.p   { font-size: 1.1em; }
+.a   { font-size: 1.1em; }
+
+// Atom
+.media {
     width: 100%;
     height: 100%;
-    position: relative;
-    grid-area: header;
-    &_image {
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
-    &_text {
-        @include flexbox();
-        @include align-items(center);
-        @include justify-content(center);
-        position: absolute;
-        right: 0;
-        left:0;
-        bottom: 15%;
-        text-transform: uppercase;
-        text-align: center;
+    &-unchanged {
+        top:50%;
+        left:50%;
+        width: var(--w, auto);
+        height: var(--h, auto);
+        -webkit-transform:translate(-50%,-50%);
+        transform:translate(-50%,-50%)
     }
 }
 
-/*
- *  Discipline template
- */
-.page {
+.link {
+    @extend .a;
+    color: var(--color, $white);
+    text-decoration: none;
+    cursor: pointer;
+    $this: &;
+    &.isActive { color: $red; }
+    &:hover { color: $red; }
+}
+
+.linkButton {
+    @extend .link;
+    border: 2px solid var(--color, $white);
+    border-radius: 45px;
+    padding: 0.8em 1em;
+    &.isActive {
+        background: var(--hoverBg, $white);
+        border: 2px solid var(--hoverColor, $black);
+        color: var(--hoverColor, $black);
+    }
+    &:hover {
+        @extend .linkButton.isActive;
+    }
+}
+
+
+// Molecule
+.pageGrid {
     display: grid;
-    grid-template: "header" 35vh "aside" auto "section" auto;
-    & header {
-        grid-area: header;
+    grid-template: "top" "bottom";
+    &-inverse {
+        grid-template: "bottom" "top";
     }
-    & aside {
-        grid-area: aside;
+    &_top {
+        grid-area: top;
     }
-    & section {
-        grid-area: section;
-    }
-}
-@media only screen and (min-width: $breakpoint ) {
-    .page {
-        font-size: 16px;
-        grid-template: "header header" 35vh "section aside" / 70% 30%;
-        height: 100vh;
-        & .flowAside {
-            & .menu {
-                @include flex-direction(column);
-                row-gap: 2.5em;
-            }
-        }
+    &_bottom {
+        grid-area: bottom;
     }
 }
 
-/*
- * About us template
- */
-.about {
-    display: grid;
-    grid-template: "header" 35vh "summary" auto "mission" auto "vision" auto;
-    &_header {
-        grid-area: header;
-    }
-    &_summary {
-        grid-area: summary;
-        background: $white;
-        color: $black;
-        padding: $pad;
-        & .flowArticle {
-            display: block;
-        }
-    }
-    &_mission {
-        grid-area: mission;
-        padding: $pad;
-        background: $black;
-        color: $white;
-    }
-    &_vision {
-        grid-area: vision;
-        padding: $pad;
-        background: $red;
-        color: $white;
-    }
-    & .flowArticle_header {
-        text-transform: none;
-        font-weight: 700;
-    }
-}
-@media only screen and (min-width: $breakpoint ) {
-    .about {
-        font-size: 16px;
-        grid-template: "header header" 35vh "summary summary" auto "mission vision" auto / 50% 50%;
-        height: 100vh;
-    }
-}
-
-/*
- * History template
- */
-.timeline {
-    width: auto;
-    height: 100%;
-    text-transform: uppercase;
-    display: grid;
-    grid-template: "selectors timeline" auto / 50% 50%;
-    &_selectors {
-        @include flexbox();
-        @include flex-direction(column);
-        @include justify-content(center);
-        @include align-items(center);
-        font-size: 18px;
-        margin-left: 80%;
-        row-gap: 100px;
-        & .flowLink {
-            transform: rotate(270deg);
-        }
-    }
-    &_highlight {
-        @include flexbox();
-        @include flex-direction(column);
-        @include justify-content(center);
-        @include align-items(center);
-        background: $red;
-        color: $white;
-        width: 100%;
-        h1 {
-            transform: rotate(270deg);
-        }
-    }
-}
-
-.history {
-    display: grid;
-    grid-template: "header" 35vh "overflow" auto;
-    &_timeline {
-        grid-area: timeline;
-        margin: $pad 0 0 0;
-        display: none;
-    }
-    &_overflow {
-        grid-area: overflow;
-        margin: $pad 0;
-        background: $black;
-        color: $white;
-    }
-}
-@media only screen and (min-width: $breakpoint ) {
-    .history {
-        font-size: 16px;
-        grid-template: "header header" 35vh "overflow timeline" auto / 72% 28%;
-        height: 100vh;
-        &_timeline {
-            display: block;
-        }
-        &_overflow {
-            overflow-y: scroll;
-        }
-    }
-}
-
-.news {
-    @extend .page;
-    &_detail {
-        grip-area: section;
-        & .flowSection_header {
-            margin-left: 0;
-        }
-        & .flowArticle_header {
-            color: $red;
-        }
-    }
-    &_thumbnail {
-        display: none;
-        background: $white;
-        grid-area: aside;
-        padding: $pad/2 0;
-        & .thumbnail {
-            width: 100%;
-            height: 100%;
-            max-width: 100%;
-            max-height: 100%;
-        }
-    }
-}
-@media only screen and (min-width: $breakpoint) {
-    .news {
-        &_detail {
-            padding: $pad;
-        }
-        &_thumbnail {
-            display: block;
-        }
-    }
-}
-
-/*
- *  Gallery template
- */
-.gallery {
-    width: 100%;
+.frontPageHero {
+    width: 100vw;
     height: 100vh;
-        overflow: hidden;
-    $this: &;
-    &_mask {
+    max-width: 100%;
+    &_image {
+        display: none;
+    }
+    &_caption {
+        @include flexbox();
+        @include align-content(center);
         width: 100%;
-        height: inherit;
-        overflow: hidden;
-    }
-    &_album {
-        $width: 450px;
-        $height: 300px;
-        $gap: 25px;
-        width: inherit;
-        height: auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax($width, 1fr));
-        grid-gap: $gap;
-        #{$this}_thumbnail {
-            width: 100%;
-            height: 100%;
-            min-width: $width;
-            min-height: $height;
-            max-width: 100%;
-            max-height: 100%;
-        }
-    }
-    &_translate {
-        transition: transform .5s cubic-bezier(.01, .96, .44, .99);
-        transform: translateY(calc(var(--iy, 0px) + var(--ty, 0px)));
+        height: 30%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
     }
 }
 
-/*
- *  Newslist template
- */
-.newslist {
-    display: grid;
-    grid-template: "header" 35vh "slideshow" 65vh / auto;
-    &_header {
-        grid-area: header;
-    }
-    &_slideshow {
-        grid-area: slideshow;
-        padding: $pad 0;
-    }
-}
+// Page
+.homePage { 
+    background: $black;
+    color: $white;
 
-
-.flowAddress {
-    display: grid;
-    grid-template: "contact social" / auto 150px;
-    width: 100%;
-    height: 100%;
-    &_contact { 
-        grid-area: contact; 
-        @include flex-direction(column);
-        .flowLink {
-            border-bottom: 1px solid $white;
-            padding-bottom: 5px;
-        }
-    }
-    &_social { 
-        grid-area: social; 
-        h4 {
-            margin-top: 1em;
-            margin-left: 1em;
-            height: 10%;
-        }
-        .menu {
-            width: auto;
-            height: 90%;
-            @include align-content(flex-start);
-        }
-        .icon {
-            width: 25px;
-            height: 25px;
-        }
-    }
-    .menu_item {
-        flex: 0 1 auto;
-    }
-}
-.flowFooter {
-    width: auto;
-    height: 100%;
-    display: grid;
-    grid-template: "address" 85% "trademark" 15%;
-    padding: $pad $pad $pad/2 $pad;
-    font-size: 0.8em;
-    $this: &;
-    &_brand {
-        grid-area: brand;
-        display: none;
-    }
-    &_menu {
-        grid-area: menu;
-        display: none;
-        white-space: nowrap;
-        .menu {
-            @include flex-flow(row nowrap);
-            .flowLink {
-                margin: 0;
-                padding: 30px 0;
-            }
-        }
-        .dropdown {
-            @include flex-flow(column nowrap);
-            .menu_item {
-                margin: 1em 0;
-            }
-        }
-    }
-    &_address {
-        grid-area: address;
-    }
-    &_trademark {
-        grid-area: trademark;
-        color: $gray-dark;
-        border-top: 1px solid $gray-dark;
-        text-align: center;
-        #{$this}_marktext {
-            margin-top: 15px;
-        }
-    }
-}
-@media only screen and (min-width: $breakpoint) {
-    .flowFooter {
-        grid-template: "brand menu address" 90% "trademark trademark trademark" 10% / 2fr 8fr 2fr;
-        &_address {
-            grid-template: "contact" auto "social" auto / auto;
-            .menu {
-                @include flex-wrap(nowrap);
-            }
-            h4 { display: none; }
-        }
-        &_brand { display: block; } 
-        &_menu { @include flexbox(); }
+    .flowSection {
+        width: auto;
+        height: 100vh;
     }
 }

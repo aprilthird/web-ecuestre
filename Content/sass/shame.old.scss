@@ -1,0 +1,358 @@
+$pad: 5vw;
+$margin: 10px;
+$black: #1a1919;
+$white: #ffffff;
+$red: #b73827;
+$gray-dark: #5d5d5d;
+$gray: #87868a;
+$breakpoint: 800px;
+$logo-icon: "../img/logo.svg";
+$menu-icon: "../img/menu-icon.svg";
+$deco-icon: "../img/decoration.svg";
+@import 'test';
+@import 'mixins';
+@import 'flexbox';
+@import 'base';
+@import 'flow-content';
+@import 'menu';
+@import 'footer';
+
+.largeHero {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    grid-area: header;
+    &_image {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    &_text {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        position: absolute;
+        right: 0;
+        left:0;
+        bottom: 15%;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+/*
+ *  Discipline template
+ */
+.page {
+    display: grid;
+    grid-template: "header" 35vh "aside" auto "section" auto;
+    & header {
+        grid-area: header;
+    }
+    & aside {
+        grid-area: aside;
+    }
+    & section {
+        grid-area: section;
+    }
+}
+@media only screen and (min-width: $breakpoint ) {
+    .page {
+        font-size: 16px;
+        grid-template: "header header" 35vh "section aside" / 70% 30%;
+        height: 100vh;
+        & .flowAside {
+            & .menu {
+                @include flex-direction(column);
+                row-gap: 2.5em;
+            }
+        }
+    }
+}
+
+/*
+ * About us template
+ */
+.about {
+    display: grid;
+    grid-template: "header" 35vh "summary" auto "mission" auto "vision" auto;
+    &_header {
+        grid-area: header;
+    }
+    &_summary {
+        grid-area: summary;
+        background: $white;
+        color: $black;
+        padding: $pad;
+        & .flowArticle {
+            display: block;
+        }
+    }
+    &_mission {
+        grid-area: mission;
+        padding: $pad;
+        background: $black;
+        color: $white;
+    }
+    &_vision {
+        grid-area: vision;
+        padding: $pad;
+        background: $red;
+        color: $white;
+    }
+    & .flowArticle_header {
+        text-transform: none;
+        font-weight: 700;
+    }
+}
+@media only screen and (min-width: $breakpoint ) {
+    .about {
+        font-size: 16px;
+        grid-template: "header header" 35vh "summary summary" auto "mission vision" auto / 50% 50%;
+        height: 100vh;
+    }
+}
+
+/*
+ * History template
+ */
+.timeline {
+    width: auto;
+    height: 100%;
+    text-transform: uppercase;
+    display: grid;
+    grid-template: "selectors timeline" auto / 50% 50%;
+    &_selectors {
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(center);
+        font-size: 18px;
+        margin-left: 80%;
+        row-gap: 100px;
+        & .flowLink {
+            transform: rotate(270deg);
+        }
+    }
+    &_highlight {
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(center);
+        background: $red;
+        color: $white;
+        width: 100%;
+        h1 {
+            transform: rotate(270deg);
+        }
+    }
+}
+
+.history {
+    display: grid;
+    grid-template: "header" 35vh "overflow" auto;
+    &_timeline {
+        grid-area: timeline;
+        margin: $pad 0 0 0;
+        display: none;
+    }
+    &_overflow {
+        grid-area: overflow;
+        margin: $pad 0;
+        background: $black;
+        color: $white;
+    }
+}
+@media only screen and (min-width: $breakpoint ) {
+    .history {
+        font-size: 16px;
+        grid-template: "header header" 35vh "overflow timeline" auto / 72% 28%;
+        height: 100vh;
+        &_timeline {
+            display: block;
+        }
+        &_overflow {
+            overflow-y: scroll;
+        }
+    }
+}
+
+.news {
+    @extend .page;
+    &_detail {
+        grip-area: section;
+        & .flowSection_header {
+            margin-left: 0;
+        }
+        & .flowArticle_header {
+            color: $red;
+        }
+    }
+    &_thumbnail {
+        display: none;
+        background: $white;
+        grid-area: aside;
+        padding: $pad/2 0;
+        & .thumbnail {
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}
+@media only screen and (min-width: $breakpoint) {
+    .news {
+        &_detail {
+            padding: $pad;
+        }
+        &_thumbnail {
+            display: block;
+        }
+    }
+}
+
+/*
+ *  Gallery template
+ */
+.gallery {
+    width: 100%;
+    height: 100vh;
+        overflow: hidden;
+    $this: &;
+    &_mask {
+        width: 100%;
+        height: inherit;
+        overflow: hidden;
+    }
+    &_album {
+        $width: 450px;
+        $height: 300px;
+        $gap: 25px;
+        width: inherit;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax($width, 1fr));
+        grid-gap: $gap;
+        #{$this}_thumbnail {
+            width: 100%;
+            height: 100%;
+            min-width: $width;
+            min-height: $height;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    &_translate {
+        transition: transform .5s cubic-bezier(.01, .96, .44, .99);
+        transform: translateY(calc(var(--iy, 0px) + var(--ty, 0px)));
+    }
+}
+
+/*
+ *  Newslist template
+ */
+.newslist {
+    display: grid;
+    grid-template: "header" 35vh "slideshow" 65vh / auto;
+    &_header {
+        grid-area: header;
+    }
+    &_slideshow {
+        grid-area: slideshow;
+        padding: $pad 0;
+    }
+}
+
+
+.flowAddress {
+    display: grid;
+    grid-template: "contact social" / auto 150px;
+    width: 100%;
+    height: 100%;
+    &_contact { 
+        grid-area: contact; 
+        @include flex-direction(column);
+        .flowLink {
+            border-bottom: 1px solid $white;
+            padding-bottom: 5px;
+        }
+    }
+    &_social { 
+        grid-area: social; 
+        h4 {
+            margin-top: 1em;
+            margin-left: 1em;
+            height: 10%;
+        }
+        .menu {
+            width: auto;
+            height: 90%;
+            @include align-content(flex-start);
+        }
+        .icon {
+            width: 25px;
+            height: 25px;
+        }
+    }
+    .menu_item {
+        flex: 0 1 auto;
+    }
+}
+.flowFooter {
+    width: auto;
+    height: 100%;
+    display: grid;
+    grid-template: "address" 85% "trademark" 15%;
+    padding: $pad $pad $pad/2 $pad;
+    font-size: 0.8em;
+    $this: &;
+    &_brand {
+        grid-area: brand;
+        display: none;
+    }
+    &_menu {
+        grid-area: menu;
+        display: none;
+        white-space: nowrap;
+        .menu {
+            @include flex-flow(row nowrap);
+            .flowLink {
+                margin: 0;
+                padding: 30px 0;
+            }
+        }
+        .dropdown {
+            @include flex-flow(column nowrap);
+            .menu_item {
+                margin: 1em 0;
+            }
+        }
+    }
+    &_address {
+        grid-area: address;
+    }
+    &_trademark {
+        grid-area: trademark;
+        color: $gray-dark;
+        border-top: 1px solid $gray-dark;
+        text-align: center;
+        #{$this}_marktext {
+            margin-top: 15px;
+        }
+    }
+}
+@media only screen and (min-width: $breakpoint) {
+    .flowFooter {
+        grid-template: "brand menu address" 90% "trademark trademark trademark" 10% / 2fr 8fr 2fr;
+        &_address {
+            grid-template: "contact" auto "social" auto / auto;
+            .menu {
+                @include flex-wrap(nowrap);
+            }
+            h4 { display: none; }
+        }
+        &_brand { display: block; } 
+        &_menu { @include flexbox(); }
+    }
+}
