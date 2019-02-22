@@ -1,0 +1,78 @@
+@mixin rotate($deg) {
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+}
+
+html {
+    box-sizing: border-box;
+}
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;
+    background: gray;
+}
+
+.multimedia {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.carousel {
+    background: gray;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+    display: flex;
+
+    &_wrapper {
+        position: relative;
+        flex: 1;
+        overflow: hidden;
+    }
+    &_anchor {
+        position: absolute;
+        display: block;
+        width: 50%;
+        height: 100%;
+        &.prev {
+            left: 0;
+        }
+        &.next {
+            right: 0;
+        }
+    }
+    &_item {
+        width: 100%;
+        height: 100%;
+        transition: transform 1s;
+        position: absolute;
+        display: flex;
+
+        &.isHidden {
+            display: none;
+        }
+        &.first {
+            left: 0;
+        }
+        &.second {
+            left: 100%;
+        }
+        &.third {
+            left: 200%;
+        }
+    }
+}
+
+.video {
+    width: auto;
+    height: auto;
+}

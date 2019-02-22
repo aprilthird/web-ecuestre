@@ -1,0 +1,81 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  background: gray;
+}
+
+.multimedia {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.carousel {
+  background: gray;
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+  display: flex;
+}
+
+.carousel_wrapper {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.carousel_anchor {
+  position: absolute;
+  display: block;
+  width: 50%;
+  height: 100%;
+}
+
+.carousel_anchor.prev {
+  left: 0;
+}
+
+.carousel_anchor.next {
+  right: 0;
+}
+
+.carousel_item {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  position: absolute;
+  display: flex;
+}
+
+.carousel_item.isHidden {
+  display: none;
+}
+
+.carousel_item.first {
+  left: 0;
+}
+
+.carousel_item.second {
+  left: 100%;
+}
+
+.carousel_item.third {
+  left: 200%;
+}
+
+.video {
+  width: auto;
+  height: auto;
+}
